@@ -1,0 +1,838 @@
+@import "bourbon/bourbon";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$navH: 45px;
+$headH: 50px;
+$blue: rgb(0, 46, 110);
+$skyblue: rgb(67, 199, 244);
+$red: rgb(250, 56, 56);
+$yellow: rgb(249, 196, 18);
+
+html, body { /*html and body temporal styles essential on theme.*/
+  overflow-x: hidden;
+  color: #333333;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+div, span, ul, li, label, input, textarea, select, a, i {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: gray;
+  font-weight: normal;
+}
+
+/*-----------------------------------
+JQUERY SLIDEPANE
+-------------------------------------*/
+
+#slidepane-container {
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#slidepane-nav {
+  position: absolute;
+  height: $navH;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-shadow: 2px 0 8px rgba(black, 0.3);
+  background: $blue;
+  z-index: 2;
+}
+
+#slidepane-nav li {
+  display: block;
+  float: left;
+  width: 33.3%;
+  line-height: $navH;
+  text-align: center;
+  cursor: pointer;
+  color: rgba(white, 0.7);
+}
+
+#slidepane-nav li.current {
+  color: rgba(white, 1);
+}
+
+#slidepane-nav #nav-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 33.333333%;
+  height: 4px;
+  background: $skyblue;
+  transition: all 200ms;
+}
+
+#slidepane {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding-top: $navH;
+  box-sizing: border-box;
+  background: silver;
+  overflow: hidden;
+  @include transform(translate3d(0, 0, 0) scale3d(1, 1, 1));
+  @include backface-visibility(hidden);
+  @include transform-style(preserve-3d);
+}
+
+#slidepane > ul {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-shadow: 0 0 20px rgba(black, 0.2);
+  overflow: hidden;
+  @include transform(translate3d(0%, 0, 0) scale3d(1, 1, 1));
+  @include backface-visibility(hidden);
+  @include transform-style(preserve-3d);
+}
+
+#slidepane > ul > li {
+  height: 100%;
+  float: left;
+  background: #efefef;
+  overflow: auto;
+  @include transform(translate3d(0, 0, 0));
+  @include transform-style(preserve-3d);
+}
+
+#slidepane > ul.animate {
+  @include transition(all 300ms);
+}
+
+#gps-check {
+  height: 30px;
+  line-height: 30px;
+  background: white;
+  padding: 0 15px;
+  box-sizing: border-box;
+  font-size: rem(13);
+  color: #1cdc14;
+  text-align: right;
+}
+
+#gps-check .icon {
+  display: block;
+  float: right;
+  height: 30px;
+  width: 25px;
+  background: url("../assets/android-gps-fixed.svg") no-repeat center 7px;
+  background-size: 75% auto;
+}
+
+#gps-check.error {
+  color: red;
+}
+
+#gps-check.error .icon {
+  background: url("../assets/android-gps-fixed.svg") no-repeat center -17px;
+  background-size: 75% auto;
+}
+
+/*-----------------------------------
+JQUERY FULL SCREEN PANE
+-------------------------------------*/
+
+.fullscreen-pane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  overflow: hidden;
+  z-index: 99999999;
+  @include transform(translate(100%, 0));
+  @include transition-property(transform);
+  @include transition-duration(400ms);
+  @include transition-timing-function(cubic-bezier(0.615, 0, 0.355, 1.000));
+}
+
+.fullscreen-pane-dimming {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: black;
+  opacity: 0;
+  z-index: 99999999;
+  @include transition(all 200ms);
+  @include transition-delay(200ms);
+}
+
+.fullscreen-pane-dimming.open {
+  opacity: 0.6;
+  @include transition(all 250ms);
+}
+
+.fullscreen-pane.open {
+  @include transform(translate(0, 0));
+}
+
+.fullscreen-pane-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  height: $headH;
+  line-height: $headH;
+  width: $headH;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+}
+
+.fullscreen-pane-header {
+  position: fixed;
+  height: $headH;
+  width: 100%;
+  left: 0;
+  background: $blue;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+
+  z-index: 2;
+}
+
+.fullscreen-pane-content {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: $headH;
+  overflow-y: auto;
+}
+
+/*-----------------------------------
+JQUERY MODAL BOX
+-------------------------------------*/
+
+$modalHeaderH: 30px;
+
+.modalbox-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+}
+
+.modalbox {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  min-height: 100px;
+  width: 80%;
+  margin: 0 auto;
+  background: white;
+  text-align: left;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 999999999;
+  @include transform(translate(0, 50px));
+  @include transition-property(transform, opacity);
+  @include transition-duration(300ms);
+  @include transition-timing-function(cubic-bezier(0.615, 0, 0.355, 1.000));
+}
+
+.modalbox.open {
+  opacity: 1;
+  @include transform(translate(0, 0));
+}
+
+.modal-dimming {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: black;
+  opacity: 0;
+  z-index: 999999999;
+  @include transition(opacity 300ms);
+}
+
+.modal-dimming.open {
+  opacity: 0.6;
+}
+
+.modalbox-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  height: $modalHeaderH;
+  line-height: $modalHeaderH + 5;
+  width: $modalHeaderH;
+  text-align: center;
+  color: #9a9a9a;
+}
+
+.modalbox-header {
+  position: fixed;
+  height: $modalHeaderH;
+  width: 100%;
+  left: 0;
+  border-bottom: 3px solid #dadada;
+  background: #eaeaea;
+  z-index: 2;
+}
+
+.modalbox-header-title {
+  display: block;
+  line-height: $modalHeaderH;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.modalbox-content {
+  position: relative;
+  height: 100%;
+  max-height: 400px;
+  box-sizing: border-box;
+  padding: $modalHeaderH + 15px 15px 15px 15px;
+  overflow-y: auto;
+}
+
+/*-----------------------------------
+TIGOTRAINERS CONTROL - FORM STYLES
+-------------------------------------*/
+
+.control-form {
+  margin-bottom: 20px;
+}
+
+.control-form-list {
+  margin: 8px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.control-form-list li {
+  position: relative;
+  cursor: pointer;
+  padding: 11px 13px;
+  margin-bottom: 3px;
+  background: white;
+  vertical-align: middle;
+}
+
+.control-form-list li:hover {
+  background: $skyblue;
+  color: white;
+}
+
+.control-form-list li .description {
+  font-size: 0.875rem;
+  color: gray;
+}
+
+.control-form-list li:hover .description {
+  color: white;
+}
+
+.control-form-title {
+  display: block;
+  padding: 0 15px;
+  line-height: $headH;
+  color: white;
+}
+
+.control-form-item {
+  padding: 8px 15px;
+  margin: 7px 0;
+}
+
+.control-form-item .item-title {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 0.875rem;
+}
+
+
+.item-description-info{
+  display: inline-block;
+  color: white;
+  background: #47c7f4;
+  width: 23px;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.item-description-content-inner{
+  font-size: 0.875rem;
+}
+
+.item-description-content-inner p,
+.item-description-content-inner ul{
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.control-form-item input[type="text"],
+.control-form-item input[type="number"],
+.control-form-item textarea,
+.control-form-item select {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #dadada;
+  border-radius: 2px;
+  resize: none;
+  -moz-appearance: textfield;
+}
+
+.control-form-item input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.control-form-item input[type="number"]::-webkit-outer-spin-button,
+.control-form-item input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.control-form-item input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin-top: 20px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    @include size(35px);
+    margin-top: -15px;
+    border: 15px solid $skyblue;
+    border-radius: 50px;
+    background: white;
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    @include size(6px);
+    margin-top: -10px;
+    border: 15px solid $skyblue;
+    border-radius: 50px;
+    background: white;
+    cursor: pointer;
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: $skyblue;
+    border-radius: 3px;
+    border: none;
+  }
+
+  &::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: $skyblue;
+    border-radius: 3px;
+    border: none;
+  }
+
+  &:focus::-moz-range-track {
+    outline: none
+  }
+}
+
+.control-form-item .item-radio,
+.control-form-item .item-checkbox {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.control-form-item .item-radio input,
+.control-form-item .item-checkbox input {
+  position: absolute;
+  @include size(0);
+  opacity: 0;
+}
+
+.control-form-item .item-radio span,
+.control-form-item .item-checkbox span {
+  display: inline-block;
+  position: relative;
+  height: 1.125rem;
+  line-height: 1.125rem;
+  padding: 5px 0 5px 35px;
+}
+
+.control-form-item .item-radio span:before,
+.control-form-item .item-checkbox span:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  content: "";
+  @include size(20px);
+  border: 2px solid #dadada;
+  border-radius: 15px;
+  background: white;
+}
+
+.control-form-item .item-checkbox span:before {
+  border-radius: 2px;
+}
+
+.control-form-item .item-radio input:checked + span:before,
+.control-form-item .item-checkbox input:checked + span:before {
+  background: $skyblue url('../assets/form-inputs-check.svg') no-repeat center center;
+  background-size: cover;
+  border-color: $skyblue;
+}
+
+.control-form-item .item-boolean {
+  text-align: right;
+  margin-top: 6px;
+}
+
+.control-form-item .item-boolean input[type="radio"] {
+  position: absolute;
+  @include size(0);
+  opacity: 0;
+}
+
+.control-form-item .item-boolean label:first-child {
+  margin-right: 3px;
+}
+
+.control-form-item .item-boolean span {
+  display: inline-block;
+  @include size(34px);
+  border: 2px solid #dadada;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 34px;
+  cursor: pointer;
+}
+
+.control-form-item-multidata {
+  position: relative;
+  @include clearfix;
+}
+
+.control-form-item-multidata-add-data {
+  float: left;
+  height: 30px;
+  margin: 2px 2px 2px 5px;
+  text-align: center;
+  line-height: 26px;
+  color: $skyblue;
+  font-size: 2rem;
+
+  &:active {
+    color: #40abd8;
+    top: 3px;
+  }
+}
+
+.control-form-item-multidata-stacked-container {
+  @include clearfix;
+}
+
+.control-form-item-multidata-staked-value {
+  position: relative;
+  float: left;
+  clear: left;
+  border: 1px solid #dadada;
+  border-radius: 2px;
+  font-size: 0.875rem;
+  padding: 0 28px 0 7px;
+  margin-bottom: 8px;
+  @include clearfix;
+}
+
+.control-form-item-multidata-staked-value span {
+  display: inline-block;
+  line-height: 1.5rem;
+}
+
+.control-form-item-multidata-staked-value i {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 2px;
+  @include size(24px);
+
+  line-height: 1.5rem;
+  text-align: center;
+  color: #cecece;
+  cursor: pointer;
+}
+
+.control-form-item .item-boolean input:checked + span {
+  background: $skyblue;
+  border-color: $skyblue;
+  color: white;
+}
+
+.control-form-item input[type="submit"] {
+  position: absolute;
+  height: 0;
+  width: 0;
+  border: none;
+  padding: 0;
+}
+
+#control-form-submit {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 3px solid #3faad8;
+  border-radius: 2px;
+  outline: none;
+  background: $skyblue;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+
+  &:active {
+    background: #40abd8;
+  }
+
+  &::before {
+    margin-right: 0.5rem;
+  }
+}
+
+#control-form-download {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 3px solid #3faad8;
+  border-radius: 2px;
+  outline: none;
+  background: $skyblue;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+
+  &:active {
+    background: #40abd8;
+  }
+
+  &::before {
+    margin-right: 0.5rem;
+  }
+}
+
+.control-form-bubble-message-container {
+  @include clearfix;
+}
+
+.control-form-bubble-message {
+  position: relative;
+  float: right;
+  right: 0;
+  padding: 2px 5px;
+  margin-top: 5px;
+  border: 1px solid #c53636;
+  border-radius: 2px;
+  background: $red;
+  font-size: 0.75rem;
+  color: white;
+
+  &::before {
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: -5px;
+    content: '';
+    @include size(7px);
+    border-left: 1px solid #c53636;
+    border-top: 1px solid #c53636;
+    background: $red;
+    @include transform(rotate(45deg));
+  }
+}
+
+/*-----------------------------------
+TIGOTRAINERS CONTROL - DATE PICKER
+-------------------------------------*/
+
+#control-form-datepicker .ui-datepicker-title {
+  text-align: center;
+  font-size: 0.875rem;
+  color: gray;
+  text-transform: uppercase;
+}
+
+#control-form-datepicker .ui-datepicker-calendar {
+  width: 100%;
+  text-align: center;
+}
+
+#control-form-datepicker .ui-datepicker-calendar tr {
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+#control-form-datepicker .ui-datepicker-calendar th span {
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: #bababa;
+}
+
+#control-form-datepicker .ui-datepicker-calendar td a {
+  display: block;
+  @include size(28px);
+  line-height: 28px;
+  font-size: 0.925rem;
+  color: black;
+}
+
+#control-form-datepicker .ui-datepicker-header {
+  position: relative;
+  padding-bottom: 8px;
+  margin-bottom: 6px;
+  line-height: 28px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+#control-form-datepicker .ui-datepicker-prev,
+#control-form-datepicker .ui-datepicker-next {
+  display: block;
+  position: absolute;
+  @include size(28px);
+  cursor: pointer;
+  opacity: 0.7;
+  text-align: center;
+
+  i {
+    display: block;
+    line-height: 28px;
+  }
+}
+
+#control-form-datepicker .ui-datepicker-next {
+  right: 0;
+}
+
+#control-form-datepicker .ui-datepicker-calendar td a.ui-state-active,
+#control-form-datepicker .ui-datepicker-calendar td a.ui-state-highlight.ui-state-active {
+  border-radius: 100px;
+  background: $skyblue;
+  color: white;
+}
+
+#control-form-datepicker .ui-datepicker-calendar td a.ui-state-highlight {
+  border-radius: 100px;
+  background: #eaeaea;
+  color: gray;
+}
+
+.control-section {
+  padding: 15px;
+  background: white;
+  margin-top: 10px;
+}
+
+.control-section h2 {
+  margin-top: 0;
+  font-size: 1.125rem;
+}
+
+/*-----------------------------------
+TIGOTRAINERS CONTROL - MAIN REGISTRY LIST
+-------------------------------------*/
+
+.main-reg-list {
+  padding: 15px;
+  background: white;
+  margin-top: 10px;
+}
+
+.main-reg-list h2 {
+  margin-top: 0;
+  font-size: 1.125rem;
+}
+
+.main-reg-list table {
+  font-size: 0.873rem;
+  width: 100%; }
+
+
+.main-reg-list table thead tr {
+  border-bottom: 5px solid rgba(0, 0, 0, 0);
+}
+
+.main-reg-list table th {
+  font-size: 0.8125rem;
+  color: gray;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.main-reg-list table td {
+  text-align: left;
+}
+
+.main-reg-list table td {
+  text-align: left; }
+
+.main-reg-list table td:nth-child(1) {
+ }
+
+.main-reg-list table td:nth-child(2) {
+ }
+
+.main-reg-list table td:nth-child(3) {
+  text-align: left; }
+
+
+.item-kpi {
+  overflow: auto;
+  color: #666;
+}
+
+.item-kpi span:first-child {
+  float: left;
+  font-size: rem(14px);
+}
+
+.item-kpi span:last-child {
+  float: right;
+}
+
+.item-kpi.cumplimiento {
+  margin-bottom: rem(15px);
+}
+
+.item-kpi.cumplimiento span,
+.item-kpi.proyectado span {
+  font-size: rem(20px);
+}
+
+.main-reg-list-container{
+  font-size: 0.7rem;
+}

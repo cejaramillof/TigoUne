@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/animate.css" />
+  <title>TigoUne</title>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    /* label focus color */
+
+    .input-field input[type=number]:focus+label {
+      color: #1a3660!important;
+    }
+
+    /* label underline focus color */
+
+    .input-field input[type=number]:focus {
+      border-bottom: 1px solid #1a3660!important;
+      box-shadow: 0 1px 0 0 #1a3660;
+    }
+
+    .info-btn {
+      padding-right: 10px;
+    }
+
+  </style>
+</head>
+
+<body style="background: url(./img/bg.png) no-repeat top center;background-attachment: fixed;">
+  <br/>
+  <br/>
+  <div class="container center-align">
+    <div class="row valign-wrapper">
+      <div class="col s12 valign">
+        <div class="card white darken-1">
+          <div class="header">
+            <img src="./img/banner-ba.png" class="responsive-img" style="width: 100%;">
+          </div>
+          <div class="card-content darkblue-text">
+            <!--<div class="left-align">
+              <span class="card-title center-align">
+                <small><h6 class="animated bounceInRight"><b>Diagnostico de daños: Banda Ancha</b></h6></small>
+              </span>
+              <p class="animated bounceInLeft">Elige el problema.</p>
+              <br/>
+            </div>-->
+            <div class="container">
+              <div class="row center-align">
+              <div class="col s5">
+                <a class="dropdown-button" data-beloworigin="true" data-activates='wifi' data-constrainWidth="false">
+                  <img class="responsive-img" style="max-width: 70px;" src="./img/wifi-icon.png"><p>
+                  <b>PROBLEMAS WIFI</b></p>
+                </a>
+                <ul id='wifi' class='dropdown-content' style="width: 1!important;">
+                  <li><a class="indigo-text text-darken-4 animated bounceIn"><b>PROBLEMAS WIFI</b></a></li>
+                  <li class="divider"></li>
+                  <li><a href="#wifi1" class="indigo-text text-darken-4 waves-effect modal-trigger">Preguntas al Cliente</a></li>
+                  <li><a href="#wifi2" class="indigo-text text-darken-4 waves-effect modal-trigger">Check List</a></li>
+                  <li><a href="#wifi3" class="indigo-text text-darken-4 waves-effect modal-trigger">Apoyo despacho</a></li>
+                  <li><a href="#wifi4" class="indigo-text text-darken-4 waves-effect modal-trigger">Escalamiento</a></li>
+                </ul>
+                <div id="wifi1" class="modal">
+                  <div class="modal-content">
+                    <ul class="collection with-header left-align">
+                      <li class="collection-header"><h6><b>Preguntas al cliente (Problemas WIFI)</b></h6></li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>OAODKSAODASD</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+                <div id="wifi2" class="modal">
+                  <div class="modal-content">
+                    <ul class="collection with-header left-align">
+                      <li class="collection-header"><h6><b>Check list (Problemas WIFI)</b></h6></li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>OAODKSAODASD</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+                <div id="wifi3" class="modal">
+                  <div class="modal-content">
+                    <ul class="collection with-header left-align">
+                      <li class="collection-header"><h6><b>Apoyo despacho (Problemas WIFI)</b></h6></li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>OAODKSAODASD</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+                <div id="wifi4" class="modal">
+                  <div class="modal-content">
+                    <ul class="collection with-header left-align">
+                      <li class="collection-header"><h6><b>Escalamiento (Problemas WIFI)</b></h6></li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>OAODKSAODASD</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s5 offset-s2"><a class="dropdown-button" data-beloworigin="true" data-activates='wifi-no' data-constrainWidth="false"><img class="responsive-img" style="max-width: 70px;" src="./img/wifi-no-icon.png"><p><b>NO<br/> NAVEGA</b></p></div></a>
+              <ul id='wifi-no' class='dropdown-content' style="width: 1!important;">
+                <li><a class="indigo-text text-darken-4 animated bounceIn"><b>NO NAVEGA</b></a></li>
+                <li class="divider"></li>
+                <li><a href="#wifi-no-1" class="indigo-text text-darken-4 waves-effect modal-trigger">Preguntas al Cliente</a></li>
+                <li><a href="#wifi-no-2" class="indigo-text text-darken-4 waves-effect modal-trigger">Check List</a></li>
+                <li><a href="#wifi-no-3" class="indigo-text text-darken-4 waves-effect modal-trigger">Apoyo despacho</a></li>
+                <li><a href="#wifi-no-4" class="indigo-text text-darken-4 waves-effect modal-trigger">Escalamiento</a></li>
+              </ul>
+              <div id="wifi-no-1" class="modal">
+                <div class="modal-content">
+                  <ul class="collection with-header left-align">
+                    <li class="collection-header"><h6><b>Preguntas al cliente (No Navega)</b></h6></li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>El inconveniente se presenta en todos los dispositivos o en dispositivos específicos</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Validar si la navegación es por Cable o por wi-fi</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Si es por wi-fi preguntar al usuario si los dispositivos están conectados a la red inalámbrica</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                </div>
+              </div>
+              <div id="wifi-no-2" class="modal">
+                <div class="modal-content">
+                  <ul class="collection with-header left-align">
+                    <li class="collection-header"><h6><b>Check list (No Navega)</b></h6></li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Validar que el equipo terminal esté encendido</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Hacer prueba y revisar si el equipo terminal está sincronizado (enganchado o con enlace).</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Si el equipo está no está sincronizado revisar red interna</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Reiniciar equipo terminal</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Si es ADSL, revisar si esta autenticado con una IP Pública.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Si es HFC, revisar si hay dirección IP.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Reiniciar CM</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Garantizar que modem esté entregando una dirección ip en la red local</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Validar que la dirección ip y mascara de red estén dentro del pool correcta</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Hacer ping a puerta de enlace</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Hacer pruebas con otros dispositivos</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Si es necesario probar la navegación con otros DNS.</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                </div>
+              </div>
+              <div id="wifi-no-3" class="modal">
+                <div class="modal-content">
+                  <ul class="collection with-header left-align">
+                    <li class="collection-header"><h6><b>Apoyo despacho (No Navega)</b></h6></li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Realizar pureba de parámetros.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Verificar puertos en CM.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Verificar puerto de plataforma.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Después de revisar y verificar que al año no es local sino remoto se escala a infraestructura.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Corregir problemas de configuración de puerto para los casos xdsl</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Revisar perfil LDAP</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Forzar en CM para los casos desenganchado.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Validar perfil de navegación.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Validar parámetros.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Validar estado del servicio.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Validar si el servicio es Hogares o Comercial.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Validar si el usuario tiene IP fija.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Realizar soporte para el restablecimiento del servicio con IP fija.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Cambiar IP de navegación.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Realizar reinicio remoto.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Apoyar en el cambio de equipo.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Enrutar a plataforma Acceso.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Reinicio de CM.</li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Cambio de equipo CM.</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                </div>
+              </div>
+              <div id="wifi-no-4" class="modal">
+                <div class="modal-content">
+                  <ul class="collection with-header left-align">
+                    <li class="collection-header"><h6><b>Escalamiento (No Navega)</b></h6></li>
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Escalar a infraestructura si hay parámetros fuera de los umbrales.</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                </div>
+              </div>
+              </div>
+              <div class="row">
+              <div class="col s5"><a class="dropdown-button" data-beloworigin="true" data-activates='wifi-low' data-constrainWidth="false"><img class="responsive-img" style="max-width: 70px;" src="./img/wifi-low-icon.png"><p><b>NAVEGACIÓN LENTA</b></p></a>
+                <ul id='wifi-low' class='dropdown-content' style="width: 1!important;">
+                  <li><a class="indigo-text text-darken-4 animated bounceIn"><b>NAVEGACIÓN LENTA</b></a></li>
+                  <li class="divider"></li>
+                  <li><a href="#wifi-low-1" class="indigo-text text-darken-4 waves-effect modal-trigger">Preguntas al Cliente</a></li>
+                  <li><a href="#wifi-low-2" class="indigo-text text-darken-4 waves-effect modal-trigger">Check List</a></li>
+                  <li><a href="#wifi-low-3" class="indigo-text text-darken-4 waves-effect modal-trigger">Apoyo despacho</a></li>
+                  <li><a href="#wifi-low-4" class="indigo-text text-darken-4 waves-effect modal-trigger">Escalamiento</a></li>
+                </ul>
+                <div id="wifi-low-1" class="modal">
+                  <div class="modal-content">
+                    <ul class="collection with-header left-align">
+                      <li class="collection-header"><h6><b>Preguntas al cliente (Navegacion Lenta)</b></h6></li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Validar si es por wi-fi o cable.</li>
+
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Cuantos equipos tiene conectados a la red</li>
+
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>La navegación Lenta es en páginas específicas</li>
+
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Es en algún horario específico</li>
+
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Si el problema es por Wifi, validar si el lugar donde se conecta tiene buena
+                      cobertura</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+                <div id="wifi-low-2" class="modal">
+                  <div class="modal-content">
+                    <ul class="collection with-header left-align">
+                      <li class="collection-header"><h6><b>Apoyo despacho (Navegación Lenta)</b></h6></li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Revisar ubicación CM, en caso de utilizar el servicio por  la red Wifi</li>
+
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Si la navegación es por cable, revisar y garantizar cable de red</li>
+
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Revisar y garantizar parámetros.</li>
+
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Validar que la fuente de poder corresponda al equipo terminal y garantizar que entregue el voltaje y la corriente adecuada.o</li>
+
+
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Garantizar navegación por cable de red.</li>
+
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Si es necesario hacer Site Survey de la red inalámbrica</li>
+
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Descartar equipos de usuario</li>
+
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Descartar y cerrar programas P2P (Ares, eMule, BitTorrent, Vuze, entre otros)</li>
+                  </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+                <div id="wifi-low-3" class="modal">
+                  <div class="modal-content">
+                    <ul class="collection with-header left-align">
+                      <li class="collection-header"><h6><b>Apoyo despacho (Navegación Lenta)</b></h6></li>
+
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Realizar prueba de Parámetros </li>
+
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Validar perfil configurado vs el perfil contratado</li>
+
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Reconfigurar red wifi, cambio de Canal, SSID y password.</li>
+
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Si aplica escalamiento documentar en la pagina de seguimiento</li>
+
+                    <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Hacer Prueba y verificar historial</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+                <div id="wifi-low-4" class="modal">
+                  <div class="modal-content">
+                    <ul class="collection with-header left-align">
+                      <li class="collection-header"><h6><b>Escalamiento (Navegación Lenta)</b></h6></li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>cuando se revisa con equipo de medida y entrega malos parámetros o se evidencia saturación de red.</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s5 offset-s2"><a class="dropdown-button" data-beloworigin="true" data-activates='wifi-inter' data-constrainWidth="false"><img class="responsive-img" style="max-width: 70px;" src="./img/wifi-inter-icon.png"><p><b>SERVICIO INTERMITENTE</b></p></a>
+                <ul id='wifi-inter' class='dropdown-content' style="width: 1!important;">
+                  <li><a class="indigo-text text-darken-4 animated bounceIn"><b>SERVICIO INTERMITENTE</b></a></li>
+                  <li class="divider"></li>
+                  <li><a href="#wifi-inter-1" class="indigo-text text-darken-4 waves-effect modal-trigger">Preguntas al Cliente</a></li>
+                  <li><a href="#wifi-inter-2" class="indigo-text text-darken-4 waves-effect modal-trigger">Check List</a></li>
+                  <li><a href="#wifi-inter-3" class="indigo-text text-darken-4 waves-effect modal-trigger">Apoyo despacho</a></li>
+                  <li><a href="#wifi-inter-4" class="indigo-text text-darken-4 waves-effect modal-trigger">Escalamiento</a></li>
+                </ul>
+                <div id="wifi-inter-1" class="modal">
+                  <div class="modal-content">
+                    <ul class="collection with-header left-align">
+                      <li class="collection-header"><h6><b>Preguntas al cliente (Servicio Intermitente)</b></h6></li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Validar el tipo de conexión (cable o Wi-fi)</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Validar el tipo de uso del servicio ( descartar conexiones dedicadas en otros Paises)</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>¿El inconveniente se presenta en todos los equipos?</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Desde cuando tiene el inconveniente? ¿La intermitencia se percibe en todo momento o en algunas horas específicas?</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>¿La intermitencia se percibe en paginas especificas</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+                <div id="wifi-inter-2" class="modal">
+                  <div class="modal-content">
+                    <ul class="collection with-header left-align">
+                      <li class="collection-header"><h6><b>Check list (Servicio Intermitente)</b></h6></li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Verificar conexiones internas y estado del equipo.</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Validar que los dispositivos del usurio se encuentren en buen estado.</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Verificar o pregunto qué tipos de dispositivos usa el usuario “PC TABLET, TV, CELULARES”.</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Numero de reinicios del CM ó CPE</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Revisar la Versión del Firmware del CPE</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Garantizar que la Fuente de Poder sea adecuada para el CPE o CM.</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Distancia entre él y los puntos donde se presenta la intermitencia con respecto del equipo CM O CPE.</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Validar estado de Tarjeta de red (NIC)</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Realizo prueba integrada del servicio</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Si es cobre verificar perfil de servicio VS distancia.</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Realizar Prueba a histórico de Vecinos</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Realizar prueba de navegación con dispositivos móvil del técnico.</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Garantizar el buen estado de la red (Cable en buen estado, conectorización correcta, torque adecuado en cada conector)</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Garantizar Parámetros Optimos</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+                <div id="wifi-inter-3" class="modal">
+                  <div class="modal-content">
+                    <ul class="collection with-header left-align">
+                      <li class="collection-header"><h6><b>Apoyo Despacho (Servicio Intermitente)</b></h6></li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Prueba de parámetros</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Configuración de CM O CPE SSID/ encriptación / canal</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Revisar histórico de los parámetros</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Cambio de equipo en caso de ser necesario</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Monitoreo técnico (15 min)</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+                <div id="wifi-inter-4" class="modal">
+                  <div class="modal-content">
+                    <ul class="collection with-header left-align">
+                      <li class="collection-header"><h6><b>Escalamiento (Servicio Intermitente)</b></h6></li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Se debe escalar cuando existen parámetros alarmados en Boca de TAP o cuando en la prueba integrada nos sugiere escalar a acceso.</li>
+                      <li class="collection-item valign-wrapper"><i class="material-icons blue-text text-darken-4 info-btn">info</i>Recuerde que antes de escalar se debe garantizar la red interna.</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.collapsible').collapsible();
+      $('.modal').modal();
+    });
+
+  </script>
+</body>
+
+</html>

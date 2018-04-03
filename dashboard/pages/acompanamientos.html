@@ -1,0 +1,781 @@
+<script src="js/general-values.js"></script>
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="#">Dashboard</a>
+  </li>
+  <li class="breadcrumb-item active">Acompañamientos</li>
+</ol>
+<div id="filter">
+  <!-- cont filtro mes -->
+</div>
+<!-- Area Chart
+<div class="card mb-3">
+	<div class="card-header">
+		<i class="fa fa-area-chart"></i> Seguimiento meses</div>
+	<div class="card-body">
+		<canvas id="myAreaChart" width="100%" height="30"></canvas>
+	</div>
+	<div class="card-footer small text-muted actualizated"></div>
+</div>
+-->
+<div class="row">
+  <!--
+	<div class="col-lg-6">
+		<div class="card mb-3">
+			<div class="card-header">
+				<i class="fa fa-bar-chart"></i> Matriz General</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-12 my-auto">
+						<canvas id="matrizBarChart"></canvas>
+					</div>
+				</div>
+			</div>
+			<div class="card-footer small text-muted actualizated"></div>
+		</div>
+	</div>
+	-->
+  <div class="col-lg-12">
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fa fa-table"></i> Servicios</div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <div class="octubre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>CUMPLIMIENTO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>107%</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>106%</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>107%</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>95%</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>107%</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>107%</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>104%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="noviembre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>% Cobertura </th>
+                  <th> ¿Cumple los requerimientos de Presentación Personal?</th>
+                  <th> ¿El asesor cuenta con todas sus herramientas de trabajo?</th>
+                  <th> ¿El asesor cumple con el protocolo de servicio?</th>
+                  <th> ¿El asesor es resolutivo frente a los procesos?</th>
+                  <th> Maneja la herramienta de una forma adecuada (General)</th>
+                  <th> Conoce las políticas del proceso (General)</th>
+                  <th> Conoce las Tipificaciones para cada transacción (General)</th>
+                  <th> Toma evidencias (especifico, Incidencias, Retención, ajustes, pqr, soporte técnico)</th>
+                  <th> Adjunta soportes (especifico, Incidencias, Retención, ajustes, pqr, soporte técnico)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>92%</td>
+                  <td>5,0</td>
+                  <td>5,0</td>
+                  <td>5,0</td>
+                  <td>4,9</td>
+                  <td>3,6</td>
+                  <td>4,3</td>
+                  <td>4,3</td>
+                  <td>4,5</td>
+                  <td>4,4</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>93%</td>
+                  <td>4,9</td>
+                  <td>4,8</td>
+                  <td>4,5</td>
+                  <td>4,9</td>
+                  <td>4,8</td>
+                  <td>4,8</td>
+                  <td>4,8</td>
+                  <td>4,7</td>
+                  <td>4,7</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>92%</td>
+                  <td>5,0</td>
+                  <td>4,5</td>
+                  <td>4,9</td>
+                  <td>4,3</td>
+                  <td>3,7</td>
+                  <td>3,5</td>
+                  <td>2,7</td>
+                  <td>4,5</td>
+                  <td>3,8</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>123%</td>
+                  <td>4,9</td>
+                  <td>4,7</td>
+                  <td>4,1</td>
+                  <td>4,3</td>
+                  <td>4,1</td>
+                  <td>4,1</td>
+                  <td>3,9</td>
+                  <td>4,2</td>
+                  <td>4,2</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>104%</td>
+                  <td>5,0</td>
+                  <td>4,9</td>
+                  <td>5,0</td>
+                  <td>5,0</td>
+                  <td>4,2</td>
+                  <td>4,1</td>
+                  <td>4,6</td>
+                  <td>5,0</td>
+                  <td>5,0</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>95%</td>
+                  <td>5,0</td>
+                  <td>5,0</td>
+                  <td>4,9</td>
+                  <td>5,0</td>
+                  <td>4,4</td>
+                  <td>4,0</td>
+                  <td>4,6</td>
+                  <td>5,0</td>
+                  <td>5,0</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>97%</td>
+                  <td>5,0</td>
+                  <td>4,9</td>
+                  <td>4,7</td>
+                  <td>4,8</td>
+                  <td>4,2</td>
+                  <td>4,3</td>
+                  <td>4,4</td>
+                  <td>4,7</td>
+                  <td>4,6</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="diciembre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>CUMPLIMIENTO</th>
+                  <th> ¿Cumple los requerimientos de Presentación Personal?</th>
+                  <th> ¿El asesor cuenta con todas sus herramientas de trabajo?</th>
+                  <th> ¿El asesor cumple con el protocolo de servicio?</th>
+                  <th> ¿El asesor es resolutivo frente a los procesos?</th>
+                  <th> Maneja la herramienta de una forma adecuada (General)</th>
+                  <th> Conoce las políticas del proceso (General)</th>
+                  <th> Conoce las Tipificaciones para cada transacción (General)</th>
+                  <th> Toma evidencias (especifico, Incidencias, Retención, ajustes, pqr, soporte técnico)</th>
+                  <th> Adjunta soportes (especifico, Incidencias, Retención, ajustes, pqr, soporte técnico)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>58%</td>
+                  <td>5,0</td>
+                  <td>5,0</td>
+                  <td>5,0</td>
+                  <td>5,0</td>
+                  <td>4,3</td>
+                  <td>4,5</td>
+                  <td>4,0</td>
+                  <td>4,4</td>
+                  <td>4,4</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>66%</td>
+                  <td>5,0</td>
+                  <td>4,3</td>
+                  <td>4,5</td>
+                  <td>4,9</td>
+                  <td>4,8</td>
+                  <td>4,5</td>
+                  <td>4,6</td>
+                  <td>4,4</td>
+                  <td>4,3</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>80%</td>
+                  <td>5,0</td>
+                  <td>4,5</td>
+                  <td>4,7</td>
+                  <td>4,8</td>
+                  <td>3,7</td>
+                  <td>3,0</td>
+                  <td>3,3</td>
+                  <td>4,7</td>
+                  <td>4,7</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>63%</td>
+                  <td>4,8</td>
+                  <td>4,8</td>
+                  <td>4,6</td>
+                  <td>4,8</td>
+                  <td>4,8</td>
+                  <td>4,6</td>
+                  <td>4,2</td>
+                  <td>4,8</td>
+                  <td>5,0</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>75%</td>
+                  <td>5,0</td>
+                  <td>5,0</td>
+                  <td>4,9</td>
+                  <td>4,9</td>
+                  <td>4,6</td>
+                  <td>4,6</td>
+                  <td>4,8</td>
+                  <td>5,0</td>
+                  <td>5,0</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>94%</td>
+                  <td>5,0</td>
+                  <td>5,0</td>
+                  <td>5,0</td>
+                  <td>4,7</td>
+                  <td>3,7</td>
+                  <td>3,9</td>
+                  <td>4,2</td>
+                  <td>4,8</td>
+                  <td>4,9</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>68%</td>
+                  <td>5,0</td>
+                  <td>4,8</td>
+                  <td>4,8</td>
+                  <td>4,9</td>
+                  <td>4,3</td>
+                  <td>4,3</td>
+                  <td>4,3</td>
+                  <td>4,6</td>
+                  <td>4,6</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="enero">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>CUMPLIMIENTO</th>
+                  <th> ¿Cumple los requerimientos de Presentación Personal?</th>
+                  <th> ¿El asesor cuenta con todas sus herramientas de trabajo?</th>
+                  <th> ¿El asesor cumple con el protocolo de servicio?</th>
+                  <th> ¿El asesor es resolutivo frente a los procesos?</th>
+                  <th> Maneja la herramienta de una forma adecuada (General)</th>
+                  <th> Conoce las políticas del proceso (General)</th>
+                  <th> Conoce las Tipificaciones para cada transacción (General)</th>
+                  <th> Toma evidencias (especifico, Incidencias, Retención, ajustes, pqr, soporte técnico)</th>
+                  <th> Adjunta soportes (especifico, Incidencias, Retención, ajustes, pqr, soporte técnico)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>34%</td>
+                  <td>5,0</td>
+                  <td>5,0</td>
+                  <td>4,9</td>
+                  <td>5,0</td>
+                  <td>4,2</td>
+                  <td>4,5</td>
+                  <td>4,1</td>
+                  <td>4,5</td>
+                  <td>4,5</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>27%</td>
+                  <td>4,9</td>
+                  <td>4,6</td>
+                  <td>4,3</td>
+                  <td>4,8</td>
+                  <td>4,7</td>
+                  <td>4,8</td>
+                  <td>4,7</td>
+                  <td>4,7</td>
+                  <td>4,6</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>45%</td>
+                  <td>5,0</td>
+                  <td>4,3</td>
+                  <td>4,8</td>
+                  <td>4,4</td>
+                  <td>4,1</td>
+                  <td>3,6</td>
+                  <td>3,6</td>
+                  <td>4,7</td>
+                  <td>4,5</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>41%</td>
+                  <td>4,8</td>
+                  <td>4,6</td>
+                  <td>4,5</td>
+                  <td>4,6</td>
+                  <td>4,4</td>
+                  <td>4,2</td>
+                  <td>3,9</td>
+                  <td>4,2</td>
+                  <td>4,2</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>24%</td>
+                  <td>5,0</td>
+                  <td>4,8</td>
+                  <td>4,8</td>
+                  <td>5,0</td>
+                  <td>4,5</td>
+                  <td>4,5</td>
+                  <td>4,7</td>
+                  <td>5,0</td>
+                  <td>5,0</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>47%</td>
+                  <td>5,0</td>
+                  <td>4,9</td>
+                  <td>4,9</td>
+                  <td>4,8</td>
+                  <td>4,2</td>
+                  <td>4,2</td>
+                  <td>4,6</td>
+                  <td>4,9</td>
+                  <td>4,9</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>35%</td>
+                  <td>4,9</td>
+                  <td>4,7</td>
+                  <td>4,7</td>
+                  <td>4,8</td>
+                  <td>4,4</td>
+                  <td>4,4</td>
+                  <td>4,3</td>
+                  <td>4,7</td>
+                  <td>4,6</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer small text-muted actualizated"></div>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fa fa-table"></i> B2C</div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <div class="octubre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>CUMPLIMIENTO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>92%</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>87%</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>86%</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>97%</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>115%</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>87%</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>92%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="noviembre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>% Cobertura </th>
+                  <th>Calificación Total</th>
+                  <th> Prepara</th>
+                  <th> Comprende</th>
+                  <th> Conecta</th>
+                  <th> Ofrece soluciones</th>
+                  <th> Cierra</th>
+                  <th> Concluye</th>
+                  <th> Contacta</th>
+                  <th> Venta cruzada</th>
+                  <th> Recomienda</th>
+                  <th> Agrega valor</th>
+                  <th> Valida</th>
+                  <th> Refuerza</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>77%</td>
+                  <td>3,1</td>
+                  <td>3,7</td>
+                  <td>2,9</td>
+                  <td>3,7</td>
+                  <td>3,0</td>
+                  <td>2,8</td>
+                  <td>2,9</td>
+                  <td>3,2</td>
+                  <td>3,2</td>
+                  <td>3,5</td>
+                  <td>2,9</td>
+                  <td>4,0</td>
+                  <td>4,0</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>70%</td>
+                  <td>3,1</td>
+                  <td>3,4</td>
+                  <td>2,8</td>
+                  <td>3,9</td>
+                  <td>3,3</td>
+                  <td>3,4</td>
+                  <td>3,4</td>
+                  <td>3,3</td>
+                  <td>3,2</td>
+                  <td>2,6</td>
+                  <td>2,1</td>
+                  <td>4,0</td>
+                  <td>4,0</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>74%</td>
+                  <td>3,1</td>
+                  <td>3,7</td>
+                  <td>2,8</td>
+                  <td>3,6</td>
+                  <td>2,9</td>
+                  <td>2,9</td>
+                  <td>3,1</td>
+                  <td>3,1</td>
+                  <td>2,4</td>
+                  <td>3,6</td>
+                  <td>2,8</td>
+                  <td>3,5</td>
+                  <td>4,0</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>48%</td>
+                  <td>3,2</td>
+                  <td>3,8</td>
+                  <td>3,1</td>
+                  <td>3,8</td>
+                  <td>3,2</td>
+                  <td>3,2</td>
+                  <td>3,3</td>
+                  <td>3,0</td>
+                  <td>2,8</td>
+                  <td>2,7</td>
+                  <td>1,8</td>
+                  <td>2,9</td>
+                  <td>2,5</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>36%</td>
+                  <td>3,2</td>
+                  <td>3,9</td>
+                  <td>2,9</td>
+                  <td>3,7</td>
+                  <td>3,2</td>
+                  <td>2,8</td>
+                  <td>3,0</td>
+                  <td>3,2</td>
+                  <td>2,7</td>
+                  <td>3,2</td>
+                  <td>1,6</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>44%</td>
+                  <td>3,3</td>
+                  <td>3,8</td>
+                  <td>3,2</td>
+                  <td>3,8</td>
+                  <td>3,4</td>
+                  <td>3,0</td>
+                  <td>3,2</td>
+                  <td>3,0</td>
+                  <td>3,0</td>
+                  <td>2,8</td>
+                  <td>2,1</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>64%</td>
+                  <td>3,1</td>
+                  <td>3,6</td>
+                  <td>2,9</td>
+                  <td>3,8</td>
+                  <td>3,2</td>
+                  <td>3,1</td>
+                  <td>3,1</td>
+                  <td>3,2</td>
+                  <td>3,0</td>
+                  <td>2,8</td>
+                  <td>2,2</td>
+                  <td>3,5</td>
+                  <td>3,5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="diciembre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer small text-muted actualizated"></div>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fa fa-table"></i> Empresas</div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <div class="octubre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>CUMPLIMIENTO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>86%</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>105%</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>92%</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>92%</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>99%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="noviembre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>% Cobertura </th>
+                  <th>Calificación Total</th>
+                  <th>Cierre</th>
+                  <th>Negociación y Manejo</th>
+                  <th>Conocimiento</th>
+                  <th>Prospección</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>72%</td>
+                  <td>3,3</td>
+                  <td>3,2</td>
+                  <td>3,3</td>
+                  <td>3,3</td>
+                  <td>3,3</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>96%</td>
+                  <td>3,4</td>
+                  <td>3,3</td>
+                  <td>3,3</td>
+                  <td>3,4</td>
+                  <td>3,4</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>85%</td>
+                  <td>3,7</td>
+                  <td>3,7</td>
+                  <td>3,6</td>
+                  <td>3,6</td>
+                  <td>3,8</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>91%</td>
+                  <td>3,6</td>
+                  <td>3,4</td>
+                  <td>3,6</td>
+                  <td>3,7</td>
+                  <td>3,7</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>91%</td>
+                  <td>3,6</td>
+                  <td>3,6</td>
+                  <td>3,6</td>
+                  <td>3,6</td>
+                  <td>3,7</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>87%</td>
+                  <td>3,7</td>
+                  <td>3,6</td>
+                  <td>3,7</td>
+                  <td>3,6</td>
+                  <td>3,7</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>89%</td>
+                  <td>3,5</td>
+                  <td>3,4</td>
+                  <td>3,5</td>
+                  <td>3,5</td>
+                  <td>3,6</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="diciembre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer small text-muted actualizated"></div>
+    </div>
+  </div>
+  <!--
+	<div class="col-lg-6">	
+		<div class="card mb-3">
+			<div class="card-header">
+				<i class="fa fa-bar-chart"></i> Digital MEV General</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-12 my-auto">
+						<canvas id="digitalBarChart"></canvas>
+					</div>
+				</div>
+			</div>
+			<div class="card-footer small text-muted actualizated"></div>
+		</div>
+	</div>
+	-->
+</div>
+<!-- Custom scripts for this page-->
+<script src="js/sb-admin-charts.js"></script>
+<script src="js/table-colors.js"></script>
+<script src="js/sb-admin-datatables.js"></script>
+<script src="js/fecha-act.js"></script>

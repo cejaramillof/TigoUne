@@ -1,0 +1,70 @@
+@import 'init.scss';
+
+$blue: rgb(0, 46, 110);
+$ebonyBlue: rgb(0, 27, 64);
+$sky: rgb(27, 151, 215);
+
+$blackA: rgba(0, 0, 0, 1);
+$blackB: rgba(0, 0, 0, 0.7);
+$blackC: rgba(0, 0, 0, 0.5);
+$blackD: rgba(0, 0, 0, 0.3);
+
+$whiteA: rgba(255, 255, 255, 1);
+$whiteB: rgba(255, 255, 255, 0.7);
+
+
+body.login {
+  /* IE10 Consumer Preview */
+  background-image: -ms-linear-gradient(top, #002852 0%, #002E6E 100%);
+
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(top, #002852 0%, #002E6E 100%);
+
+  /* Opera */
+  background-image: -o-linear-gradient(top, #002852 0%, #002E6E 100%);
+
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #002852), color-stop(1, #002E6E));
+
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(top, #002852 0%, #002E6E 100%);
+
+  /* W3C Markup, IE10 Release Preview */
+  background-image: linear-gradient(to bottom, #002852 0%, #002E6E 100%);
+}
+
+body.login div#login{
+  width: 280px;
+}
+
+body.login div#login h1 a {
+  width: 280px;
+  -webkit-background-size: 233px;
+  background-size: 233px;
+  background-position: center center;
+}
+
+body.login div#login form#loginform {
+  @include border-radius(2px);
+  padding: 20px;
+}
+
+
+body.login div#login form#loginform input {
+  font-size: 1rem;
+}
+
+body.login div#login p#nav {
+  display: none;
+}
+
+body.login div#login p#nav a {
+  color: white;
+  &:hover {
+    color: #00a0d2;
+  }
+}
+
+body.login div#login p#backtoblog {
+  display: none;
+}

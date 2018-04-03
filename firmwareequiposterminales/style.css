@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "icon";
+  src: url("font/icon.ttf") format("truetype"); }
+@font-face {
+  font-family: "Cronos Pro";
+  src: url("font/cronosregular.ttf") format("truetype"); }
+@font-face {
+  font-family: "Open Sans";
+  src: url("font/OpenSans-Regular.ttf") format("truetype"); }
+body {
+  max-width: 768px;
+  font-family: "Open Sans";
+  margin: 0 auto;
+  padding: 20px; }
+
+.inputMaterial {
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 768px;
+  background: #FFF;
+  box-sizing: border-box;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+.material {
+  position: relative;
+  padding: 0;
+  margin: 5px;
+  border: none;
+  overflow: visible; }
+  .material input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 10px 8px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #DDD;
+    font-size: 120%;
+    outline: none;
+    cursor: text; }
+    .material input::-webkit-input-placeholder {
+      transition: color 300ms ease; }
+    .material input:not(:focus)::-webkit-input-placeholder {
+      color: transparent; }
+  .material hr {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 2px;
+    border: none;
+    background: #10357f;
+    font-size: 1px;
+    will-change: transform, visibility;
+    transition: all 200ms ease-out;
+    transform: scaleX(0);
+    visibility: hidden;
+    z-index: 10; }
+  .material input:focus ~ hr {
+    transform: scaleX(1);
+    visibility: visible; }
+  .material label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 120%;
+    color: #10357f;
+    transform-origin: 0 -150%;
+    transition: transform 300ms ease;
+    pointer-events: none; }
+  .material input:focus ~ label,
+  .material input:valid ~ label {
+    transform: scale(0.6); }
+
+.tableCodes {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  background: white;
+  border: 0;
+  text-align: left;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  .tableCodes td, .tableCodes th {
+    padding-left: 20px;
+    box-sizing: border-box;
+    vertical-align: middle; }
+  .tableCodes tr {
+    border-bottom: 1px solid #10357f;
+    height: 40px; }
+  .tableCodes thead {
+    background: #10357f;
+    color: white; }
+
+.imgTD {
+  text-align: center; }
+
+div.pager {
+  text-align: center;
+  margin: 1em 0; }
+
+div.pager span {
+  display: inline-block;
+  width: 1.8em;
+  height: 1.8em;
+  line-height: 1.8;
+  text-align: center;
+  cursor: pointer;
+  background: #d3d3d3;
+  color: #10357f;
+  margin-right: 0.5em;
+  border-radius: 100%; }
+
+div.pager span.active {
+  background: #10357f;
+  color: #fff;
+  border-radius: 100%; }
+
+.imgCode {
+  vertical-align: middle;
+  width: 70%;
+  cursor: pointer; }
+
+.buttonClose {
+  font-family: "Open Sans";
+  margin-left: 98%;
+  font-size: 36px;
+  line-height: 8px;
+  height: 20px;
+  width: 16px; }
+
+.state {
+  position: absolute;
+  top: 0;
+  left: -100vw; }
+  .state:checked ~ .content {
+    transform: none; }
+  .state:checked ~ .backdrop {
+    bottom: 0;
+    opacity: 1;
+    z-index: 1;
+    transition: .3s opacity ease-in-out; }
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 0;
+  padding: 0 20px;
+  z-index: 999; }
+  .lightbox .content {
+    flex-direction: column;
+    overflow: auto;
+    position: relative;
+    z-index: 2;
+    top: -10px;
+    max-width: 500px;
+    max-height: 65vh;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    transform: translateY(-200%);
+    transition: .6s transform ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.1); }
+  .lightbox .backdrop {
+    cursor: pointer;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 768px;
+    bottom: 100%;
+    max-height: 3900px;
+    left: 0;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: .3s opacity ease-in-out, bottom .1s .3s; }
+
+.buttonClose {
+  cursor: pointer; }
+
+.back {
+  cursor: pointer;
+  background: #43c7f4;
+  width: 20%;
+  border-radius: 15px;
+  height: 30px;
+  text-align: center;
+  float: left;
+  margin-left: 40%;
+  margin-right: 40%;
+  line-height: 25px;
+  color: #10357f;
+  margin-top: 50px; }
+
+/*# sourceMappingURL=style.css.map */

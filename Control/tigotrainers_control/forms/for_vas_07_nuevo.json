@@ -1,0 +1,2471 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Fecha de la actividad",
+      "slug": "activity_date",
+      "type": "date",
+      "flow": 2,
+      "properties": {
+        "required": true,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Canal Trabajado",
+      "slug": "channel",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Agentes Comerciales",
+          "option_value": "agentes comerciales",
+          "flow": 3
+        },
+        {
+          "option_key": "AUR",
+          "option_value": "aur y contructores",
+          "flow": 87
+        },
+        {
+          "option_key": "Centro de Experiencia",
+          "option_value": "cde",
+          "flow": 27
+        },
+        {
+          "option_key": "CDVS",
+          "option_value": "cvds",
+          "flow": 27
+        },
+        {
+          "option_key": "Contact Center SAC",
+          "option_value": "Contact Center SAC",
+          "flow": 68
+        },
+        {
+          "option_key": "Contact Center - Soporte Técnico",
+          "option_value": "Contact Center - Soporte Técnico",
+          "flow": 68
+        },
+        {
+          "option_key": "Contact Center - Televentas Inbound",
+          "option_value": "Contact Center - Televentas Inbound",
+          "flow": 68
+        },
+        {
+          "option_key": "Contact Center - Televentas Outbound",
+          "option_value": "Contact Center - Televentas Outbound",
+          "flow": 68
+        },
+        {
+          "option_key": "Contact Center - Retención",
+          "option_value": "Contact Center - Retención",
+          "flow": 68
+        },
+        {
+          "option_key": "Distribuidores",
+          "option_value": "dealer",
+          "flow": 48
+        },
+        {
+          "option_key": "Fuerza de Venta Directa",
+          "option_value": "fvd",
+          "flow": 3
+        },
+        {
+          "option_key": "Retail",
+          "option_value": "retail",
+          "flow": 3
+        },
+        {
+          "option_key": "PAP",
+          "option_value": "pap",
+          "flow": 3
+        },
+        {
+          "option_key": "Puntos Fijos",
+          "option_value": "puntos fijos",
+          "flow": 3
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Código POS / Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 4,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Cédula del asesor",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 5,
+      "properties": {
+        "required": true,
+        "validate": "cc_id"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Nombre del asesor",
+      "slug": "asesor_name",
+      "description": "<strong>Nombre del asesor: </strong>Marcar nombres y apellidos completos.<p>Ejemplo: MARIA ANDREA PEREZ ALVEAR</p>",
+      "type": "text",
+      "flow": 6,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Número móvil del asesor",
+      "slug": "asesor_msisdn",
+      "type": "number",
+      "flow": 7,
+      "properties": {
+        "required": true,
+        "validate": "cellphone_number"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Nombre del jefe inmediato del asesor",
+      "slug": "asesor_boss_name",
+      "description": "<strong>Nombre del jefe inmediato del asesor: </strong>Marcar nombres y apellidos completos.<p>Ejemplo: MARIA ANDREA PEREZ ALVEAR</p>",
+      "type": "text",
+      "flow": 9,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Antigüedad del asesor en el cargo",
+      "slug": "asesor_antiquity",
+      "type": "unique_option",
+      "flow": 47,
+      "options": [
+        {
+          "option_key": "Menos de 3 meses",
+          "option_value": "Menos de 3 meses"
+        },
+        {
+          "option_key": "De 3 a 6 meses",
+          "option_value": "De 3 a 6 meses"
+        },
+        {
+          "option_key": "Más de 6 meses",
+          "option_value": "Más de 6 meses"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 10,
+      "title": "1. Prepara: ¿Cumple los requerimientos de Presentación Personal?",
+      "slug": "mac_1",
+      "description": "<p><strong>1. Prepara: &iquest;Cumple los requerimientos de Presentaci&oacute;n Personal?</strong></p><ul><li>Uniforme completo, adecuado y aseado (Camisa, zapatos, pantalon)</li><li>Presentaci&oacute;n del cabello / Barba</li><li>U&ntilde;as arregladas</li><li>Accesorios adecuados con la presentaci&oacute;n</li></ul>",
+      "type": "boolean_option",
+      "flow": 11,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 11,
+      "title": "2. Prepara: ¿El asesor comercial cuenta con todas sus herramientas de trabajo?",
+      "slug": "mac_2",
+      "description": "<p><strong>2. Prepara:</strong> &iquest;El asesor comercial cuenta con todas sus herramientas de trabajo?</p><ul><li>Conocimiento Meta Comercial / Ventas Ejecutadas</li><li>TigoUne Trainers / ME Virtual</li><li>Carnet de identificaci&oacute;n</li><li>Celular o Smarphone o Tablet o equipo computo</li><li>Material publicitaria o Merchandising</li><li>Aplicaciones de ingreso descargadas y funcionando</li><li>Promociones y focos vigentes</li></ul>",
+      "type": "boolean_option",
+      "flow": 12,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 12,
+      "title": "3. Conecta: ¿Aborda a los clientes?",
+      "slug": "mac_3",
+      "description": "<p><strong>3. Conecta:</strong> &iquest;Aborda a los clientes?</p><p>Demuestra actitud, seguridad e identificaci&oacute;n de diferentes perfiles, &nbsp;sonr&iacute;e, realiza contacto visual.</p>",
+      "type": "boolean_option",
+      "flow": 13,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 13,
+      "title": "4. Conecta:  ¿Realiza preguntas poderosas para atraer a los clientes?",
+      "slug": "mac_4",
+      "description": "<p><strong>4. Conecta:</strong> &iquest;Realiza preguntas poderosas para atraer a los clientes?</p><p>Aplica las preguntas poderosas entregadas en el MAC o innova en la creaci&oacute;n de sus propias preguntas poderosas.</p>",
+      "type": "boolean_option",
+      "flow": 14,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 14,
+      "title": "5. Comprende: ¿Indaga a su cliente con minimo (3) preguntas, identifica su motivo de compra, escucha y parafrasea?",
+      "slug": "mac_5",
+      "description": "<p><strong>5. Comprende:</strong> ¿Indaga a su cliente con minimo (3) preguntas, identifica su motivo de compra, escucha y parafrasea?</p><p>Las preguntas de indagaci&oacute;n pueden desarrollarse alrededor de todo el proceso de contacto con el cliente.</p>",
+      "type": "range_option",
+      "flow": 15,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 15,
+      "title": "6. Convence: ¿Utiliza la estructura:  Característica - Conector - Beneficio?",
+      "slug": "mac_6",
+      "description": "<p><strong>6. Convence:</strong> ¿Utiliza la estructura: &nbsp;Caracter&iacute;stica - Conector - Beneficio?</p><p>Une las caracteristicas de los productos con el beneficio que representan para el usuario.</p>",
+      "type": "boolean_option",
+      "flow": 16,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 16,
+      "title": "7. Convence: ¿Cuenta los (3) principales beneficios de la oferta definida para el cliente?",
+      "slug": "mac_7",
+      "description": "<p><strong>7. Convence:</strong> ¿Cuenta los (3) principales beneficios de la oferta definida para el cliente?</p><p>Menciona (3) beneficio claves para el cliente.</p>",
+      "type": "range_option",
+      "flow": 17,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 17,
+      "title": "8. Convence: ¿Neutraliza y controla las objeciones que le presenta el usuario?",
+      "slug": "mac_8",
+      "description": "",
+      "type": "range_option",
+      "flow": 18,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 18,
+      "title": "9. Cierra: ¿Realiza entre (1) y (3) frases o intentos de cierre?",
+      "slug": "mac_9",
+      "description": "",
+      "type": "range_option",
+      "flow": 19,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 19,
+      "title": "10. Cierra: ¿Concluye la venta?",
+      "slug": "mac_10",
+      "description": "<p><strong>10. Cierra: ¿Concluye la venta?</strong></p><p><strong>Fijo</strong></p><ul><li>Da la bienvenida y repasa beneficios</li><li>Explica el proceso de factura</li><li>Explica factura web</li><li>Explica Une play + P&aacute;gina de TigoUne + L&iacute;nea de atenci&oacute;n</li><li>T&eacute;rminos y condiciones&nbsp;</li></ul><p><strong>M&oacute;vil</strong></p><ul><li>Da la bienvenida y repasa beneficios</li><li>Configura el SP e instala Tigo Shop &ndash; Mi Tigo</li><li>Se gestiona la documentacion de la venta</li><li>T&eacute;rminos y condiciones</li><li>Adicionales como: Smart apps + Pagina de Tigo</li></ul>",
+      "type": "range_option",
+      "flow": 20,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 20,
+      "title": "11. Contacto cliente: ¿Solicita referidos, intercambia contacto con el cliente?",
+      "slug": "mac_11",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 45,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 45,
+      "title": "Duración del entrenamiento (minutos)",
+      "slug": "training_time",
+      "type": "range_option",
+      "flow": 21,
+      "options": {
+        "min_value": 20,
+        "max_value": 480,
+        "steps": 10
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 21,
+      "title": "Observaciones",
+      "description": "",
+      "type": "title_group",
+      "flow": 22
+    },
+    {
+      "id": 22,
+      "title": "Según el paso \"Prepara\", aclare con qué items de presentación personal no cumplió el asesor.",
+      "slug": "field_notes_prepara_items",
+      "type": "textarea",
+      "flow": 23,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 23,
+      "title": "Según el paso \"Prepara\", aclare con qué herramientas de trabajo no cuenta el asesor.",
+      "slug": "field_notes_prepara_herramientas",
+      "type": "textarea",
+      "flow": 24,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 24,
+      "title": "Según el paso \"Concluye\", aclare qué items le hicieron falta al asesor.",
+      "slug": "field_notes_concluye_items",
+      "type": "textarea",
+      "flow": 25,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 25,
+      "title": "Si aplica, Explique por qué el acompañamiento tardó más de 60 minutos.",
+      "slug": "field_notes_exceeded_time",
+      "type": "textarea",
+      "flow": 26,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 26,
+      "title": "Plan de Acción",
+      "slug": "basic_training_module",
+      "description": "<p><strong>PLAN DE ACCI&Oacute;N</strong></p><p>El evaluador deber&aacute; escoger uno o varios de los siguientes planes de acci&oacute;n a los cuales se les har&aacute; seguimiento posteriormente, tenga presente las observaciones de cada plan para marcarlo adecuadamente.</p><p><strong>Role Playing en sitio:</strong> Se realizar&aacute; role playing en terreno con el asesor en el momento del acompa&ntilde;amiento.</p><p><strong>Programar nuevo acompa&ntilde;amiento:</strong>&nbsp;<span style=\"color: #002e6e;\">El asesor tiene la actitud, pero debe fortalecer habilidades.</span> Se programar&aacute; nuevo acompa&ntilde;amiento cuando el asesor requiere seguimiento y fortalecimiento de sus habilidades, conoce como funciona el MAC pero tiene oportunidades para aplicarlo.</p><p><strong>Alerta a L&iacute;der/Ejecutivo:</strong> <span style=\"color: #002e6e;\">El asesor no tiene la actitud correcta, pero tiene las habilidades.</span> Aplica cuando el asesor comercial requiere seguimiento de su lider y ejecutivo del canal, tiene potencial pero no presenta una buena actitud o no desea implementar el MAC.</p><p><strong>Alerta a Contratista/Canal:</strong>&nbsp;<span style=\"color: #002e6e;\">El asesor no tiene la actitud correcta, y tampoco evidencia habilidades.</span> Aplica cuando el asesor comercial no tiene una buena ejecuci&oacute;n del MAC y tampoco tiene una buena actitud en la aplicaci&oacute;n del mismo.</p><p><strong>Programar entrenamiento en sala:</strong>&nbsp;Implementamos este plan de acci&oacute;n cuando el asesor no tiene una buena ejecucion del MAC y aparte de reforzar habilidades requiere fortalecer conocimientos del mismo.</p><p><strong>Socios de aprendizaje:</strong>&nbsp;Asesores de buena ejecuci&oacute;n del MAC. Se utiliza este plan cuando el asesor comercial presenta una buena ejecucion del MAC y una buena actitud frente al mismo, estos asesores serviran de embajadores del MAC en nuestras regionales.</p>",
+      "type": "multiple_option",
+      "flow": 67,
+      "options": [
+        {
+          "option_key": "Role Playing en sitio",
+          "option_value": "Role Playing en sitio"
+        },
+        {
+          "option_key": "Programar nuevo acompañamiento",
+          "option_value": "Programar nuevo acompañamiento"
+        },
+        {
+          "option_key": "Alerta a Líder/Ejecutivo",
+          "option_value": "Alerta a Líder/Ejecutivo"
+        },
+        {
+          "option_key": "Alerta a Contratista/Canal",
+          "option_value": "Alerta a Contratista/Canal"
+        },
+        {
+          "option_key": "Programar entrenamiento en sala",
+          "option_value": "Programar entrenamiento en sala"
+        },
+        {
+          "option_key": "Socios de aprendizaje",
+          "option_value": "Socios de aprendizaje"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 27,
+      "title": "Código POS / Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 28,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 28,
+      "title": "Cédula del asesor",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 29,
+      "properties": {
+        "required": true,
+        "validate": "cc_id"
+      }
+    },
+    {
+      "id": 29,
+      "title": "Nombre del asesor",
+      "description": "<strong>Nombre del asesor: </strong>Marcar nombres y apellidos completos.<p>Ejemplo: MARIA ANDREA PEREZ ALVEAR</p>",
+      "slug": "asesor_name",
+      "type": "text",
+      "flow": 30,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 30,
+      "title": "Número móvil del asesor",
+      "slug": "asesor_msisdn",
+      "type": "number",
+      "flow": 31,
+      "properties": {
+        "required": true,
+        "validate": "cellphone_number"
+      }
+    },
+    {
+      "id": 31,
+      "title": "Nombre del jefe inmediato del asesor",
+      "slug": "asesor_boss_name",
+      "description": "<strong>Nombre del jefe inmediato del asesor: </strong>Marcar nombres y apellidos completos.<p>Ejemplo: MARIA ANDREA PEREZ ALVEAR</p>",
+      "type": "text",
+      "flow": 33,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 33,
+      "title": "Antigüedad del asesor en el cargo",
+      "slug": "asesor_antiquity",
+      "type": "unique_option",
+      "flow": 46,
+      "options": [
+        {
+          "option_key": "Menos de 3 meses",
+          "option_value": "Menos de 3 meses"
+        },
+        {
+          "option_key": "De 3 a 6 meses",
+          "option_value": "De 3 a 6 meses"
+        },
+        {
+          "option_key": "Más de 6 meses",
+          "option_value": "Más de 6 meses"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 34,
+      "title": "1. Prepara: ¿Cumple los requerimientos de Presentación Personal?",
+      "slug": "mac_1",
+      "description": "<p><strong>1. Prepara: &iquest;Cumple los requerimientos de Presentaci&oacute;n Personal?</strong></p><ul><li>Uniforme completo, adecuado y aseado (Camisa, zapatos, pantalon)</li><li>Presentaci&oacute;n del cabello / Barba</li><li>U&ntilde;as arregladas</li><li>Accesorios adecuados con la presentaci&oacute;n</li></ul>",
+      "type": "boolean_option",
+      "flow": 35,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 35,
+      "title": "2. Prepara: ¿El asesor comercial cuenta con todas sus herramientas de trabajo?",
+      "slug": "mac_2",
+      "description": "<p><strong>2. Prepara:</strong> &iquest;El asesor comercial cuenta con todas sus herramientas de trabajo?</p><ul><li>Conocimiento Meta Comercial / Ventas Ejecutadas</li><li>TigoUne Trainers / ME Virtual</li><li>Carnet de identificaci&oacute;n</li><li>Celular o Smarphone o Tablet o equipo computo</li><li>Material publicitaria o Merchandising</li><li>Aplicaciones de ingreso descargadas y funcionando</li><li>Promociones y focos vigentes</li></ul>",
+      "type": "boolean_option",
+      "flow": 36,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 36,
+      "title": "3. Conecta: ¿Genera conexión con los clientes dando una calurosa bienvenida?",
+      "slug": "mac_3",
+      "description": "<p><strong>3. Conecta:</strong> &iquest;Aborda a los clientes?</p><p>Demuestra actitud, seguridad e identificaci&oacute;n de diferentes perfiles, &nbsp;sonr&iacute;e, realiza contacto visual.</p>",
+      "type": "boolean_option",
+      "flow": 38,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 38,
+      "title": "4. Comprende: ¿Indaga a su cliente con minimo (3) preguntas, identifica su motivo de compra, escucha y parafrasea?",
+      "slug": "mac_5",
+      "description": "<p><strong>4. Comprende:</strong> ¿Indaga a su cliente con minimo (3) preguntas, identifica su motivo de compra, escucha y parafrasea?</p><p>Las preguntas de indagaci&oacute;n pueden desarrollarse alrededor de todo el proceso de contacto con el cliente.</p>",
+      "type": "range_option",
+      "flow": 39,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 39,
+      "title": "5. Convence: ¿Utiliza la estructura:  Característica - Conector - Beneficio?",
+      "slug": "mac_6",
+      "description": "<p><strong>5. Convence:</strong> ¿Utiliza la estructura: &nbsp;Caracter&iacute;stica - Conector - Beneficio?</p><p>Une las caracteristicas de los productos con el beneficio que representan para el usuario.</p>",
+      "type": "boolean_option",
+      "flow": 40,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 40,
+      "title": "6. Convence: ¿Cuenta los (3) principales beneficios de la oferta definida para el cliente?",
+      "slug": "mac_7",
+      "description": "<p><strong>6. Convence:</strong> ¿Cuenta los (3) principales beneficios de la oferta definida para el cliente?</p><p>Menciona (3) beneficio claves para el cliente.</p>",
+      "type": "range_option",
+      "flow": 41,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 41,
+      "title": "7. Convence: ¿Neutraliza y controla las objeciones que le presenta el usuario?",
+      "slug": "mac_8",
+      "description": "",
+      "type": "range_option",
+      "flow": 42,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 42,
+      "title": "8. Cierra: ¿Realiza entre (1) y (3) frases o intentos de cierre?",
+      "slug": "mac_9",
+      "description": "",
+      "type": "range_option",
+      "flow": 43,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 43,
+      "title": "9. Concluye.",
+      "slug": "mac_10",
+      "description": "<p><strong>10. Concluye:</strong></p><p><strong>Fijo</strong></p><ul><li>Da la bienvenida y repasa beneficios</li><li>Explica el proceso de factura</li><li>Explica factura web</li><li>Explica Une play + P&aacute;gina de TigoUne + L&iacute;nea de atenci&oacute;n</li><li>T&eacute;rminos y condiciones&nbsp;</li></ul><p><strong>M&oacute;vil</strong></p><ul><li>Da la bienvenida y repasa beneficios</li><li>Configura el SP e instala Tigo Shop &ndash; Mi Tigo</li><li>Se gestiona la documentacion de la venta</li><li>T&eacute;rminos y condiciones</li><li>Adicionales como: Smart apps + Pagina de Tigo</li></ul>",
+      "type": "range_option",
+      "flow": 44,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 44,
+      "title": "10. Contacto cliente: ¿Solicita referidos, intercambia contacto con el cliente?",
+      "slug": "mac_11",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 45,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 46,
+      "title": "Presencia de clientes",
+      "slug": "client_present",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 34,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 47,
+      "title": "Presencia de clientes",
+      "slug": "client_present",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 10,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 48,
+      "title": "Tipo de asesor",
+      "slug": "asesor_tipo",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Asesor Fuerza de venta Directa",
+          "option_value": "fvd",
+          "flow": 3
+        },
+        {
+          "option_key": "Asesor TAT",
+          "option_value": "tat",
+          "flow": 131
+        },
+        {
+          "option_key": "PDA/PDV",
+          "option_value": "pda/pdv",
+          "flow": 144
+        },
+        {
+          "option_key": "Corresponsal",
+          "option_value": "corresponsal",
+          "flow": 27
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 66,
+      "title": "Duración del entrenamiento (minutos)",
+      "slug": "training_time",
+      "type": "range_option",
+      "flow": 67,
+      "options": {
+        "min_value": 20,
+        "max_value": 480,
+        "steps": 10
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 67,
+      "title": "Otras Observaciones",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": "_submit",
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 68,
+      "title": "Código POS / Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 69,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 69,
+      "title": "Cédula del asesor",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 70,
+      "properties": {
+        "required": true,
+        "validate": "cc_id"
+      }
+    },
+    {
+      "id": 70,
+      "title": "Nombre del asesor",
+      "slug": "asesor_name",
+      "type": "text",
+      "flow": 71,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 71,
+      "title": "Número móvil del asesor",
+      "slug": "asesor_msisdn",
+      "type": "number",
+      "flow": 72,
+      "properties": {
+        "required": true,
+        "validate": "cellphone_number"
+      }
+    },
+    {
+      "id": 72,
+      "title": "Nombre del jefe inmediato del asesor",
+      "slug": "asesor_boss_name",
+      "type": "text",
+      "flow": 73,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 73,
+      "title": "Antigüedad del asesor en el cargo",
+      "slug": "asesor_antiquity",
+      "type": "unique_option",
+      "flow": 74,
+      "options": [
+        {
+          "option_key": "Menos de 3 meses",
+          "option_value": "Menos de 3 meses"
+        },
+        {
+          "option_key": "De 3 a 6 meses",
+          "option_value": "De 3 a 6 meses"
+        },
+        {
+          "option_key": "Más de 6 meses",
+          "option_value": "Más de 6 meses"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 74,
+      "title": "Piloto",
+      "slug": "Piloto",
+      "type": "unique_option",
+      "flow": 75,
+      "options": [
+        {
+          "option_key": "Entrada",
+          "option_value": "Entrada"
+        },
+        {
+          "option_key": "Salida",
+          "option_value": "Salida"
+        },
+        {
+          "option_key": "SAC",
+          "option_value": "SAC"
+        },
+        {
+          "option_key": "Técnicos",
+          "option_value": "Técnicos"
+        },
+        {
+          "option_key": "Click To Call",
+          "option_value": "Click To Call"
+        },
+        {
+          "option_key": "Chat",
+          "option_value": "Chat"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 75,
+      "title": "Tipo de acompañamiento",
+      "slug": "tipo_actividad",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "En sitio",
+          "option_value": "En sitio",
+          "flow": 76
+        },
+        {
+          "option_key": "Escucha de llamada",
+          "option_value": "Escucha de llamada",
+          "flow": 163
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 76,
+      "title": "Prepara: ¿Demuestra conocimiento de las ofertas y planes ofrecidos al cliente?",
+      "slug": "mac_1",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 77,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+	{
+      "id": 77,
+      "title": "Prepara: ¿Demuestra conocimiento de los procesos y los pasos a seguir en el momento de la venta?",
+      "slug": "mac_2",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 78,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 78,
+      "title": "Prepara: Tiene documentado sus clientes y potenciales, asi como sus ventas en curso",
+      "slug": "mac_3",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 79,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 79,
+      "title": "3. Conecta: genera conexión con los clientes, dando un caluroso y natural saludo",
+      "slug": "mac_4",
+      "description": "",
+	  "type": "boolean_option",
+      "flow": 80,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 80,
+      "title": "4.  Comprende: Indaga a su cliente con minimo (3) preguntas, identifica su motivo de compra, escucha y parafrasea  (Las preguntas de indgación pueden desarrollarse alrededor de todo el proceso de contacto con el cliente)",
+      "slug": "mac_5",
+      "description": "",
+	  "type": "range_option",
+      "flow": 81,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 81,
+      "title": "5. Convence: Utiliza la estructura:  Característica - Conector - Beneficio. (Une las caracteristicas de los productos con el beneficio que representan para el usuario según las necesidades indagadas al usuario)",
+      "slug": "mac_6",
+      "description": "",
+	  "type": "boolean_option",
+      "flow": 82,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 82,
+      "title": "6. Convence: Cuenta los (3) principales beneficios de la oferta definida para el cliente (Menciona (3) beneficio claves para el cliente) ",
+      "slug": "mac_7",
+      "description": "",
+	  "type": "range_option",
+      "flow": 83,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 83,
+      "title": "7. Convence:  Neutraliza y controla las objeciones que le presenta el usuario (hace un adecuado manejo de objeciones sin entrar en controversias con el usuario y dando a conocer argumentos validos)",
+      "slug": "mac_8",
+      "description": "",
+	  "type": "range_option",
+      "flow": 84,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 84,
+      "title": "8. Cierra: realiza entre (1) y (3) frases o intentos de cierre",
+      "slug": "mac_9",
+      "description": "",
+	  "type": "range_option",
+      "flow": 86,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 86,
+      "title": "9. Concluye: ¿Concluye la venta?",
+      "slug": "mac_10",
+      "description": "<p><strong>10. Cierra: ¿Concluye la venta?</strong></p><p><strong>Fijo</strong></p><ul><li>Da la bienvenida y repasa beneficios</li><li>Explica el proceso de factura</li><li>Explica factura web</li><li>Explica Une play + P&aacute;gina de TigoUne + L&iacute;nea de atenci&oacute;n</li><li>T&eacute;rminos y condiciones&nbsp;</li></ul><p><strong>M&oacute;vil</strong></p><ul><li>Da la bienvenida y repasa beneficios</li><li>Configura el SP e instala Tigo Shop &ndash; Mi Tigo</li><li>Se gestiona la documentacion de la venta</li><li>T&eacute;rminos y condiciones</li><li>Adicionales como: Smart apps + Pagina de Tigo</li></ul>",
+      "type": "range_option",
+      "flow": 160,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 160,
+      "title": "10.  Contacta : Solicita referidos y/o intercambia contacto con el cliente (Entrega sus datos y los pide al cliente)",
+      "slug": "mac_11",
+      "description": "",
+	  "type": "boolean_option",
+      "flow": 161,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 161,
+      "title": "11. Contacta: Hace seguimiento a sus pedidos y/o clientes potenciales (referidos)",
+      "slug": "mac_12",
+      "description": "",
+	  "type": "boolean_option",
+      "flow": 162,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 162,
+      "title": "12. Procesos: El asesor perfecciona el contrato (Condiciones, y terminos del contrato) y menciona guiones legales",
+      "slug": "mac_13",
+      "description": "",
+	  "type": "boolean_option",
+      "flow": 66,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 163,
+      "title": "Prepara: ¿Demuestra conocimiento de las ofertas y planes ofrecidos al cliente?",
+      "slug": "mac_1",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 164,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+	{
+      "id": 164,
+      "title": "Prepara: ¿Demuestra conocimiento de los procesos y los pasos a seguir en el momento de la venta?",
+      "slug": "mac_2",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 166,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 166,
+      "title": "3. Conecta: genera conexión con los clientes, dando un caluroso y natural saludo",
+      "slug": "mac_4",
+      "description": "",
+	  "type": "boolean_option",
+      "flow": 167,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 167,
+      "title": "4.  Comprende: Indaga a su cliente con minimo (3) preguntas, identifica su motivo de compra, escucha y parafrasea  (Las preguntas de indgación pueden desarrollarse alrededor de todo el proceso de contacto con el cliente)",
+      "slug": "mac_5",
+      "description": "",
+	  "type": "range_option",
+      "flow": 168,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 168,
+      "title": "5. Convence: Utiliza la estructura:  Característica - Conector - Beneficio. (Une las caracteristicas de los productos con el beneficio que representan para el usuario según las necesidades indagadas al usuario)",
+      "slug": "mac_6",
+      "description": "",
+	  "type": "boolean_option",
+      "flow": 169,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 169,
+      "title": "6. Convence: Cuenta los (3) principales beneficios de la oferta definida para el cliente (Menciona (3) beneficio claves para el cliente) ",
+      "slug": "mac_7",
+      "description": "",
+	  "type": "range_option",
+      "flow": 170,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 170,
+      "title": "7. Convence:  Neutraliza y controla las objeciones que le presenta el usuario (hace un adecuado manejo de objeciones sin entrar en controversias con el usuario y dando a conocer argumentos validos)",
+      "slug": "mac_8",
+      "description": "",
+	  "type": "range_option",
+      "flow": 171,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 171,
+      "title": "8. Cierra: realiza entre (1) y (3) frases o intentos de cierre",
+      "slug": "mac_9",
+      "description": "",
+	  "type": "range_option",
+      "flow": 172,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 172,
+      "title": "9. Concluye: ¿Concluye la venta?",
+      "slug": "mac_10",
+      "description": "<p><strong>10. Cierra: ¿Concluye la venta?</strong></p><p><strong>Fijo</strong></p><ul><li>Da la bienvenida y repasa beneficios</li><li>Explica el proceso de factura</li><li>Explica factura web</li><li>Explica Une play + P&aacute;gina de TigoUne + L&iacute;nea de atenci&oacute;n</li><li>T&eacute;rminos y condiciones&nbsp;</li></ul><p><strong>M&oacute;vil</strong></p><ul><li>Da la bienvenida y repasa beneficios</li><li>Configura el SP e instala Tigo Shop &ndash; Mi Tigo</li><li>Se gestiona la documentacion de la venta</li><li>T&eacute;rminos y condiciones</li><li>Adicionales como: Smart apps + Pagina de Tigo</li></ul>",
+      "type": "range_option",
+      "flow": 173,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 173,
+      "title": "10.  Contacta : Solicita referidos y/o intercambia contacto con el cliente (Entrega sus datos y los pide al cliente)",
+      "slug": "mac_11",
+      "description": "",
+	  "type": "boolean_option",
+      "flow": 175,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 175,
+      "title": "12. Procesos: El asesor perfecciona el contrato (Condiciones, y terminos del contrato) y menciona guiones legales",
+      "slug": "mac_13",
+      "description": "",
+	  "type": "boolean_option",
+      "flow": 66,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 87,
+      "title": "Código POS / Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 88,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 88,
+      "title": "Cédula del asesor",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 89,
+      "properties": {
+        "required": true,
+        "validate": "cc_id"
+      }
+    },
+    {
+      "id": 89,
+      "title": "Nombre del asesor",
+      "slug": "asesor_name",
+      "description": "<strong>Nombre del asesor: </strong>Marcar nombres y apellidos completos.<p>Ejemplo: MARIA ANDREA PEREZ ALVEAR</p>",
+      "type": "text",
+      "flow": 90,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 90,
+      "title": "Número móvil del asesor",
+      "slug": "asesor_msisdn",
+      "type": "number",
+      "flow": 91,
+      "properties": {
+        "required": true,
+        "validate": "cellphone_number"
+      }
+    },
+    {
+      "id": 91,
+      "title": "Nombre del jefe inmediato del asesor",
+      "slug": "asesor_boss_name",
+      "description": "<strong>Nombre del jefe inmediato del asesor: </strong>Marcar nombres y apellidos completos.<p>Ejemplo: MARIA ANDREA PEREZ ALVEAR</p>",
+      "type": "text",
+      "flow": 92,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+
+
+
+    {
+      "id": 92,
+      "title": "¿El asesor ofreció el Smart Chip?",
+      "slug": "smart_chip",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 93,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+
+
+
+
+    {
+      "id": 93,
+      "title": "Antigüedad del asesor en el cargo",
+      "slug": "asesor_antiquity",
+      "type": "unique_option",
+      "flow": 94,
+      "options": [
+        {
+          "option_key": "Menos de 3 meses",
+          "option_value": "Menos de 3 meses"
+        },
+        {
+          "option_key": "De 3 a 6 meses",
+          "option_value": "De 3 a 6 meses"
+        },
+        {
+          "option_key": "Más de 6 meses",
+          "option_value": "Más de 6 meses"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 94,
+      "title": "Presencia de clientes",
+      "slug": "client_present",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 95,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 95,
+      "title": "Presencia de portero",
+      "slug": "portero_present",
+      "description": "",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "SI",
+          "option_value": 4,
+          "flow": 96
+        },
+        {
+          "option_key": "NO",
+          "option_value": 1,
+          "flow": 99
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 96,
+      "title": "Presencia de administrador",
+      "slug": "administrador_present",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 98,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 98,
+      "title": "Inscrita a la urbanización",
+      "slug": "inscrita_a_la_urbanizacion",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 102,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 99,
+      "title": "Presencia de administrador",
+      "slug": "administrador_present",
+      "description": "",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "SI",
+          "option_value": 4,
+          "flow": 101
+        },
+        {
+          "option_key": "NO",
+          "option_value": 1,
+          "flow":130
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 101,
+      "title": "Inscrita a la urbanización",
+      "slug": "inscrita_a_la_urbanizacion",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 102,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 102,
+      "title": "1. Prepara: ¿Cumple los requerimientos de Presentación Personal?",
+      "slug": "mac_1",
+      "description": "<p><strong>1. Prepara: &iquest;Cumple los requerimientos de Presentaci&oacute;n Personal?</strong></p><ul><li>Uniforme completo, adecuado y aseado (Camisa, zapatos, pantalon)</li><li>Presentaci&oacute;n del cabello / Barba</li><li>U&ntilde;as arregladas</li><li>Accesorios adecuados con la presentaci&oacute;n</li></ul>",
+      "type": "boolean_option",
+      "flow": 103,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 103,
+      "title": "2. Prepara: ¿El asesor comercial cuenta con todas sus herramientas de trabajo?",
+      "slug": "mac_2",
+      "description": "<p><strong>2. Prepara:</strong> &iquest;El asesor comercial cuenta con todas sus herramientas de trabajo?</p><ul><li>Conocimiento Meta Comercial / Ventas Ejecutadas</li><li>Tiene presente los proyectos o urbanizaciones asignadas</li><li>Tiene su programa de visitas y/o seguimientos a esos proyectos</li><li>Sabe ingresar al plan de beneficios por TIGOUNE TRAINERS</li><li>Tiene presente la base de clientes instaladas en la Urbanización o conjunto residencial</li><li>TigoUne Trainers / ME Virtual</li><li>Carnet de identificaci&oacute;n</li><li>Celular o Smarphone o Tablet o equipo computo</li><li>Material publicitaria o Merchandising</li><li>Aplicaciones de ingreso descargadas y funcionando</li><li>Promociones y focos vigentes</li></ul>",
+      "type": "boolean_option",
+      "flow": 104,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 104,
+      "title": "3. Conecta: ¿Aborda a los clientes?",
+      "slug": "mac_3",
+      "description": "<p><strong>3. Conecta:</strong> &iquest;Aborda a los clientes?</p><p>Demuestra actitud, seguridad e identificaci&oacute;n de diferentes perfiles, &nbsp;sonr&iacute;e, realiza contacto visual.</p>",
+      "type": "boolean_option",
+      "flow": 105,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 105,
+      "title": "4. Conecta:  ¿Realiza preguntas poderosas para atraer a los clientes?",
+      "slug": "mac_4",
+      "description": "<p><strong>4. Conecta:</strong> &iquest;Realiza preguntas poderosas para atraer a los clientes?</p><p>Aplica las preguntas poderosas entregadas en el MAC o innova en la creaci&oacute;n de sus propias preguntas poderosas.</p>",
+      "type": "boolean_option",
+      "flow": 106,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 106,
+      "title": "5. Comprende: ¿Indaga a su cliente con minimo (3) preguntas, identifica su motivo de compra, escucha y parafrasea?",
+      "slug": "mac_5",
+      "description": "<p><strong>5. Comprende:</strong> ¿Indaga a su cliente con minimo (3) preguntas, identifica su motivo de compra, escucha y parafrasea?</p><p>Las preguntas de indagaci&oacute;n pueden desarrollarse alrededor de todo el proceso de contacto con el cliente.</p>",
+      "type": "range_option",
+      "flow": 107,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 107,
+      "title": "6. Ofrece soluciones: ¿Utiliza la estructura:  Característica - Conector - Beneficio?",
+      "slug": "mac_6",
+      "description": "<p><strong>6. Convence:</strong> ¿Utiliza la estructura: &nbsp;Caracter&iacute;stica - Conector - Beneficio?</p><p>Une las caracteristicas de los productos con el beneficio que representan para el usuario.</p>",
+      "type": "boolean_option",
+      "flow": 108,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 108,
+      "title": "7. Ofrece soluciones: ¿Cuenta los (3) principales beneficios de la oferta definida para el cliente?",
+      "slug": "mac_7",
+      "description": "<p><strong>7. Convence:</strong> ¿Cuenta los (3) principales beneficios de la oferta definida para el cliente?</p><p>Menciona (3) beneficio claves para el cliente.</p>",
+      "type": "range_option",
+      "flow": 109,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 109,
+      "title": "8. Ofrece soluciones: ¿Neutraliza y controla las objeciones que le presenta el usuario?",
+      "slug": "mac_8",
+      "description": "",
+      "type": "range_option",
+      "flow": 110,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 110,
+      "title": "9. Cierra: ¿Realiza entre (1) y (3) frases o intentos de cierre?",
+      "slug": "mac_9",
+      "description": "",
+      "type": "range_option",
+      "flow": 111,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 111,
+      "title": "10. Cierra: ¿Concluye la venta?",
+      "slug": "mac_10",
+      "description": "<p><strong>10. Cierra: ¿Concluye la venta?</strong></p><p><strong>Fijo</strong></p><ul><li>Da la bienvenida y repasa beneficios</li><li>Explica el proceso de factura</li><li>Explica factura web</li><li>Explica Une play + P&aacute;gina de TigoUne + L&iacute;nea de atenci&oacute;n</li><li>T&eacute;rminos y condiciones&nbsp;</li></ul><p><strong>M&oacute;vil</strong></p><ul><li>Da la bienvenida y repasa beneficios</li><li>Configura el SP e instala Tigo Shop &ndash; Mi Tigo</li><li>Se gestiona la documentacion de la venta</li><li>T&eacute;rminos y condiciones</li><li>Adicionales como: Smart apps + Pagina de Tigo</li></ul>",
+      "type": "range_option",
+      "flow": 112,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 112,
+      "title": "11. Contacto cliente: ¿Solicita referidos, intercambia contacto con el cliente?",
+      "slug": "mac_11",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 113,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 113,
+      "title": "Gestión Comercial del Canal",
+      "description": "",
+      "type": "title_group",
+      "flow": 114
+    },
+    {
+      "id": 114,
+      "title": "1. Conecta: El asesor aborda de forma empática y con propiedad al portero y/o administrador",
+      "slug": "mac_12",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 115,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 115,
+      "title": "2. Ofrece soluciones: El asesor presenta el plan de beneficios a la urbanización",
+      "slug": "mac_13",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 116,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 116,
+      "title": "3. Ofrece soluciones: El asesor presenta (3) Beneficios claves que representa el plan de beneficios para la unidad.",
+      "slug": "mac_14",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 117,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 117,
+      "title": "4. Cierre: El asesor comercial aplica cierres parciales logrando una cita posterior para concretizar la implementación del plan.",
+      "slug": "mac_15",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 45,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 118,
+      "title": "1. Prepara: ¿Cumple los requerimientos de Presentación Personal?",
+      "slug": "mac_1",
+      "description": "<p><strong>1. Prepara: &iquest;Cumple los requerimientos de Presentaci&oacute;n Personal?</strong></p><ul><li>Uniforme completo, adecuado y aseado (Camisa, zapatos, pantalon)</li><li>Presentaci&oacute;n del cabello / Barba</li><li>U&ntilde;as arregladas</li><li>Accesorios adecuados con la presentaci&oacute;n</li></ul>",
+      "type": "boolean_option",
+      "flow": 119,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 119,
+      "title": "2. Prepara: ¿El asesor comercial cuenta con todas sus herramientas de trabajo?",
+      "slug": "mac_2",
+      "description": "<p><strong>2. Prepara:</strong> &iquest;El asesor comercial cuenta con todas sus herramientas de trabajo?</p><ul><li>Conocimiento Meta Comercial / Ventas Ejecutadas</li><li>Tiene presente los proyectos o urbanizaciones asignadas</li><li>Tiene su programa de visitas y/o seguimientos a esos proyectos</li><li>Sabe ingresar al plan de beneficios por TIGOUNE TRAINERS</li><li>Tiene presente la base de clientes instaladas en la Urbanización o conjunto residencial</li><li>TigoUne Trainers / ME Virtual</li><li>Carnet de identificaci&oacute;n</li><li>Celular o Smarphone o Tablet o equipo computo</li><li>Material publicitaria o Merchandising</li><li>Aplicaciones de ingreso descargadas y funcionando</li><li>Promociones y focos vigentes</li></ul>",
+      "type": "boolean_option",
+      "flow": 120,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 120,
+      "title": "3. Conecta: ¿Aborda a los clientes?",
+      "slug": "mac_3",
+      "description": "<p><strong>3. Conecta:</strong> &iquest;Aborda a los clientes?</p><p>Demuestra actitud, seguridad e identificaci&oacute;n de diferentes perfiles, &nbsp;sonr&iacute;e, realiza contacto visual.</p>",
+      "type": "boolean_option",
+      "flow": 121,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 121,
+      "title": "4. Conecta:  ¿Realiza preguntas poderosas para atraer a los clientes?",
+      "slug": "mac_4",
+      "description": "<p><strong>4. Conecta:</strong> &iquest;Realiza preguntas poderosas para atraer a los clientes?</p><p>Aplica las preguntas poderosas entregadas en el MAC o innova en la creaci&oacute;n de sus propias preguntas poderosas.</p>",
+      "type": "boolean_option",
+      "flow": 122,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 122,
+      "title": "5. Comprende: ¿Indaga a su cliente con minimo (3) preguntas, identifica su motivo de compra, escucha y parafrasea?",
+      "slug": "mac_5",
+      "description": "<p><strong>5. Comprende:</strong> ¿Indaga a su cliente con minimo (3) preguntas, identifica su motivo de compra, escucha y parafrasea?</p><p>Las preguntas de indagaci&oacute;n pueden desarrollarse alrededor de todo el proceso de contacto con el cliente.</p>",
+      "type": "range_option",
+      "flow": 123,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 123,
+      "title": "6. Ofrece soluciones: ¿Utiliza la estructura:  Característica - Conector - Beneficio?",
+      "slug": "mac_6",
+      "description": "<p><strong>6. Convence:</strong> ¿Utiliza la estructura: &nbsp;Caracter&iacute;stica - Conector - Beneficio?</p><p>Une las caracteristicas de los productos con el beneficio que representan para el usuario.</p>",
+      "type": "boolean_option",
+      "flow": 124,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 124,
+      "title": "7. Ofrece soluciones: ¿Cuenta los (3) principales beneficios de la oferta definida para el cliente?",
+      "slug": "mac_7",
+      "description": "<p><strong>7. Convence:</strong> ¿Cuenta los (3) principales beneficios de la oferta definida para el cliente?</p><p>Menciona (3) beneficio claves para el cliente.</p>",
+      "type": "range_option",
+      "flow": 125,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 125,
+      "title": "8. Ofrece soluciones: ¿Neutraliza y controla las objeciones que le presenta el usuario?",
+      "slug": "mac_8",
+      "description": "",
+      "type": "range_option",
+      "flow": 126,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 126,
+      "title": "9. Cierra: ¿Realiza entre (1) y (3) frases o intentos de cierre?",
+      "slug": "mac_9",
+      "description": "",
+      "type": "range_option",
+      "flow": 127,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 127,
+      "title": "10. Cierra: ¿Concluye la venta?",
+      "slug": "mac_10",
+      "description": "<p><strong>10. Cierra: ¿Concluye la venta?</strong></p><p><strong>Fijo</strong></p><ul><li>Da la bienvenida y repasa beneficios</li><li>Explica el proceso de factura</li><li>Explica factura web</li><li>Explica Une play + P&aacute;gina de TigoUne + L&iacute;nea de atenci&oacute;n</li><li>T&eacute;rminos y condiciones&nbsp;</li></ul><p><strong>M&oacute;vil</strong></p><ul><li>Da la bienvenida y repasa beneficios</li><li>Configura el SP e instala Tigo Shop &ndash; Mi Tigo</li><li>Se gestiona la documentacion de la venta</li><li>T&eacute;rminos y condiciones</li><li>Adicionales como: Smart apps + Pagina de Tigo</li></ul>",
+      "type": "range_option",
+      "flow": 128,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 128,
+      "title": "11. Contacto cliente: ¿Solicita referidos, intercambia contacto con el cliente?",
+      "slug": "mac_11",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 45,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 130,
+      "title": "Inscrita a la urbanización",
+      "slug": "inscrita_a_la_urbanizacion",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 118,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 131,
+      "title": "Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 132,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 132,
+      "title": "Cédula del asesor TAT",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 133,
+      "properties": {
+        "required": true,
+        "validate": "cc_id"
+      }
+    },
+    {
+      "id": 133,
+      "title": "Nombre del asesor TAT",
+      "slug": "asesor_name",
+      "description": "<strong>Nombre del asesor: </strong>Marcar nombres y apellidos completos.<p>Ejemplo: MARIA ANDREA PEREZ ALVEAR</p>",
+      "type": "text",
+      "flow": 134,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 134,
+      "title": "Número móvil del asesor TAT",
+      "slug": "asesor_msisdn",
+      "type": "number",
+      "flow": 135,
+      "properties": {
+        "required": true,
+        "validate": "cellphone_number"
+      }
+    },
+    {
+      "id": 135,
+      "title": "Nombre del jefe inmediato del asesor TAT",
+      "slug": "asesor_boss_name",
+      "description": "<strong>Nombre del jefe inmediato del asesor: </strong>Marcar nombres y apellidos completos.<p>Ejemplo: MARIA ANDREA PEREZ ALVEAR</p>",
+      "type": "text",
+      "flow": 136,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 136,
+      "title": "Antigüedad del asesor TAT en el cargo",
+      "slug": "asesor_antiquity",
+      "type": "unique_option",
+      "flow": 137,
+      "options": [
+        {
+          "option_key": "Menos de 3 meses",
+          "option_value": "Menos de 3 meses"
+        },
+        {
+          "option_key": "De 3 a 6 meses",
+          "option_value": "De 3 a 6 meses"
+        },
+        {
+          "option_key": "Más de 6 meses",
+          "option_value": "Más de 6 meses"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 137,
+      "title": "1. Prepara: ¿El asesor se encuentra bien presentado teniendo en cuenta las condiciones basicas de aseo personal?",
+      "slug": "mac_1",
+      "description": "<p><strong>1. Prepara: &iquest;Cumple los requerimientos de Presentaci&oacute;n Personal?</strong></p><ul><li>Uniforme completo, adecuado y aseado (Camisa, zapatos, pantalon)</li><li>Presentaci&oacute;n del cabello / Barba</li><li>U&ntilde;as arregladas</li><li>Accesorios adecuados con la presentaci&oacute;n</li></ul>",
+      "type": "boolean_option",
+      "flow": 138,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 138,
+      "title": "1. Prepara: ¿El asesor comercial cuenta con todas sus herramientas de trabajo?",
+      "slug": "mac_2",
+      "description": "<p><strong>2. Prepara:</strong> &iquest;El asesor comercial cuenta con todas sus herramientas de trabajo?</p><ul><li>Herramientas de montaje y desmontaje de material POP</li><li>FORDIS (Debe llevar planeaci&oacute;n de su ruta)</li><li>Material POP actualizado</li><li>Celular cargado</li><li>Conocimiento de la oferta foco del canal</li></ul>",
+      "type": "boolean_option",
+      "flow": 139,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 139,
+      "title": "2. Conecta: Saluda de forma empática (Respetuosa) al PDA/PDV y hace la introducción del motivo de su visita.",
+      "slug": "mac_3",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 140,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 140,
+      "title": "3. Validación de punto: El asesor revisa y actualiza el estado del POP del punto (Tacker, flanger,  afiches, saltarines, moviles)",
+      "slug": "mac_4",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 141,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 141,
+      "title": "3. Validación de punto: Hace seguimiento del estatus de ventas del punto, indagando al PDA/PDV",
+      "slug": "mac_5",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 142,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 142,
+      "title": "4. Refuerzo: Asesor refuerza la oferta foco de la compañía y fortalece el modelo comercial del punto (refuerza la importancia de cómo ganar mas con TIGO)",
+      "slug": "mac_6",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 143,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 143,
+      "title": "5. Agrega valor: El asesor da valor agregado al PDA/PDV como por ejemplo: herramientas comparativas, actualidad, información clave para el manejo de objeciones.",
+      "slug": "mac_7",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 66,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 144,
+      "title": "Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 145,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 145,
+      "title": "ID del PDA/PDV",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 146,
+      "properties": {
+        "required": true,
+        "validate": "cc_id"
+      }
+    },
+    {
+      "id": 146,
+      "title": "Nombre del evaluado",
+      "slug": "asesor_name",
+      "description": "<strong>Nombre del evaluado: </strong>Marcar nombres y apellidos completos.<p>Ejemplo: MARIA ANDREA PEREZ ALVEAR</p>",
+      "type": "text",
+      "flow": 147,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 147,
+      "title": "Número móvil del evaluado",
+      "slug": "asesor_msisdn",
+      "type": "number",
+      "flow": 148,
+      "properties": {
+        "required": true,
+        "validate": "cellphone_number"
+      }
+    },
+    {
+      "id": 148,
+      "title": "Nombre del jefe inmediato del evaluado",
+      "slug": "asesor_boss_name",
+      "description": "<strong>Nombre del jefe inmediato del asesor: </strong>Marcar nombres y apellidos completos.<p>Ejemplo: MARIA ANDREA PEREZ ALVEAR</p>",
+      "type": "text",
+      "flow": 149,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 149,
+      "title": "Antigüedad del evaluado en el cargo",
+      "slug": "asesor_antiquity",
+      "type": "unique_option",
+      "flow": 150,
+      "options": [
+        {
+          "option_key": "Menos de 3 meses",
+          "option_value": "Menos de 3 meses"
+        },
+        {
+          "option_key": "De 3 a 6 meses",
+          "option_value": "De 3 a 6 meses"
+        },
+        {
+          "option_key": "Más de 6 meses",
+          "option_value": "Más de 6 meses"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 150,
+      "title": "1. Prepara: el punto se encuentra con el apoyo POP  colocacado de manera correcta y con las especificaceiones del manual de visibilidad.",
+      "slug": "mac_1",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 151,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 151,
+      "title": "1. Prepara: el punto Conoce los temas focos de la Compañía (Pospago , Tarifa prepago 1 x1, Portabilidad Tigo Gestión",
+      "slug": "mac_2",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 152,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 152,
+      "title": "1. Prepara: conoce el esquema de como ganar con vender estos productos Tigo en su punto de venta.",
+      "slug": "mac_3",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 153,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 153,
+      "title": "2. Recomienda: El PDA/PDV Ofrece Tigo al momento de que un cliente va por una recarga o algún producto en especial.",
+      "slug": "mac_4",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 154,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 154,
+      "title": "3. Comprende: El punto de venta indaga al cliente para ofrecer los paquetes o servicios que el cliente requiera",
+      "slug": "mac_5",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 155,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 155,
+      "title": "4. Cierre: el punto de venta logra hacer cierre cuando un cliente pregunta por un producto.",
+      "slug": "mac_6",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 156,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 156,
+      "title": "5. Agrega valor: El cliente llega por un producto y ofrece otro de mayor valor",
+      "slug": "mac_7",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 157,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 157,
+      "title": "Plan de acción",
+      "description": "",
+      "type": "title_group",
+      "flow": 158
+    },
+    {
+      "id": 158,
+      "title": "¿Requiere refuerzo de producto?",
+      "slug": "basic_training_module",
+      "description": "",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Si",
+          "option_value": 4,
+          "flow": 159
+        },
+        {
+          "option_key": "No",
+          "option_value": 1,
+          "flow": 66
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 159,
+      "title": "Tema de Refuerzo",
+      "slug": "basic_training_module",
+      "description": "",
+      "type": "multiple_option",
+      "flow": 66,
+      "options": [
+        {
+          "option_key": "1. Minuteras",
+          "option_value": "1. Minuteras"
+        },
+        {
+          "option_key": "2. Bolsas",
+          "option_value": "2. Bolsas"
+        },
+        {
+          "option_key": "3. Portabilidad",
+          "option_value": "3. Portabilidad"
+        },
+        {
+          "option_key": "4. Tigo Gestión",
+          "option_value": "4. Tigo Gestión"
+        },
+        {
+          "option_key": "5. Incentivos",
+          "option_value": "5. Incentivos"
+        },
+        {
+          "option_key": "6. Promociones especiales del mes",
+          "option_value": "6. Promociones especiales del mes"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    }
+
+
+
+
+
+
+  ]
+}

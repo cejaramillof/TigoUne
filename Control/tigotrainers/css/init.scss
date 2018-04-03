@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+@mixin skew ($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+@function prefix($property, $prefixes: (webkit moz o ms)) {
+	$vendor-prefixed-properties: transform background-clip background-size;
+	$result: ();
+	@each $prefix in $prefixes {
+		@if index($vendor-prefixed-properties, $property) {
+			$property: -#{$prefix}-#{$property}
+		}
+		$result: append($result, $property);
+	}
+	@return $result;
+}
+
+@function trans-prefix($transition, $prefix: moz) {
+	$prefixed: ();
+	@each $trans in $transition {
+		$prop-name: nth($trans, 1);
+		$vendor-prop-name: prefix($prop-name, $prefix);
+		$prop-vals: nth($trans, 2);
+		$prefixed: append($prefixed, ($vendor-prop-name $prop-vals), comma);
+	}
+
+	@return $prefixed;
+}
+
+@mixin transition($values...) {
+	$transitions: ();
+	@each $declaration in $values {
+		$prop: nth($declaration, 1);
+		$prop-opts: ();
+		$length: length($declaration);
+		@for $i from 2 through $length {
+			$prop-opts: append($prop-opts, nth($declaration, $i));
+		}
+		$trans: ($prop, $prop-opts);
+		$transitions: append($transitions, $trans, comma);
+	}
+	-webkit-transition: trans-prefix($transitions, webkit);
+	-moz-transition: trans-prefix($transitions, moz);
+	-o-transition: trans-prefix($transitions, o);
+	transition: $values;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+	@if $inset {
+		-webkit-box-shadow:inset $top $left $blur $color;
+		-moz-box-shadow:inset $top $left $blur $color;
+		box-shadow:inset $top $left $blur $color;
+	} @else {
+		-webkit-box-shadow: $top $left $blur $color;
+		-moz-box-shadow: $top $left $blur $color;
+		box-shadow: $top $left $blur $color;
+	}
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+	background-clip: padding-box;
+}
+
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin position ($position:relative, $top: auto, $right: auto, $bottom: auto, $left: auto) {
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	position: $position;
+}
+
+@function color ($hexcolor, $opacity: 1) { @return rgba($hexcolor, $opacity); }
+
+@function rem($size) {
+	$remSize: $size / 16px;
+	@return #{$remSize}rem;
+}
+
+%text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+%tap-higlight {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+}
+
+%box-sizing {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+

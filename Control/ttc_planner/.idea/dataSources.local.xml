@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - tigotrai_ners@localhost" uuid="692315db-1055-4bd1-a8c3-e9421b9a6e5e">
+      <secret-storage>master_key</secret-storage>
+      <user-name>tigotrai_b1wNeVN</user-name>
+      <introspection-scope>tigotrai_ners:*</introspection-scope>
+      <resolve-scope>tigotrai_ners:*</resolve-scope>
+    </data-source>
+  </component>
+</project>

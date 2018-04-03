@@ -1,0 +1,377 @@
+/*
+Theme Name: Tigo Trainers
+Theme URI: https://www.tigotrainers.com
+Author: Juan Felipe Tobon Gutierrez
+Author URI: https://www.tigotrainers.com
+Description: Portal Tigo Trainers.
+Version: 1.0
+License: GPLv2
+
+Copyright (C) 2015 Juan Felipe Tobon Gutierrez
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+#ttr-navicon, #ttr-sidebar-left .ttr-sidemenu .menu-item, .ttr-productos ul li a:hover {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent; }
+
+#ttr-main, .ttr-productos, #ttr-single-productos, #ttr-single-productos iframe, #ttr-single-ayuda, #ttr-single-ayuda iframe {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'CronoPro';
+  src: url("font/CronosPro-Regular.woff"), url("font/CronosPro-Regular.eot"), url("font/CronosPro-Regular.svg#CronoPro") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+html {
+  height: 100%; }
+
+body {
+  min-height: 100%;
+  font-size: 16px; }
+
+a {
+  text-decoration: none; }
+
+#ttr-header {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  background: #002e6e;
+  z-index: 10000;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); }
+  #ttr-header:before, #ttr-header:after {
+    content: "";
+    display: table; }
+  #ttr-header:after {
+    clear: both; }
+
+#ttr-header-logo {
+  display: block;
+  float: left;
+  line-height: 50px;
+  height: 50px; }
+  #ttr-header-logo img {
+    display: inline-block;
+    height: 80%;
+    width: auto;
+    vertical-align: middle; }
+
+#ttr-navicon {
+  float: left;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer; }
+  #ttr-navicon span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 2px;
+    width: 45%;
+    margin-top: -1px;
+    background-color: white;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    background-clip: padding-box;
+    -webkit-transition: background-color 0 ease-in-out 180ms;
+    -moz-transition: background-color 0 ease-in-out 180ms;
+    -o-transition: background-color 0 ease-in-out 180ms;
+    transition: background-color 0 ease-in-out 180ms; }
+    #ttr-navicon span::before, #ttr-navicon span::after {
+      position: absolute;
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: white;
+      content: "";
+      -webkit-border-radius: 1px;
+      border-radius: 1px;
+      background-clip: padding-box;
+      -webkit-transition: -webkit-transform 180ms ease-in-out, top 180ms ease-in-out 180ms;
+      -moz-transition: -moz-transform 180ms ease-in-out, top 180ms ease-in-out 180ms;
+      -o-transition: -o-transform 180ms ease-in-out, top 180ms ease-in-out 180ms;
+      transition: transform 180ms ease-in-out, top 180ms ease-in-out 180ms; }
+    #ttr-navicon span::before {
+      top: -7px; }
+    #ttr-navicon span::after {
+      top: 7px; }
+  #ttr-navicon.ttr-open-sidemenu span {
+    background-color: rgba(255, 255, 255, 0); }
+    #ttr-navicon.ttr-open-sidemenu span::before, #ttr-navicon.ttr-open-sidemenu span::after {
+      -webkit-transition: -webkit-transform 180ms ease-in-out 180ms, top 180ms ease-in-out;
+      -moz-transition: -moz-transform 180ms ease-in-out 180ms, top 180ms ease-in-out;
+      -o-transition: -o-transform 180ms ease-in-out 180ms, top 180ms ease-in-out;
+      transition: transform 180ms ease-in-out 180ms, top 180ms ease-in-out;
+      top: 0; }
+    #ttr-navicon.ttr-open-sidemenu span::before {
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    #ttr-navicon.ttr-open-sidemenu span::after {
+      -moz-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+
+#ttr-sidebar-left {
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  width: 270px;
+  background-color: #001b40;
+  z-index: 9900;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-box-shadow: 0 0 10px black;
+  -moz-box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
+  -moz-transform: translate(-280px, 0);
+  -webkit-transform: translate(-280px, 0);
+  transform: translate(-280px, 0);
+  -webkit-transition: -webkit-transform 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: -moz-transform 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: -o-transform 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: transform 500ms cubic-bezier(0.77, 0, 0.175, 1); }
+  #ttr-sidebar-left.ttr-open-sidemenu {
+    -moz-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  #ttr-sidebar-left .menu-title {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 12px 15px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.75rem; }
+  #ttr-sidebar-left .ttr-sidemenu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: white; }
+    #ttr-sidebar-left .ttr-sidemenu .menu-item a {
+      display: block;
+      padding: 15px 15px 15px 52.5px;
+      color: white;
+      border-bottom: 1px solid #001127; }
+      #ttr-sidebar-left .ttr-sidemenu .menu-item a:hover {
+        background-color: #002e6e; }
+
+#ttr-screen-overlay {
+  top: 50px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 9800;
+  -webkit-transition: visibility 0ms ease-in-out 500ms, opacity 500ms ease-in-out;
+  -moz-transition: visibility 0ms ease-in-out 500ms, opacity 500ms ease-in-out;
+  -o-transition: visibility 0ms ease-in-out 500ms, opacity 500ms ease-in-out;
+  transition: visibility 0ms ease-in-out 500ms, opacity 500ms ease-in-out; }
+  #ttr-screen-overlay.ttr-open-sidemenu {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0ms; }
+
+#ttr-main {
+  position: relative;
+  top: 50px;
+  overflow: auto;
+  background: #f1f2f2; }
+
+/****************************************************
+OPERATION: SAFE JOB
+The next rules are declared to create a simulated
+content for prepaid and postpaid products
+
+Date: April 06, 2015
+*****************************************************/
+.ttr-productos {
+  position: relative;
+  width: 100%;
+  max-width: 1024px;
+  min-height: 100%;
+  padding: 15px 15px 30px 15px;
+  margin: 0 auto;
+  background-color: #fafafa;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); }
+  .ttr-productos h1 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    font-family: "CronoPro", Arial, sans-serif;
+    color: #333; }
+  .ttr-productos ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .ttr-productos ul li {
+      display: block;
+      background-color: white;
+      margin: 5px 0;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      background-clip: padding-box;
+      -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2); }
+      .ttr-productos ul li a {
+        display: block;
+        color: #002e6e;
+        padding: 15px; }
+        .ttr-productos ul li a:hover {
+          color: white;
+          background-color: #1b97d7;
+          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+          -webkit-border-radius: 3px;
+          border-radius: 3px;
+          background-clip: padding-box; }
+
+#ttr-single-productos {
+  position: relative;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #fafafa;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  overflow: auto; }
+  #ttr-single-productos h1 {
+    position: absolute;
+    font-size: 1.4rem;
+    padding: 0 0 0.7rem 0;
+    margin: 0;
+    font-family: "CronoPro", Arial, sans-serif;
+    color: #333; }
+  #ttr-single-productos iframe {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(100% - 55px); }
+  #ttr-single-productos .content {
+    position: relative;
+    top: 55px;
+    width: 100%; }
+
+#ttr-single-ayuda {
+  position: relative;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #fafafa;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); }
+  #ttr-single-ayuda h1 {
+    position: relative;
+    font-size: 1.4rem;
+    padding: 0 0 0.7rem 0;
+    margin: 0;
+    font-family: "CronoPro", Arial, sans-serif;
+    color: #333; }
+  #ttr-single-ayuda iframe {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(100% - 55px); }
+  #ttr-single-ayuda .content {
+    position: relative;
+    width: 100%; }
+    #ttr-single-ayuda .content img {
+      display: block;
+      width: 100%; }
+
+#pospago-selection, #channel-selection, #item-selection {
+  padding: 5px;
+  margin-bottom: 20px;
+  width: 100%; }
+  #pospago-selection .placeholder, #channel-selection .placeholder, #item-selection .placeholder {
+    display: none; }
+
+#foco-pospago-results {
+  overflow: auto;
+  min-height: 400px; }
+  #foco-pospago-results img {
+    float: left;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0; }
+  #foco-pospago-results iframe {
+    width: 100%;
+    height: 400px; }
+
+#ttr-slider-wrap {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@media screen and (min-width: 960px) {
+  #ttr-slider-wrap {
+    padding: 0 15px; } }
+#ttr-content-wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center; }
+  #ttr-content-wrap h1, #ttr-content-wrap h2 {
+    color: #002e6e;
+    font-family: "Cronopro", Arial, sans-serif;
+    font-weight: normal; }
+
+.alert {
+  padding: 10px 15px;
+  color: #333;
+  position: relative;
+  font-size: 0.6875rem;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
+
+.alert .msg {
+  padding: 0 20px 0 40px; }
+
+.info-box {
+  background: rgba(255, 255, 255, 0.7) url(img/info.png) no-repeat left 14px center; }
+
+.ttr-prepado-emphasis {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #002e6e; }
+
+/*# sourceMappingURL=style.css.map */

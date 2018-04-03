@@ -1,0 +1,296 @@
+{
+	"campos":
+	[
+		{
+			"ayuda": "",
+			"descripcion": "Las calificaciones serán en algunos casos: Si o No según el caso, para otros momentos será necesario la utilización de la siguiente convención:<br>(1) Desempeño muy inferior al esperado (DEFICIENTE)<br>(2) Desempeño inferior al esperado (REGULAR)<br>(3) Desempeño promedio esperado (BUENO)<br>(4) Desempeño superior al esperado (EXCELENTE)",
+			"posicion": 1,
+			"requerido":true,
+			"tipo": "instructions",
+			"titulo": "",
+			"peso" : 0
+		},
+		{
+			"ayuda": "",
+			"descripcion": "",
+			"multiple": false,
+			"posicion": 2,
+			"requerido":true,
+			"tipo": "cedula",
+			"titulo": "Cédula del evaluado",
+			"peso" : 0
+		},
+		{
+			"ayuda": "",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "titulo":"En sitio", "valor":"En sitio" },
+				{ "titulo":"Escucha de llamada", "valor":"Escucha de llamada" }
+			],
+			"posicion": 3,
+			"requerido":true,
+			"tipo": "radio",
+			"titulo": "Tipo de acompañamiento",
+			"peso" : 0
+		},
+		{
+			"ayuda": "",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "titulo":"SI", "valor":4 },
+				{ "titulo":"NO", "valor":1 },
+				{ "titulo":"NO APLICA", "valor":0 }
+			],
+			"posicion": 4,
+			"requerido":true,
+			"tipo": "radio",
+			"titulo": "El asesor solucionó en el primer contacto",
+			"peso" : 0
+		},
+		{
+			"aspecto": "Prepara",
+			"ayuda": "",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "titulo":"SI", "valor":4 },
+				{ "titulo":"NO", "valor":1 },
+				{ "titulo":"NO APLICA", "valor":0 }
+			],
+			"posicion": 5,
+			"requerido":true,
+			"tipo": "radio",
+			"titulo": "Prepara: ¿Demuestra conocimiento de las ofertas y planes ofrecidos al cliente?",
+			"peso" : 0.034
+		},
+		{
+			"aspecto": "Prepara",
+			"ayuda": "",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "titulo":"SI", "valor":4 },
+				{ "titulo":"NO", "valor":1 },
+				{ "titulo":"NO APLICA", "valor":0 }
+			],
+			"posicion": 6,
+			"requerido":true,
+			"tipo": "radio",
+			"titulo": "Prepara: ¿Demuestra conocimiento de los procesos y los pasos a seguir en el momento de la venta?",
+			"peso" : 0.033
+		},
+		{
+			"aspecto": "Prepara",
+			"ayuda": "Aplica calificar este punto si el acompañamiento es en sitio",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "titulo":"SI", "valor":4 },
+				{ "titulo":"NO", "valor":1 },
+				{ "titulo":"NO APLICA", "valor":0 }
+			],
+			"posicion": 7,
+			"requerido":true,
+			"tipo": "radio",
+			"titulo": "Prepara: Tiene documentado sus clientes y potenciales, asi como sus ventas en curso",
+			"peso" : 0.033
+		},
+		{
+			"aspecto": "Conecta",
+			"ayuda": "",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "titulo":"SI", "valor":4 },
+				{ "titulo":"NO", "valor":1 },
+				{ "titulo":"NO APLICA", "valor":0 }
+			],
+			"posicion": 8,
+			"requerido":true,
+			"tipo": "radio",
+			"titulo": "Conecta: genera conexión con los clientes, dando una calurosa bienvenida",
+			"peso" : 0.075
+		},
+		{
+			"aspecto": "Conecta",
+			"ayuda": "Aplica calificar este punto si es estrategia de salida",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "titulo":"SI", "valor":4 },
+				{ "titulo":"NO", "valor":1 },
+				{ "titulo":"NO APLICA", "valor":0 }
+			],
+			"posicion": 9,
+			"requerido":true,
+			"tipo": "radio",
+			"titulo": "Conecta: Genera expectativa del motivo de la llamada, incentivando el deseo de compra en el cliente",
+			"peso" : 0.075
+		},
+		{
+			"aspecto": "Comprende",
+			"ayuda": "Las preguntas de indgación pueden desarrollarse alrededor de todo el proceso de contacto con el cliente",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "minimo" : 1 },
+				{ "maximo" : 4 }
+			],
+			"posicion": 10,
+			"requerido":true,
+			"tipo": "slider",
+			"titulo": "Comprende: Indaga a su cliente con minimo (3) preguntas, identifica su motivo de compra, escucha y parafrasea  (Las preguntas de indgación pueden desarrollarse)",
+			"peso" : 0.15
+		},
+		{
+			"aspecto": "Ofrece soluciones",
+			"ayuda": "Une las caracteristicas de los productos con los beneficios que representan para el usuario según las necesidades indagadas al usuario",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "titulo":"SI", "valor":4 },
+				{ "titulo":"NO", "valor":1 },
+				{ "titulo":"NO APLICA", "valor":0 }
+			],
+			"posicion": 11,
+			"requerido":true,
+			"tipo": "radio",
+			"titulo": "Ofrece soluciones: Utiliza la estructura:  Característica - Conector - Beneficio.",
+			"peso" : 0.067
+		},
+		{
+			"aspecto": "Ofrece soluciones",
+			"ayuda": "Menciona (3) beneficio claves para el cliente de forma concreta",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "minimo" : 1 },
+				{ "maximo" : 4 }
+			],
+			"posicion": 12,
+			"requerido":true,
+			"tipo": "slider",
+			"titulo": "Ofrece soluciones: Cuenta los (3) principales beneficios de la oferta definida para el cliente",
+			"peso" : 0.067
+		},
+		{
+			"aspecto": "Ofrece soluciones",
+			"ayuda": "hace un adecuado manejo de objeciones sin entrar en controversias con el usuario y dando a conocer argumentos validos",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "minimo" : 1 },
+				{ "maximo" : 4 }
+			],
+			"posicion": 13,
+			"requerido":true,
+			"tipo": "slider",
+			"titulo": "Ofrece soluciones: Neutraliza y controla las objeciones que le presenta el usuario",
+			"peso" : 0.066
+		},
+		{
+			"aspecto": "Cierra",
+			"ayuda": "",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "minimo" : 1 },
+				{ "maximo" : 4 }
+			],
+			"posicion": 14,
+			"requerido":true,
+			"tipo": "slider",
+			"titulo": "Cierra: Realiza entre (1) y (3) frases o intentos de cierre",
+			"peso" : 0.2
+		},
+		{
+			"aspecto": "Concluye",
+			"ayuda": "a.Fijo<br>-Explica el proceso de facturación<br>-Términos y condiciones<br>-Habla de los beneficios adicionales (Home: Debito, une play, Stingray)<br>Movil: Pos: Favoritos, comunidad, llamadas internacionales, MiTigo entre otros) Pre: Dias tigo, kit bienvenida, Valor de llamadas adicionales, Tigo Shop entre otros)",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "minimo" : 1 },
+				{ "maximo" : 4 }
+			],
+			"posicion": 15,
+			"requerido":true,
+			"tipo": "slider",
+			"titulo": "Concluye: da la bienvenida y parafrasea beneficios en caso de cerrar la venta, si no la cierra se despide cordialmente del cliente",
+			"peso" : 0.1
+		},
+		{
+			"aspecto": "Contacta",
+			"ayuda": "Entrega sus datos y los pide al cliente<br>Aplica calificar este punto si la estrategia lo permite dentro de su politica, esta varía según piloto",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "titulo":"SI", "valor":4 },
+				{ "titulo":"NO", "valor":1 },
+				{ "titulo":"NO APLICA", "valor":0 }
+			],
+			"posicion": 16,
+			"requerido":true,
+			"tipo": "radio",
+			"titulo": "Contacta: Solicita referidos y/o intercambia contacto con el cliente programando una próxima llamada",
+			"peso" : 0.025
+		},
+		{
+			"aspecto": "Contacta",
+			"ayuda": "Entrega sus datos y los pide al cliente<br>Aplica calificar este punto si la estrategia lo permite dentro de su politica, esta varía según piloto",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "titulo":"SI", "valor":4 },
+				{ "titulo":"NO", "valor":1 },
+				{ "titulo":"NO APLICA", "valor":0 }
+			],
+			"posicion": 17,
+			"requerido":true,
+			"tipo": "radio",
+			"titulo": "Contacta: Hace seguimiento a sus pedidos y/o clientes potenciales (referidos)",
+			"peso" : 0.025
+		},
+		{
+			"aspecto": "Procesos",
+			"ayuda": "Aplica calificar este punto cuando la venta es efectiva y se cierra)<br>El asesor hace el perfeccionamiento de el contrato (Condiciones, y terminos del contrato)<br>Menciona guiones legales de forma clara para el cliente",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "titulo":"SI", "valor":4 },
+				{ "titulo":"NO", "valor":1 },
+				{ "titulo":"NO APLICA", "valor":0 }
+			],
+			"posicion": 18,
+			"requerido":true,
+			"tipo": "radio",
+			"titulo": "Procesos: Cumple con los procesos de la llamada",
+			"peso" : 0.05
+		},
+		{
+			"ayuda": "",
+			"descripcion": "Aclare observaciones relacionadas con la duración del entrenamiento, y con adicionales observados durante la asesoría",
+			"multiple": false,
+			"posicion": 19,
+			"requerido": false,
+			"tipo": "textarea",
+			"titulo": "Observaciones generales",
+			"peso" : 0
+		},
+		{
+			"ayuda": "",
+			"descripcion": "",
+			"opciones":
+			[
+				{ "minimo" : 20 },
+				{ "maximo" : 480 }
+			],
+			"posicion": 20,
+			"requerido": true, 
+			"tipo": "time",
+			"titulo": "Duración de la visita (minutos)",
+			"peso" : 0
+		}
+	]
+}

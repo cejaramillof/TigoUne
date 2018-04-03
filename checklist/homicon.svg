@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>bold-check-button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bold-check-button" fill="#FFFFFF">
+            <path d="M38.67,0.016 C17.922,-0.581 0.62,15.754 0.024,36.501 C0.013,36.866 0.008,37.232 0.008,37.597 C0.008,58.352 16.834,75.178 37.589,75.178 C58.344,75.178 75.17,58.352 75.17,37.597 C75.179,17.256 59.001,0.601 38.67,0.016 L38.67,0.016 Z M54.335,18.994 L61.781,26.44 L39.444,48.754 L31.998,56.2 L24.576,48.754 L13.396,37.597 L20.842,30.151 L31.999,41.308 L54.335,18.994 L54.335,18.994 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

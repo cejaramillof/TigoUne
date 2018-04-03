@@ -1,0 +1,455 @@
+<script src="js/general-values.js"></script>
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="#">Dashboard</a>
+  </li>
+  <li class="breadcrumb-item active">Convergencia servicio</li>
+</ol>
+<div id="filter">
+  <!-- cont filtro mes -->
+</div>
+<!-- Area Chart
+<div class="card mb-3">
+	<div class="card-header">
+		<i class="fa fa-area-chart"></i> Seguimiento meses</div>
+	<div class="card-body">
+		<canvas id="myAreaChart" width="100%" height="30"></canvas>
+	</div>
+	<div class="card-footer small text-muted actualizated"></div>
+</div>
+-->
+<div class="row">
+  <!--
+	<div class="col-lg-6">
+		<div class="card mb-3">
+			<div class="card-header">
+				<i class="fa fa-bar-chart"></i> Matriz General</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-12 my-auto">
+						<canvas id="matrizBarChart"></canvas>
+					</div>
+				</div>
+			</div>
+			<div class="card-footer small text-muted actualizated"></div>
+		</div>
+	</div>
+	-->
+  <div class="col-lg-6">
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fa fa-table"></i> OLA 2</div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <div class="octubre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>CUMPLIMIENTO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>86%</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>93%</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>99%</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>96%</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>112%</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>99%</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>96%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="noviembre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>CUMPLIMIENTO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>86%</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>93%</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>96%</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>112%</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>99%</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>96%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="diciembre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>CUMPLIMIENTO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>86%</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>93%</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>96%</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>112%</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>99%</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>96%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer small text-muted actualizated"></div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fa fa-table"></i> OLA 3</div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <div class="octubre">
+            <table class="table table-bordered text-center" id="general-digital" width="100%" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>CUMPLIMIENTO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>87%</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>101%</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>94%</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>94%</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>95%</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>95%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="noviembre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>CUMPLIMIENTO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>84%</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>104%</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>103%</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>89%</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>102%</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>92%</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>95%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="diciembre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>CUMPLIMIENTO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>84%</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>105%</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>103%</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>89%</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>101%</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>91%</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>95%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer small text-muted actualizated"></div>
+    </div>
+  </div>
+  <!--
+	<div class="col-lg-6">	
+		<div class="card mb-3">
+			<div class="card-header">
+				<i class="fa fa-bar-chart"></i> Digital MEV General</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-12 my-auto">
+						<canvas id="digitalBarChart"></canvas>
+					</div>
+				</div>
+			</div>
+			<div class="card-footer small text-muted actualizated"></div>
+		</div>
+	</div>
+	-->
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fa fa-table"></i> OLA 4</div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <div class="octubre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>CUMPLIMIENTO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>95%</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>83%</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>104%</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>101%</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>98%</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>81%</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>97%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="noviembre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>CUMPLIMIENTO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>86%</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>86%</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>106%</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>101%</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>97%</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>82%</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>97%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="diciembre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>REGIÓN</th>
+                  <th>CUMPLIMIENTO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CENTRO</td>
+                  <td>85%</td>
+                </tr>
+                <tr>
+                  <td>COSTA</td>
+                  <td>88%</td>
+                </tr>
+                <tr>
+                  <td>EJE CAFETERO</td>
+                  <td>106%</td>
+                </tr>
+                <tr>
+                  <td>NOROCCIDENTE</td>
+                  <td>101%</td>
+                </tr>
+                <tr>
+                  <td>ORIENTE</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>SUROCCIDENTE</td>
+                  <td>81%</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>98%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer small text-muted actualizated"></div>
+    </div>
+  </div>
+</div>
+<!-- Custom scripts for this page-->
+<script src="js/sb-admin-charts.js"></script>
+<script src="js/table-colors.js"></script>
+<script src="js/sb-admin-datatables.js"></script>
+<script src="js/fecha-act.js"></script>

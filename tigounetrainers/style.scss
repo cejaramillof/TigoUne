@@ -1,0 +1,267 @@
+/*
+Theme Name: TigoUNE Trainers
+Theme URI: https://www.tigounetrainers.com
+Author: Juan Felipe Tobon G.
+Author URI: https://www.tigounetrainers.com
+Description: TigoUNE Trainers Theme.
+Version: 1.0
+License: GNU General Public License v3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
+*/
+@import "css/bourbon/_bourbon";
+
+$blue: #00377B;
+$blueLight1: #335f95;
+$blueLight2: #6687b0;
+$blueDark1: #002263;
+$blueDark2: #000e4f;
+
+$cyan: #43C7F4;
+$cyanLigh1: #91d9ed;
+$cyanDark1: #1196ba;
+
+$polar: #f6f9f9;
+$polarDark1: #d3dbde;
+$polarDark2: #b0bac2;
+
+$gray: #828282;
+$grayLight1: #c2c2c2;
+$grayLight2: #ebebeb;
+$grayLight3: #fafafa;
+$grayDark1: #666666;
+$grayDark2: #333333;
+
+$red: #d8262e;
+$redLight1: #e05158;
+$redLight2: #e87d82;
+$redDark1: #bf1d29;
+$redDark2: #a51c27;
+
+$headerH: 50px;
+
+/*ELEMENTS*/
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('assets/OpenSans-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('assets/OpenSans-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+  url('assets/OpenSans-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('assets/OpenSans-Regular.svg') format('svg'); /* Legacy iOS */
+}
+
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: 'OpenSans', Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+
+  &:hover {
+    color: $cyan;
+  }
+}
+
+.trnrs-title-primary {
+  background: $blue;
+  color: white;
+  margin: 0;
+  padding: 10px 16px;
+  font-weight: normal;
+}
+
+.trnrs-title-primary .trnrs-category-breadcrumb {
+  font-size: 14px;
+  color: rgba(white, 0.2);
+}
+
+.trnrs-title-primary .trnrs-category-breadcrumb a {
+  color: rgba(white, 0.6);
+  text-decoration: none;
+
+  &:hover {
+    color: rgba(white, 0.9);
+  }
+}
+
+.trnrs-title-primary h1 {
+  font-size: 1.5rem;
+  color: white;
+  margin: 10px 0 0;
+}
+
+/*
+.category h1{
+  background: $grayLight2;
+  color: $grayDark1;
+}*/
+
+/*HEADER*/
+
+.trnrs-header {
+  position: fixed;
+  width: 100%;
+
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.18);
+  padding: 0 16px;
+  box-sizing: border-box;
+  z-index: 999999999;
+  background: white;
+}
+
+.trnrs-header .trnrs-header-row {
+  position: relative;
+  overflow: auto;
+  height: $headerH;
+}
+
+.trnrs-header .trnrs-header-button {
+  display: block;
+  float: left;
+  height: $headerH;
+  position: relative;
+  text-decoration: none;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+}
+
+.trnrs-header .trnrs-header-button img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 60%;
+  width: auto;
+}
+
+.trnrs-header .trnrs-logout {
+  float: right;
+  &:hover img {
+    opacity: 0.5;
+  }
+}
+
+.trnrs-header .trnrs-logout img {
+  height: 40%;
+  opacity: 0.3;
+}
+
+/*MAIN*/
+
+#page {
+  position: relative;
+  min-height: 100%;
+}
+
+.trnrs-main {
+  padding-top: $headerH;
+  box-sizing: border-box;
+  z-index: 10;
+  margin: 0 auto;
+}
+
+.trnrs-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+  text-align: center !important;
+}
+
+.trnrs-go-back {
+  text-decoration: none;
+  color: white;
+}
+
+.trnrs-menu-list, .trnrs-menu-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.trnrs-menu-list {
+  margin: 0;
+}
+
+.trnrs-menu-list-item-title {
+  display: block;
+  font-size: 1.4rem;
+  color: $gray;
+  padding: 8px 16px;
+  //box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+}
+
+.trnrs-main-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.trnrs-no-content {
+  display: block;
+  color: $grayLight1;
+  font-style: italic;
+  margin: 0.5rem 0 1rem;
+}
+
+.theme-default .slider-wrapper {
+
+}
+
+.theme-default .nivoSlider {
+  z-index: 99;
+}
+
+.theme-default .nivo-controlNav {
+  position: relative;
+  margin-top: -52px;
+  z-index: 999 !important;
+}
+
+.trnrs-item-list {
+  margin: 0.8rem 0;
+  font-size: 0;
+
+  li {
+    width: 30%;
+    display: inline-block;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0f0f0;
+    border-left: 3px solid $grayLight1;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+    &:hover {
+      border-left-color: $cyan;
+    }
+  }
+
+  a {
+    height: 80px;
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+}
+
+@media all and(max-width: 600px) {
+  .trnrs-item-list li {
+    width: 45%;
+  }
+}
+
+@media all and(max-width: 400px) {
+  .trnrs-item-list li {
+    width: 100%;
+    margin-left: 0;
+
+    & a {
+      height: auto;
+    }
+  }
+}

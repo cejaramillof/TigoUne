@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TV Codes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: url(./img/bg.png) no-repeat top center;background-attachment: fixed;">
+
+
+<aside id="1" class="lightbox">
+
+    <input type="checkbox" class="state" id="lightbox-1"/>
+
+    <div class="content">
+
+        <div class="descriptionGroup" style="display: flex;
+    flex-direction: row;">
+
+
+        </div>
+
+        <div class="back" style="background: transparent!Important;"><img src="./img/volver.png"></div>
+
+    </div>
+
+    <div class="backdrop backdropBack"></div>
+
+</aside>
+<div class="inputMaterial" style ="padding: 0px!important;">
+<img class="responsive-img" style="width: 100%;height: auto;"src="./img/banner.png">
+<form class="" style ="padding: 20px!important;">
+    <!--<label for="kwd_search">Buscar Codigos:</label>-->
+
+    <h5 style="margin:0px;"><b>Buscar referencia:</b></h5>
+
+    <fieldset class="material">
+        <input type="text" id="kwd_search" placeholder="Cablemodems" required>
+        <label>Referencia</label>
+        <hr>
+
+    </fieldset>
+</form>
+</div>
+
+<div class="wrapper">
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="itemTabla" type="text/template">
+
+<tr>
+    <td><%= codeMark %></td>
+    <td><%= codeReference %></td>
+    <td class="imgTD"><p class="imgCode" style="cursor: pointer;color: #10357f;padding: 1% 6%;font-weight: bold;width: 100%;" src="codeIcon.svg" data-valor="<%= codeMark %>" >FIRMWARE </p></td>
+</tr>
+
+</script>
+
+
+<script id="tabla" type="text/template">
+
+    <table id="my-table" class="tableCodes paginated" style="border-collapse:collapse">
+        <thead>
+        <tr>
+            <th>Referencia</th>
+            <th>Marca</th>
+            <th>Codigos</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <%= codeItem %>
+
+        </tbody>
+    </table>
+
+</script>
+
+<script id="codeLi" type="text/template">
+
+    <tr><td class="codeLiItem"><%= code %></td></tr>
+
+</script>
+
+<script id="codeUL" type="text/template">
+    <div style="display: inline-block;width:50%!important;">
+     <table class="codeULlist">
+
+      <thead style="font-weight: bold!important;">
+          <tr><td>REFERENCIA</td></tr>
+          <tr><td>TECNOLOGIA:</td></tr>
+          <tr><td>TIPO:</td></tr>
+          <tr><td>Hardware Version:</td></tr>
+          <tr><td style="background-color: #1054b2;color: white;">FIRMWARE ACTUAL:</td></tr>
+      <thead>
+     </table>
+   </div>
+   <div style="display: inline-block;width:50%!important;">
+   <table class="">
+   <tbody>
+      <tr><td><%= brand %></td></tr>
+       <%= items %>
+  </tbody>
+   </table>
+   </div>
+
+</script>
+
+
+</body>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/underscore-min.js"></script>
+<script src="js/main.js"></script>
+
+</html>

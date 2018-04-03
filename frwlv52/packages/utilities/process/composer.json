@@ -1,0 +1,14 @@
+{
+    "name": "utilities/process",
+    "description": "",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Edison Taborda",
+            "email": "edisontabo@gmail.com"
+        }
+    ],  
+    "minimum-stability": "stable",
+    "require": {}
+}

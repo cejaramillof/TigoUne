@@ -1,0 +1,252 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Fecha de la actividad",
+      "slug": "activity_date",
+      "type": "date",
+      "flow": 4,
+      "properties": {
+        "required": true,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Canal Trabajado",
+      "slug": "channel",
+      "type": "unique_option",
+      "flow": 6,
+      "options": [
+        {
+          "option_key": "EMTELCO",
+          "option_value": "EMTELCO"
+        },
+        {
+          "option_key": "EIA",
+          "option_value": "EIA"
+        },
+        {
+          "option_key": "RYE",
+          "option_value": "RYE"
+        },
+        {
+          "option_key": "EAGLE",
+          "option_value": "EAGLE"
+        },
+        {
+          "option_key": "SERVTEK",
+          "option_value": "SERVTEK"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Cédula del evaluado",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 7,
+      "properties": {
+        "required": true,
+        "validate": "cc_id"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Nombre del evaluado",
+      "slug": "asesor_name",
+      "description": "<strong>Nombre del participante: </strong>Marcar nombres y apellidos completos.<p>Ejemplo: MARIA ANDREA PEREZ ALVEAR</p>",
+      "type": "text",
+      "flow": 9,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Cargo del evaluado",
+      "slug": "asesor_tipo",
+      "type": "unique_option",
+      "flow": 11,
+      "options": [
+        {
+          "option_key": "Entrenador",
+          "option_value": "Entrenador"
+        },
+        {
+          "option_key": "Supervisor",
+          "option_value": "Supervisor"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 11,
+      "title": "¿Demostró dominio en el tema (resolvió dudas)?",
+      "slug": "mac_1",
+      "type": "unique_option",
+      "flow": 12,
+      "options": [
+        {
+          "option_key": "Bueno",
+          "option_value": 4
+        },
+        {
+          "option_key": "Regular",
+          "option_value": 3
+        },
+        {
+          "option_key": "Deficiente",
+          "option_value": 2
+        },
+        {
+          "option_key": "No Aplica",
+          "option_value": 1
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 12,
+      "title": "¿El contenido fue presentado en forma clara y ordenada?",
+      "slug": "mac_2",
+      "type": "unique_option",
+      "flow": 13,
+      "options": [
+        {
+          "option_key": "Bueno",
+          "option_value": 4
+        },
+        {
+          "option_key": "Regular",
+          "option_value": 3
+        },
+        {
+          "option_key": "Deficiente",
+          "option_value": 2
+        },
+        {
+          "option_key": "No Aplica",
+          "option_value": 1
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 13,
+      "title": "¿Empleó ejemplos y casos útiles que faciliten la aplicación de los contenidos?",
+      "slug": "mac_3",
+      "type": "unique_option",
+      "flow": 14,
+      "options": [
+        {
+          "option_key": "Bueno",
+          "option_value": 4
+        },
+        {
+          "option_key": "Regular",
+          "option_value": 3
+        },
+        {
+          "option_key": "Deficiente",
+          "option_value": 2
+        },
+        {
+          "option_key": "No Aplica",
+          "option_value": 1
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 14,
+      "title": "¿Evaluó el logro de los objetivos a través de preguntas a los asistentes?",
+      "slug": "mac_4",
+      "description": "<p><strong>4. Conversaciones de cambio:</strong> El formador busca un espacio para conversar con el asesor comercial en privado.</p><p>Realiza las siguientes preguntas buscando la reflexi&oacute;n del asesor:</p><p>1) &iquest;C&oacute;mo te sentiste?<br />2) &iquest;Cu&aacute;les crees que son tus mayores fortalezas?<br />3) &iquest;Cu&aacute;les crees que son tus mayores oportunidades?<br />4) &iquest;Qu&eacute; crees que debemos hacer para que tu hagas mejor estos pasos?</p>",
+      "type": "unique_option",
+      "flow": 15,
+      "options": [
+        {
+          "option_key": "Bueno",
+          "option_value": 4
+        },
+        {
+          "option_key": "Regular",
+          "option_value": 3
+        },
+        {
+          "option_key": "Deficiente",
+          "option_value": 2
+        },
+        {
+          "option_key": "No Aplica",
+          "option_value": 1
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 15,
+      "title": "¿El contenido del curso es útil y aplicable?",
+      "slug": "mac_5",
+      "type": "unique_option",
+      "flow": 16,
+      "options": [
+        {
+          "option_key": "Bueno",
+          "option_value": 4
+        },
+        {
+          "option_key": "Regular",
+          "option_value": 3
+        },
+        {
+          "option_key": "Deficiente",
+          "option_value": 2
+        },
+        {
+          "option_key": "No Aplica",
+          "option_value": 1
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 16,
+      "title": "Observaciones",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": "_submit",
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    }
+  ]
+}

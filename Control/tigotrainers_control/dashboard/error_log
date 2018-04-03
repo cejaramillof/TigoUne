@@ -1,0 +1,12 @@
+[14-Sep-2017 17:23:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/subsection-reports.php:100
+Stack trace:
+#0 {main}
+  thrown in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/subsection-reports.php on line 100
+[14-Sep-2017 17:23:11 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/subsection-reports.php:100
+Stack trace:
+#0 {main}
+  thrown in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/subsection-reports.php on line 100
+[14-Sep-2017 17:23:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/subsection-reports.php:100
+Stack trace:
+#0 {main}
+  thrown in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/subsection-reports.php on line 100

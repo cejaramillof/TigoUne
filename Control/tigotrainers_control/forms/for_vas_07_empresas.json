@@ -1,0 +1,2300 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+  	{
+      "id": 1,
+      "title": "Fecha de la actividad",
+      "slug": "activity_date",
+      "type": "date",
+      "flow": 2,
+      "properties": {
+        "required": true,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Cédula del ejecutivo",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 3,
+      "properties": {
+        "required": true,
+        "validate": "cc_id"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Nombre del ejecutivo",
+      "slug": "asesor_name",
+      "type": "text",
+      "flow": 4,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Nombre del jefe inmediato del ejecutivo",
+      "slug": "asesor_boss_name",
+      "type": "text",
+      "flow": 5,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Antigüedad del ejecutivo en el cargo",
+      "slug": "asesor_antiquity",
+      "type": "unique_option",
+      "flow": 6,
+      "options": [
+        {
+          "option_key": "Menos de 3 meses",
+          "option_value": "Menos de 3 meses"
+        },
+        {
+          "option_key": "De 3 a 6 meses",
+          "option_value": "De 3 a 6 meses"
+        },
+        {
+          "option_key": "Más de 6 meses",
+          "option_value": "Más de 6 meses"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Canal Trabajado",
+      "slug": "channel",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Farmer",
+          "option_value": "farmer",
+          "flow": 7
+        },
+        {
+          "option_key": "Hunter",
+          "option_value": "hunter",
+          "flow": 8
+        },
+        {
+          "option_key": "Distribuidores / Agencias Comerciales",
+          "option_value": "distribuidores y agencias comerciales",
+          "flow": 8
+        },
+        {
+          "option_key": "BTL",
+          "option_value": "BTL",
+          "flow": 127
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Objetivo del acompañamiento",
+      "slug": "coach_objective",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Exploración",
+          "option_value": "Exploración",
+          "flow": 9
+        },
+        {
+          "option_key": "Venta efectiva",
+          "option_value": "Venta efectiva",
+          "flow": 28
+        },
+        {
+          "option_key": "Mantenimiento",
+          "option_value": "Mantenimiento",
+          "flow": 48
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Objetivo del acompañamiento",
+      "slug": "coach_objective",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Exploración",
+          "option_value": "Exploración",
+          "flow": 209
+        },
+        {
+          "option_key": "Venta efectiva",
+          "option_value": "Venta efectiva",
+          "flow": 228
+        },
+        {
+          "option_key": "Mantenimiento",
+          "option_value": "Mantenimiento",
+          "flow": 248
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Paso 0: Preparación",
+      "description": "Conocer el cliente, preparar información requerida y hacer seguimiento a los compromisos.",
+      "type": "title_group",
+      "flow": 10
+    },
+    {
+      "id": 10,
+      "title": "Confirma cita y define objetivo de visita de acuerdo con el mapa de trabajo a desarrollar para el cliente.",
+      "slug": "mac_1",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 11,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 11,
+      "title": "Revisa y hace seguimiento a los  compromisos y pendientes.",
+      "slug": "mac_2",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 12,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 12,
+      "title": "Revisa material de trabajo (información de producto, procesos, formatos, promociones, cupo crosseling, carpeta de trabajo).",
+      "slug": "mac_3",
+      "type": "range_option",
+      "description": "",
+      "flow": 13,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 13,
+      "title": "Revisa información del cliente en Web y plataformas internas.",
+      "slug": "mac_4",
+      "type": "range_option",
+      "description": "",
+      "flow": 15,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 15,
+      "title": "Paso 1: Relacionamiento",
+      "description": "Establecer una relación de confianza y posicionar su rol como ejecutivo frente al cliente. Mantener un trato cordial y respetuoso con todos los interlocutores.",
+      "type": "title_group",
+      "flow": 16
+    },
+    {
+      "id": 16,
+      "title": "Llega con anticipación a la cita acordada.",
+      "slug": "mac_6",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 17,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 17,
+      "title": "Realiza acercamiento con sintonía y empatía y hace comentario positivos.",
+      "slug": "mac_7",
+      "type": "range_option",
+      "description": "",
+      "flow": 18,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 18,
+      "title": "Informa el motivo/objetivo de la visita y chequea el tiempo disponible.",
+      "slug": "mac_8",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 19,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 19,
+      "title": "Identifica las personas asistentes y sus roles clave. Valida con el cliente otras personas que deban participar.",
+      "slug": "mac_9",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 20,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 20,
+      "title": "Interacción y posicionamiento con los diferentes contactos  del cliente según conocimiento integral de la cuenta.",
+      "slug": "mac_10",
+      "type": "range_option",
+      "description": "",
+      "flow": 21,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 21,
+      "title": "Paso 2: Desarrollo y negociación",
+      "description": "Escuchar activamente la necesidad del cliente y realizar preguntas clave para aclarar o especificar la necesidad. Asesorar al cliente sobre las características del producto y la oferta unificada de la Compañía. Realizar presentación efectiva de la oferta y beneficios y resolver las objeciones del cliente.",
+      "type": "title_group",
+      "flow": 22
+    },
+    {
+      "id": 22,
+      "title": "Escucha activamente y hace preguntas poderosas.",
+      "slug": "mac_11",
+      "type": "range_option",
+      "description": "",
+      "flow": 23,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 23,
+      "title": "Identifica necesidades explícitas en el cliente.",
+      "slug": "mac_12",
+      "type": "range_option",
+      "description": "",
+      "flow": 24,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 24,
+      "title": "Señala proactivamente soluciones a necesidades ocultas",
+      "slug": "mac_13",
+      "type": "range_option",
+      "description": "",
+      "flow": 25,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 25,
+      "title": "Establece compromisos de ofertas",
+      "slug": "mac_14",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 26,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 26,
+      "title": "Paso 3: Cierre",
+      "description": "Usar  las técnicas de cierre para finalizar la visita y/o concretar la venta, transmitiendo seguridad y confianza",
+      "type": "title_group",
+      "flow": 27
+    },
+    {
+      "id": 27,
+      "title": "Genera expectativa para envío de oferta y acuerda fecha de siguiente visita",
+      "slug": "mac_15",
+      "type": "range_option",
+      "description": "",
+      "flow": 276,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 28,
+      "title": "Paso 0: Preparación",
+      "description": "Conocer el cliente, preparar información requerida y hacer seguimiento a los compromisos.",
+      "type": "title_group",
+      "flow": 29
+    },
+    {
+      "id": 29,
+      "title": "Confirma cita y define objetivo de visita de acuerdo con el mapa de trabajo a desarrollar para el cliente.",
+      "slug": "mac_1",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 30,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 30,
+      "title": "Revisa y hace seguimiento a los  compromisos y pendientes.",
+      "slug": "mac_2",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 31,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 31,
+      "title": "Revisa material de trabajo (información de producto, procesos, formatos, promociones, cupo crosseling, carpeta de trabajo).",
+      "slug": "mac_3",
+      "type": "range_option",
+      "description": "",
+      "flow": 32,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 32,
+      "title": "Revisa información del cliente en Web y plataformas internas.",
+      "slug": "mac_4",
+      "type": "range_option",
+      "description": "",
+      "flow": 33,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 33,
+      "title": "Prepara presentación comercial  con diferencial de oferta, anticipando las posibles preguntas que pueden surgir (Momento 2).",
+      "slug": "mac_5",
+      "type": "range_option",
+      "description": "",
+      "flow": 34,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 34,
+      "title": "Paso 1: Relacionamiento",
+      "description": "Establecer una relación de confianza y posicionar su rol como ejecutivo frente al cliente. Mantener un trato cordial y respetuoso con todos los interlocutores.",
+      "type": "title_group",
+      "flow": 35
+    },
+    {
+      "id": 35,
+      "title": "Llega con anticipación a la cita acordada.",
+      "slug": "mac_6",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 36,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 36,
+      "title": "Realiza acercamiento con sintonía y empatía y hace comentario positivos.",
+      "slug": "mac_7",
+      "type": "range_option",
+      "description": "",
+      "flow": 37,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 37,
+      "title": "Informa el motivo/objetivo de la visita y chequea el tiempo disponible.",
+      "slug": "mac_8",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 38,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 38,
+      "title": "Identifica las personas asistentes y sus roles clave. Valida con el cliente otras personas que deban participar.",
+      "slug": "mac_9",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 39,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 39,
+      "title": "Interacción y posicionamiento con los diferentes contactos  del cliente según conocimiento integral de la cuenta.",
+      "slug": "mac_10",
+      "type": "range_option",
+      "description": "",
+      "flow": 40,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 40,
+      "title": "Paso 2: Desarrollo y negociación",
+      "description": "Escuchar activamente la necesidad del cliente y realizar preguntas clave para aclarar o especificar la necesidad. Asesorar al cliente sobre las características del producto y la oferta unificada de la Compañía. Realizar presentación efectiva de la oferta y beneficios y resolver las objeciones del cliente.",
+      "type": "title_group",
+      "flow": 41
+    },
+  	 {
+      "id": 41,
+      "title": "Presentación efectiva de oferta con diferencial",
+      "slug": "mac_11",
+      "type": "range_option",
+      "description": "",
+      "flow": 42,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 42,
+      "title": "Destaca beneficios clave de la Compañía y del portafolio",
+      "slug": "mac_12",
+      "type": "range_option",
+      "description": "",
+      "flow": 43,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 43,
+      "title": "Identifica las objeciones reales para resolverlas",
+      "slug": "mac_13",
+      "type": "range_option",
+      "description": "",
+      "flow": 44,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 44,
+      "title": "Asesora al cliente de acuerdo con su necesidad",
+      "slug": "mac_14",
+      "type": "range_option",
+      "description": "",
+      "flow": 45,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 45,
+      "title": "Paso 3: Cierre",
+      "description": "Usar  las técnicas de cierre para finalizar la visita y/o concretar la venta, transmitiendo seguridad y confianza",
+      "type": "title_group",
+      "flow": 46
+    },
+    {
+      "id": 46,
+      "title": "Firma de contrato y acuerdos",
+      "slug": "mac_15",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 47,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 47,
+      "title": "Gestiona la documentación para registro de venta",
+      "slug": "mac_16",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 276,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 48,
+      "title": "Paso 0: Preparación",
+      "description": "Conocer el cliente, preparar información requerida y hacer seguimiento a los compromisos.",
+      "type": "title_group",
+      "flow": 49
+    },
+    {
+      "id": 49,
+      "title": "Confirma cita y define objetivo de visita de acuerdo con el mapa de trabajo a desarrollar para el cliente.",
+      "slug": "mac_1",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 50,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 50,
+      "title": "Revisa y hace seguimiento a los  compromisos y pendientes.",
+      "slug": "mac_2",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 51,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 51,
+      "title": "Revisa material de trabajo (información de producto, procesos, formatos, promociones, cupo crosseling, carpeta de trabajo).",
+      "slug": "mac_3",
+      "type": "range_option",
+      "description": "",
+      "flow": 52,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 52,
+      "title": "Revisa información del cliente en Web y plataformas internas.",
+      "slug": "mac_4",
+      "type": "range_option",
+      "description": "",
+      "flow": 54,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 54,
+      "title": "Paso 1: Relacionamiento",
+      "description": "Establecer una relación de confianza y posicionar su rol como ejecutivo frente al cliente. Mantener un trato cordial y respetuoso con todos los interlocutores.",
+      "type": "title_group",
+      "flow": 55
+    },
+    {
+      "id": 55,
+      "title": "Llega con anticipación a la cita acordada.",
+      "slug": "mac_6",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 57,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 57,
+      "title": "Realiza acercamiento con sintonía y empatía y hace comentario positivos.",
+      "slug": "mac_7",
+      "type": "range_option",
+      "description": "",
+      "flow": 58,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 58,
+      "title": "Informa el motivo/objetivo de la visita y chequea el tiempo disponible.",
+      "slug": "mac_8",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 59,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 59,
+      "title": "Identifica las personas asistentes y sus roles clave. Valida con el cliente otras personas que deban participar.",
+      "slug": "mac_9",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 60,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 60,
+      "title": "Interacción y posicionamiento con los diferentes contactos  del cliente según conocimiento integral de la cuenta.",
+      "slug": "mac_10",
+      "type": "range_option",
+      "description": "",
+      "flow": 70,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 70,
+      "title": "Paso 2: Desarrollo y negociación",
+      "description": "Escuchar activamente la necesidad del cliente y realizar preguntas clave para aclarar o especificar la necesidad. Asesorar al cliente sobre las características del producto y la oferta unificada de la Compañía. Realizar presentación efectiva de la oferta y beneficios y resolver las objeciones del cliente.",
+      "type": "title_group",
+      "flow": 71
+    },
+     {
+      "id": 71,
+      "title": "Explica oferta y canales de atención de servicio",
+      "slug": "mac_11",
+      "type": "range_option",
+      "description": "",
+      "flow": 72,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 72,
+      "title": "Presenta estrategias de fidelización",
+      "slug": "mac_12",
+      "type": "range_option",
+      "description": "",
+      "flow": 73,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 73,
+      "title": "Definir nuevos objetivos para próximas visitas",
+      "slug": "mac_13",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 74,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 74,
+      "title": "Paso 3: Cierre",
+      "description": "Usar  las técnicas de cierre para finalizar la visita y/o concretar la venta, transmitiendo seguridad y confianza",
+      "type": "title_group",
+      "flow": 75
+    },
+    {
+      "id": 75,
+      "title": "Valida satisfacción del cliente con la propuesta y los servicios",
+      "slug": "mac_14",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 276,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 209,
+      "title": "Paso 0: Preparación",
+      "description": "Conocer el cliente, preparar información requerida y hacer seguimiento a los compromisos.",
+      "type": "title_group",
+      "flow": 210
+    },
+    {
+      "id": 210,
+      "title": "Confirma cita y define objetivo de visita de acuerdo con el mapa de trabajo a desarrollar para el cliente.",
+      "slug": "mac_1",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 211,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 211,
+      "title": "Revisa y hace seguimiento a los  compromisos y pendientes.",
+      "slug": "mac_2",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 212,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 212,
+      "title": "Revisa material de trabajo (información de producto, procesos, formatos, promociones, cupo crosseling, carpeta de trabajo).",
+      "slug": "mac_3",
+      "type": "range_option",
+      "description": "",
+      "flow": 213,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 213,
+      "title": "Revisa información del cliente en Web y plataformas internas.",
+      "slug": "mac_4",
+      "type": "range_option",
+      "description": "",
+      "flow": 215,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 215,
+      "title": "Paso 1: Relacionamiento",
+      "description": "Establecer una relación de confianza y posicionar su rol como ejecutivo frente al cliente. Mantener un trato cordial y respetuoso con todos los interlocutores.",
+      "type": "title_group",
+      "flow": 216
+    },
+    {
+      "id": 216,
+      "title": "Llega con anticipación a la cita acordada.",
+      "slug": "mac_6",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 217,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 217,
+      "title": "Realiza acercamiento con sintonía y empatía y hace comentario positivos.",
+      "slug": "mac_7",
+      "type": "range_option",
+      "description": "",
+      "flow": 218,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 218,
+      "title": "Informa el motivo/objetivo de la visita y chequea el tiempo disponible.",
+      "slug": "mac_8",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 219,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 219,
+      "title": "Identifica las personas asistentes y sus roles clave. Valida con el cliente otras personas que deban participar.",
+      "slug": "mac_9",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 221,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 221,
+      "title": "Paso 2: Desarrollo y negociación",
+      "description": "Escuchar activamente la necesidad del cliente y realizar preguntas clave para aclarar o especificar la necesidad. Asesorar al cliente sobre las características del producto y la oferta unificada de la Compañía. Realizar presentación efectiva de la oferta y beneficios y resolver las objeciones del cliente.",
+      "type": "title_group",
+      "flow": 222
+    },
+    {
+      "id": 222,
+      "title": "Escucha activamente y hace preguntas poderosas",
+      "slug": "mac_10",
+      "type": "range_option",
+      "description": "",
+      "flow": 223,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 223,
+      "title": "Identifica necesidades explícitas en el cliente.",
+      "slug": "mac_11",
+      "type": "range_option",
+      "description": "",
+      "flow": 224,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 224,
+      "title": "Señala proactivamente soluciones a necesidades ocultas",
+      "slug": "mac_12",
+      "type": "range_option",
+      "description": "",
+      "flow": 225,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 225,
+      "title": "Establece compromisos de ofertas",
+      "slug": "mac_13",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 226,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 226,
+      "title": "Paso 3: Cierre",
+      "description": "Usar  las técnicas de cierre para finalizar la visita y/o concretar la venta, transmitiendo seguridad y confianza",
+      "type": "title_group",
+      "flow": 227
+    },
+    {
+      "id": 227,
+      "title": "Genera expectativa para envío de oferta y acuerda fecha de siguiente visita",
+      "slug": "mac_14",
+      "type": "range_option",
+      "description": "",
+      "flow": 276,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 228,
+      "title": "Paso 0: Preparación",
+      "description": "Conocer el cliente, preparar información requerida y hacer seguimiento a los compromisos.",
+      "type": "title_group",
+      "flow": 229
+    },
+    {
+      "id": 229,
+      "title": "Confirma cita y define objetivo de visita de acuerdo con el mapa de trabajo a desarrollar para el cliente.",
+      "slug": "mac_1",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 230,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 230,
+      "title": "Revisa y hace seguimiento a los  compromisos y pendientes.",
+      "slug": "mac_2",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 231,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 231,
+      "title": "Revisa material de trabajo (información de producto, procesos, formatos, promociones, cupo crosseling, carpeta de trabajo).",
+      "slug": "mac_3",
+      "type": "range_option",
+      "description": "",
+      "flow": 232,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 232,
+      "title": "Revisa información del cliente en Web y plataformas internas.",
+      "slug": "mac_4",
+      "type": "range_option",
+      "description": "",
+      "flow": 233,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 233,
+      "title": "Prepara presentación comercial  con diferencial de oferta, anticipando las posibles preguntas que pueden surgir (Momento 2).",
+      "slug": "mac_5",
+      "type": "range_option",
+      "description": "",
+      "flow": 234,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 234,
+      "title": "Paso 1: Relacionamiento",
+      "description": "Establecer una relación de confianza y posicionar su rol como ejecutivo frente al cliente. Mantener un trato cordial y respetuoso con todos los interlocutores.",
+      "type": "title_group",
+      "flow": 235
+    },
+    {
+      "id": 235,
+      "title": "Llega con anticipación a la cita acordada.",
+      "slug": "mac_6",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 236,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 236,
+      "title": "Realiza acercamiento con sintonía y empatía y hace comentario positivos.",
+      "slug": "mac_7",
+      "type": "range_option",
+      "description": "",
+      "flow": 237,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 237,
+      "title": "Informa el motivo/objetivo de la visita y chequea el tiempo disponible.",
+      "slug": "mac_8",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 238,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 238,
+      "title": "Identifica las personas asistentes y sus roles clave. Valida con el cliente otras personas que deban participar.",
+      "slug": "mac_9",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 239,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 239,
+      "title": "Interacción y posicionamiento con los diferentes contactos  del cliente según conocimiento integral de la cuenta.",
+      "slug": "mac_10",
+      "type": "range_option",
+      "description": "",
+      "flow": 40,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 240,
+      "title": "Paso 2: Desarrollo y negociación",
+      "description": "Escuchar activamente la necesidad del cliente y realizar preguntas clave para aclarar o especificar la necesidad. Asesorar al cliente sobre las características del producto y la oferta unificada de la Compañía. Realizar presentación efectiva de la oferta y beneficios y resolver las objeciones del cliente.",
+      "type": "title_group",
+      "flow": 241
+    },
+  	 {
+      "id": 241,
+      "title": "Presentación efectiva de oferta con diferencial",
+      "slug": "mac_11",
+      "type": "range_option",
+      "description": "",
+      "flow": 242,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 242,
+      "title": "Destaca beneficios clave de la Compañía y del portafolio",
+      "slug": "mac_12",
+      "type": "range_option",
+      "description": "",
+      "flow": 243,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 243,
+      "title": "Identifica las objeciones reales para resolverlas",
+      "slug": "mac_13",
+      "type": "range_option",
+      "description": "",
+      "flow": 244,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 244,
+      "title": "Asesora al cliente de acuerdo con su necesidad",
+      "slug": "mac_14",
+      "type": "range_option",
+      "description": "",
+      "flow": 245,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 245,
+      "title": "Paso 3: Cierre",
+      "description": "Usar  las técnicas de cierre para finalizar la visita y/o concretar la venta, transmitiendo seguridad y confianza",
+      "type": "title_group",
+      "flow": 246
+    },
+    {
+      "id": 246,
+      "title": "Firma de contrato y acuerdos",
+      "slug": "mac_15",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 247,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 247,
+      "title": "Gestiona la documentación para registro de venta",
+      "slug": "mac_16",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 276,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 248,
+      "title": "Paso 0: Preparación",
+      "description": "Conocer el cliente, preparar información requerida y hacer seguimiento a los compromisos.",
+      "type": "title_group",
+      "flow": 249
+    },
+    {
+      "id": 249,
+      "title": "Confirma cita y define objetivo de visita de acuerdo con el mapa de trabajo a desarrollar para el cliente.",
+      "slug": "mac_1",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 250,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 250,
+      "title": "Revisa y hace seguimiento a los  compromisos y pendientes.",
+      "slug": "mac_2",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 251,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 251,
+      "title": "Revisa material de trabajo (información de producto, procesos, formatos, promociones, cupo crosseling, carpeta de trabajo).",
+      "slug": "mac_3",
+      "type": "range_option",
+      "description": "",
+      "flow": 252,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 252,
+      "title": "Revisa información del cliente en Web y plataformas internas.",
+      "slug": "mac_4",
+      "type": "range_option",
+      "description": "",
+      "flow": 254,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 254,
+      "title": "Paso 1: Relacionamiento",
+      "description": "Establecer una relación de confianza y posicionar su rol como ejecutivo frente al cliente. Mantener un trato cordial y respetuoso con todos los interlocutores.",
+      "type": "title_group",
+      "flow": 55
+    },
+    {
+      "id": 255,
+      "title": "Llega con anticipación a la cita acordada.",
+      "slug": "mac_6",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 256,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 257,
+      "title": "Realiza acercamiento con sintonía y empatía y hace comentario positivos.",
+      "slug": "mac_7",
+      "type": "range_option",
+      "description": "",
+      "flow": 258,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 258,
+      "title": "Informa el motivo/objetivo de la visita y chequea el tiempo disponible.",
+      "slug": "mac_8",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 259,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 259,
+      "title": "Identifica las personas asistentes y sus roles clave. Valida con el cliente otras personas que deban participar.",
+      "slug": "mac_9",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 260,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 260,
+      "title": "Interacción y posicionamiento con los diferentes contactos  del cliente según conocimiento integral de la cuenta.",
+      "slug": "mac_10",
+      "type": "range_option",
+      "description": "",
+      "flow": 270,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 270,
+      "title": "Paso 2: Desarrollo y negociación",
+      "description": "Escuchar activamente la necesidad del cliente y realizar preguntas clave para aclarar o especificar la necesidad. Asesorar al cliente sobre las características del producto y la oferta unificada de la Compañía. Realizar presentación efectiva de la oferta y beneficios y resolver las objeciones del cliente.",
+      "type": "title_group",
+      "flow": 271
+    },
+     {
+      "id": 271,
+      "title": "Explica oferta y canales de atención de servicio",
+      "slug": "mac_11",
+      "type": "range_option",
+      "description": "",
+      "flow": 272,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 272,
+      "title": "Presenta estrategias de fidelización",
+      "slug": "mac_12",
+      "type": "range_option",
+      "description": "",
+      "flow": 273,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 273,
+      "title": "Definir nuevos objetivos para próximas visitas",
+      "slug": "mac_13",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 274,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 274,
+      "title": "Paso 3: Cierre",
+      "description": "Usar  las técnicas de cierre para finalizar la visita y/o concretar la venta, transmitiendo seguridad y confianza",
+      "type": "title_group",
+      "flow": 275
+    },
+    {
+      "id": 275,
+      "title": "Valida satisfacción del cliente con la propuesta y los servicios",
+      "slug": "mac_14",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 276,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 276,
+      "title": "Paso 4: Resumen de acuerdos y próximos pasos",
+      "description": "Señalar los pasos a seguir, fechas y compromisos acordados. Explicar facturación, modelo de servicio y promociones",
+      "type": "title_group",
+      "flow": 277
+    },
+    {
+      "id": 277,
+      "title": "Resume los acuerdos sobre: Tiempos de instalación o implementación, entrega del producto, condiciones del servicio, fechas de corte y/o vigencia del contrato, compromisos de ambas partes",
+      "slug": "mac_17",
+      "type": "range_option",
+      "description": "",
+      "flow": 278,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 278,
+      "title": "Explica lo relacionado con: proceso de facturación, modelo de servicio, promociones y condiciones",
+      "slug": "mac_18",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 279,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 279,
+      "title": "Paso 5: Valor agregado a su gestión",
+      "description": "Seguimiento a las oportunidades de negocio, análisis de la visita y reportes en sistemas de información",
+      "type": "title_group",
+      "flow": 280
+    },
+    {
+      "id": 280,
+      "title": "Realiza el ingreso de la venta y genera el reporte de la visita y otros registros (Archivo personal y plataformas) de forma impecable.",
+      "slug": "mac_19",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 281,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 281,
+      "title": "Analiza la visita de acuerdo con los pasos del MAC e identifica los puntos de mejora para su próxima interacción.",
+      "slug": "mac_20",
+      "type": "range_option",
+      "description": "",
+      "flow": 282,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 282,
+      "title": "Revisa las oportunidades de negocio que surgieron en la visita para hacer gestión de las mismas",
+      "slug": "mac_21",
+      "type": "range_option",
+      "description": "",
+      "flow": 283,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+     {
+      "id": 283,
+      "title": "Plan de acción",
+      "description": "",
+      "type": "title_group",
+      "flow": 284
+    },
+    {
+      "id": 284,
+      "title": "Oportunidades de mejora",
+      "slug": "oportunities",
+      "description": "",
+      "type": "multiple_option",
+      "flow": 285,
+      "options": [
+        {
+          "option_key": "Preparación",
+          "option_value": "Preparación"
+        },
+        {
+          "option_key": "Relacionamiento",
+          "option_value": "Relacionamiento"
+        },
+        {
+          "option_key": "Desarrollo y negociación",
+          "option_value": "Desarrollo y negociación"
+        },
+        {
+          "option_key": "Cierre",
+          "option_value": "Cierre"
+        },
+        {
+          "option_key": "Resumen de acuerdos y próximos pasos",
+          "option_value": "Resumen de acuerdos y próximos pasos"
+        },
+        {
+          "option_key": "Valor agregado a su gestión",
+          "option_value": "Valor agregado a su gestión"
+        }
+      ],
+      "properties": {
+        "required": false,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 285,
+      "title": "Acciones a implementar",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": 286,
+      "properties": {
+        "required": false,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 286,
+      "title": "Recursos",
+      "slug": "resources",
+      "description": "",
+      "type": "multiple_option",
+      "flow": 287,
+      "options": [
+        {
+          "option_key": "Autoestudio",
+          "option_value": "Autoestudio"
+        },
+        {
+          "option_key": "Entrenamiento",
+          "option_value": "Entrenamiento"
+        },
+        {
+          "option_key": "Refuerzo",
+          "option_value": "Refuerzo"
+        },
+        {
+          "option_key": "Acompañamiento",
+          "option_value": "Acompañamiento"
+        },
+        {
+          "option_key": "Retroalimentación",
+          "option_value": "Retroalimentación"
+        }
+      ],
+      "properties": {
+        "required": false,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 287,
+      "title": "Fecha de revisión",
+      "slug": "revision_date",
+      "type": "date",
+      "flow": 288,
+      "properties": {
+        "required": false,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 127,
+      "title": "Paso 0: Preparación",
+      "description": "Conocer el cliente, preparar información requerida y hacer seguimiento a los compromisos.",
+      "type": "title_group",
+      "flow": 128
+    },
+    {
+      "id": 128,
+      "title": "Revisa el plan de trabajo según zona asignada",
+      "slug": "mac_1",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 129,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 129,
+      "title": "Prepara el material de trabajo (publicidad, ayuda ventas)",
+      "slug": "mac_2",
+      "type": "range_option",
+      "description": "",
+      "flow": 130,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 130,
+      "title": "Estudia el portafolio, especialmente el producto a ofertar o campaña vigente",
+      "slug": "mac_3",
+      "type": "range_option",
+      "description": "",
+      "flow": 131,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 131,
+      "title": "Ensaya su diálogo y respuesta a posibles objeciones",
+      "slug": "mac_4",
+      "type": "range_option",
+      "description": "",
+      "flow": 132,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 132,
+      "title": "Lleva su uniforme y carnet que te identifica como representante de TigoUne",
+      "slug": "mac_5",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 133,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 133,
+      "title": "Paso 1: Relacionamiento",
+      "description": "Establecer una relación de confianza y posicionar su rol como ejecutivo frente al cliente. Mantener un trato cordial y respetuoso con todos los interlocutores",
+      "type": "title_group",
+      "flow": 134
+    },
+    {
+      "id": 134,
+      "title": "Saludo corporativo, título de respeto, represento a la Compañía TigoUne",
+      "slug": "mac_6",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 135,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 135,
+      "title": "Pregunta: “¿Quien es la persona que está a cargo de la toma de decisiones para la contratación de los servicios de telecomunicaciones o líneas móviles?, tenemos una oferta de movilidad que puede interesarle”",
+      "slug": "mac_7",
+      "type": "range_option",
+      "description": "",
+      "flow": 136,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 136,
+      "title": "Valida tiempo disponible para conocer la propuesta o agendar una cita",
+      "slug": "mac_8",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 137,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+
+    {
+      "id": 137,
+      "title": "Mantiene una actitud positiva independiente del resultado de la interacción",
+      "slug": "mac_9",
+      "type": "range_option",
+      "description": "",
+      "flow": 138,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 138,
+      "title": "Paso 2: Desarrollo",
+      "description": "Escuchar activamente la necesidad del cliente y realizar preguntas clave para aclarar o especificar la necesidad. Asesorar al cliente sobre las características del producto y la oferta unificada de la Compañía. Realizar presentación efectiva de la oferta y beneficios y resolver las objeciones del cliente",
+      "type": "title_group",
+      "flow": 139
+    },
+    {
+      "id": 139,
+      "title": "Valida información del cliente: contactos, #líneas, operador actual",
+      "slug": "mac_10",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 140,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+
+    {
+      "id": 140,
+      "title": "Entrega volante con información de la oferta",
+      "slug": "mac_11",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 141,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 141,
+      "title": "Agenda una nueva cita",
+      "slug": "mac_12",
+      "type": "boolean_option",
+      "description": "",
+      "flow": 142,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 142,
+      "title": "Envía correo recordatorio de la cita incluyendo una e-card estandarizada con la oferta",
+      "slug": "mac_13",
+      "type": "boolean_option",
+      "description": "",
+      "flow": "_submit",
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 143,
+      "title": "Plan de acción",
+      "description": "",
+      "type": "title_group",
+      "flow": 144
+    },
+    {
+      "id": 144,
+      "title": "Oportunidades de mejora",
+      "slug": "oportunities",
+      "description": "",
+      "type": "multiple_option",
+      "flow": 145,
+      "options": [
+        {
+          "option_key": "Preparación",
+          "option_value": "Preparación"
+        },
+        {
+          "option_key": "Relacionamiento",
+          "option_value": "Relacionamiento"
+        },
+        {
+          "option_key": "Desarrollo y negociación",
+          "option_value": "Desarrollo y negociación"
+        },
+        {
+          "option_key": "Cierre",
+          "option_value": "Cierre"
+        },
+        {
+          "option_key": "Resumen de acuerdos y próximos pasos",
+          "option_value": "Resumen de acuerdos y próximos pasos"
+        },
+        {
+          "option_key": "Valor agregado a su gestión",
+          "option_value": "Valor agregado a su gestión"
+        }
+      ],
+      "properties": {
+        "required": false,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 145,
+      "title": "Acciones a implementar",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": 146,
+      "properties": {
+        "required": false,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 146,
+      "title": "Recursos",
+      "slug": "resources",
+      "description": "",
+      "type": "multiple_option",
+      "flow": 147,
+      "options": [
+        {
+          "option_key": "Autoestudio",
+          "option_value": "Autoestudio"
+        },
+        {
+          "option_key": "Entrenamiento",
+          "option_value": "Entrenamiento"
+        },
+        {
+          "option_key": "Refuerzo",
+          "option_value": "Refuerzo"
+        },
+        {
+          "option_key": "Acompañamiento",
+          "option_value": "Acompañamiento"
+        },
+        {
+          "option_key": "Retroalimentación",
+          "option_value": "Retroalimentación"
+        }
+      ],
+      "properties": {
+        "required": false,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 147,
+      "title": "Fecha de revisión",
+      "slug": "revision_date",
+      "type": "date",
+      "flow": 288,
+      "properties": {
+        "required": false,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 288,
+      "title": "Observaciones",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": 289,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 289,
+      "title": "Duración de la visita (minutos)",
+      "slug": "training_time",
+      "type": "range_option",
+      "flow": "_submit",
+      "options": {
+        "min_value": 20,
+        "max_value": 480,
+        "steps": 10
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    }
+  ]
+}

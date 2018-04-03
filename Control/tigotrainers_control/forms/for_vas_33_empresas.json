@@ -1,0 +1,367 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Fecha de la actividad",
+      "slug": "activity_date",
+      "type": "date",
+      "flow": 2,
+      "properties": {
+        "required": true,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Canal Trabajado",
+      "slug": "channel",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Farmer",
+          "option_value": "farmer",
+          "flow": 4
+        },
+        {
+          "option_key": "Hunter",
+          "option_value": "hunter",
+          "flow": 4
+        },
+        {
+          "option_key": "Gran Empresa y Gobierno",
+          "option_value": "gran empresa y gobierno",
+          "flow": 5
+        },
+        {
+          "option_key": "Distribuidores / Agencias Comerciales",
+          "option_value": "distribuidores y agencias comerciales",
+          "flow": 4
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Nivel de Entrenamiento",
+      "slug": "training_level",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Básico",
+          "option_value": "Básico",
+          "flow": 9
+        },
+        {
+          "option_key": "Intermedio",
+          "option_value": "Intermedio",
+          "flow": 10
+        },
+        {
+          "option_key": "Avanzado",
+          "option_value": "Avanzado",
+          "flow": 11
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Nivel de Entrenamiento",
+      "slug": "training_level",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Básico",
+          "option_value": "Básico",
+          "flow": 12
+        },
+        {
+          "option_key": "Intermedio",
+          "option_value": "Intermedio",
+          "flow": 13
+        },
+        {
+          "option_key": "Avanzado",
+          "option_value": "Avanzado",
+          "flow": 14
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Módulo de Entrenamiento Básico",
+      "slug": "basic_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Entorno Corporativo",
+          "option_value": "Entorno Corporativo"
+        },
+        {
+          "option_key": "Conceptos de telecomunicaciones",
+          "option_value": "Conceptos de telecomunicaciones"
+        },
+        {
+          "option_key": "Procesos",
+          "option_value": "Procesos"
+        },
+        {
+          "option_key": "Portafolio fijo básico",
+          "option_value": "Portafolio fijo básico"
+        },
+        {
+          "option_key": "Portafolio móvil básico",
+          "option_value": "Portafolio móvil básico"
+        },
+        {
+          "option_key": "MAC",
+          "option_value": "MAC"
+        },
+        {
+          "option_key": "Plataformas",
+          "option_value": "Plataformas"
+        },
+        {
+          "option_key": "Evaluación",
+          "option_value": "Evaluación"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Módulo de Entrenamiento Intermedio",
+      "slug": "intermediate_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Portafolio fijo avanzado",
+          "option_value": "Portafolio fijo avanzado"
+        },
+         {
+          "option_key": "Portafolio móvil avanzado",
+          "option_value": "Portafolio móvil avanzado"
+        },
+        {
+          "option_key": "MAC",
+          "option_value": "MAC"
+        },
+        {
+          "option_key": "Evaluación",
+          "option_value": "Evaluación"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 11,
+      "title": "Módulo de Entrenamiento Avanzado",
+      "slug": "advanced_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Cloud Data Center & Security",
+          "option_value": "Cloud Data Center & Security"
+        },
+        {
+          "option_key": "Soluciones TIC",
+          "option_value": "Soluciones TIC"
+        },
+        {
+          "option_key": "Comunicaciones Unificadas",
+          "option_value": "Comunicaciones Unificadas"
+        },
+        {
+          "option_key": "Venta consultiva",
+          "option_value": "Venta consultiva"
+        },
+        {
+          "option_key": "Evaluación",
+          "option_value": "Evaluación"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 12,
+      "title": "Módulo de Entrenamiento Básico",
+      "slug": "basic_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Entorno Corporativo",
+          "option_value": "Entorno Corporativo"
+        },
+        {
+          "option_key": "Procesos",
+          "option_value": "Procesos"
+        },
+        {
+          "option_key": "MAC",
+          "option_value": "MAC"
+        },
+        {
+          "option_key": "Portafolio fijo básico",
+          "option_value": "Portafolio fijo básico"
+        },
+        {
+          "option_key": "Portafolio móvil básico",
+          "option_value": "Portafolio móvil básico"
+        },
+        {
+          "option_key": "Plataformas",
+          "option_value": "Plataformas"
+        },
+        {
+          "option_key": "Procesos",
+          "option_value": "Procesos"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 13,
+      "title": "Módulo de Entrenamiento Intermedio",
+      "slug": "intermediate_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Portafolio fijo avanzado",
+          "option_value": "Portafolio fijo avanzado"
+        },
+        {
+          "option_key": "Portafolio móvil avanzado",
+          "option_value": "Portafolio móvil avanzado"
+        },
+        {
+          "option_key": "MAC",
+          "option_value": "MAC"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 14,
+      "title": "Módulo de Entrenamiento Avanzado",
+      "slug": "advanced_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Cloud Data Center & Security",
+          "option_value": "Cloud Data Center & Security"
+        },
+        {
+          "option_key": "Soluciones TIC",
+          "option_value": "Soluciones TIC"
+        },
+        {
+          "option_key": "Comunicaciones Unificadas",
+          "option_value": "Comunicaciones Unificadas"
+        },
+        {
+          "option_key": "Venta consultiva",
+          "option_value": "Venta consultiva"
+        },
+         {
+          "option_key": "Colombia compra eficiente",
+          "option_value": "Colombia compra eficiente"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 8,
+      "title": "¿Se realizó evaluación?",
+      "slug": "quiz_done",
+      "type": "boolean_option",
+      "flow": 21,
+      "options": {
+        "true": 1,
+        "false": 0
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 21,
+      "title": "Duración del entrenamiento (minutos)",
+      "slug": "training_time",
+      "type": "range_option",
+      "flow": 22,
+      "options": {
+        "min_value": 60,
+        "max_value": 480,
+        "steps": 60
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 22,
+      "title": "Cédula(s) de participante(s)",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 23,
+      "properties": {
+        "required": true,
+        "validate": "cc_id",
+        "multidata": true
+      }
+    },
+    {
+      "id": 23,
+      "title": "Observaciones",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": "_submit",
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    }
+  ]
+}

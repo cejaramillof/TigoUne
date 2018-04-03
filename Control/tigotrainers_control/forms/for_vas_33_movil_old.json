@@ -1,0 +1,486 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Fecha de la actividad",
+      "slug": "activity_date",
+      "type": "date",
+      "flow": 2,
+      "properties": {
+        "required": true,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Canal Trabajado",
+      "slug": "channel",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Centro de Experiencia",
+          "option_value": "cde",
+          "flow": 4
+        },
+        {
+          "option_key": "Retail",
+          "option_value": "retail",
+          "flow": 5
+        },
+        {
+          "option_key": "Fuerza de Venta Directa",
+          "option_value": "fvd",
+          "flow": 6
+        },
+        {
+          "option_key": "Distribuidores",
+          "option_value": "dealer",
+          "flow": 7
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Nivel de Entrenamiento",
+      "slug": "training_level",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Básico",
+          "option_value": "Básico",
+          "flow": 9
+        },
+        {
+          "option_key": "Intermedio",
+          "option_value": "Intermedio",
+          "flow": 10
+        },
+        {
+          "option_key": "Avanzado",
+          "option_value": "Avanzado",
+          "flow": 11
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Nivel de Entrenamiento",
+      "slug": "training_level",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Básico",
+          "option_value": "Básico",
+          "flow": 12
+        },
+        {
+          "option_key": "Intermedio",
+          "option_value": "Intermedio",
+          "flow": 13
+        },
+        {
+          "option_key": "Avanzado",
+          "option_value": "Avanzado",
+          "flow": 14
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Nivel de Entrenamiento",
+      "slug": "training_level",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Básico",
+          "option_value": "Básico",
+          "flow": 15
+        },
+        {
+          "option_key": "Intermedio",
+          "option_value": "Intermedio",
+          "flow": 16
+        },
+        {
+          "option_key": "Avanzado",
+          "option_value": "Avanzado",
+          "flow": 17
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Nivel de Entrenamiento",
+      "slug": "training_level",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Básico",
+          "option_value": "Básico",
+          "flow": 18
+        },
+        {
+          "option_key": "Intermedio",
+          "option_value": "Intermedio",
+          "flow": 19
+        },
+        {
+          "option_key": "Avanzado",
+          "option_value": "Avanzado",
+          "flow": 20
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Módulo de Entrenamiento Básico",
+      "slug": "basic_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Día 1 - Entorno Corporativo + Prepago",
+          "option_value": "Día 1 - Entorno Corporativo + Prepago"
+        },
+        {
+          "option_key": "Día 2 - Prepago + Pospago",
+          "option_value": "Día 2 - Prepago + Pospago"
+        },
+        {
+          "option_key": "Día 3 - Prepago + Sueños con Propósito",
+          "option_value": "Día 3 - Prepago + Sueños con Propósito"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Módulo de Entrenamiento Intermedio",
+      "slug": "intermediate_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Día 4 - MacGO + Vendors",
+          "option_value": "Día 4 - MacGO + Vendors"
+        },
+        {
+          "option_key": "Día 5 - Ventas con Propósito + SmartApps",
+          "option_value": "Día 5 - Ventas con Propósito + SmartApps"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 11,
+      "title": "Módulo de Entrenamiento Avanzado",
+      "slug": "advanced_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Día 6 - Digital Life Style + Prepago y Pospago",
+          "option_value": "Día 6 - Digital Life Style + Prepago y Pospago"
+        },
+        {
+          "option_key": "Día 7 - Sale Day",
+          "option_value": "Día 7 - Sale Day"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 12,
+      "title": "Módulo de Entrenamiento Básico",
+      "slug": "basic_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Día 1 - Entorno Corporativo + Prepago",
+          "option_value": "Día 1 - Entorno Corporativo + Prepago"
+        },
+        {
+          "option_key": "Día 2 - Pospago",
+          "option_value": "Día 2 - Pospago"
+        },
+        {
+          "option_key": "Día 3 - Fundamentales del canal",
+          "option_value": "Día 3 - Fundamentales del canal"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 13,
+      "title": "Módulo de Entrenamiento Intermedio",
+      "slug": "intermediate_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Día 4 - Básico de ventas y SAC + MacGO",
+          "option_value": "Día 4 - Básico de ventas y SAC + MacGO"
+        },
+        {
+          "option_key": "Día 5 - Ventas con Propósito + Digital Life Style 1",
+          "option_value": "Día 5 - Ventas con Propósito + Digital Life Style 1"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 14,
+      "title": "Módulo de Entrenamiento Avanzado",
+      "slug": "advanced_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Día 6 - Seguimiento Ventas con Propósito",
+          "option_value": "Día 6 - Seguimiento Ventas con Propósito"
+        },
+        {
+          "option_key": "Día 7 - Digital Life Style 2",
+          "option_value": "Día 7 - Digital Life Style 2"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 15,
+      "title": "Módulo de Entrenamiento Básico",
+      "slug": "basic_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Día 1 - Entorno Corporativo + Prepago",
+          "option_value": "Día 1 - Entorno Corporativo + Prepago"
+        },
+        {
+          "option_key": "Día 2 - Prepago + Pospago",
+          "option_value": "Día 2 - Prepago + Pospago"
+        },
+        {
+          "option_key": "Día 3 - Ventas con Proposito + Prepago",
+          "option_value": "Día 3 - Ventas con Proposito + Prepago"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 16,
+      "title": "Módulo de Entrenamiento Intermedio",
+      "slug": "intermediate_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Día 4 - MacGO",
+          "option_value": "Día 4 - MacGO"
+        },
+        {
+          "option_key": "Día 5 - Básicos de Ventas y Servicio al Cliente",
+          "option_value": "Día 5 - Básicos de Ventas y Servicio al Cliente"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 17,
+      "title": "Módulo de Entrenamiento Avanzado",
+      "slug": "advanced_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Día 6 - Seguimiento Ventas con Propósito",
+          "option_value": "Día 6 - Seguimiento Ventas con Propósito"
+        },
+        {
+          "option_key": "Día 6 - Digital Life Style",
+          "option_value": "Día 6 - Digital Life Style"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 18,
+      "title": "Módulo de Entrenamiento Básico",
+      "slug": "basic_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Día 1 - Entorno Corporativo + Prepago",
+          "option_value": "Día 1 - Entorno Corporativo + Prepago"
+        },
+        {
+          "option_key": "Día 2 - Prepago",
+          "option_value": "Día 2 - Prepago"
+        },
+        {
+          "option_key": "Día 3 - Pospago",
+          "option_value": "Día 3 - Pospago"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 19,
+      "title": "Módulo de Entrenamiento Intermedio",
+      "slug": "intermediate_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Día 4 - Básicos de Ventas y Servicio al Cliente",
+          "option_value": "Día 4 - Básicos de Ventas y Servicio al Cliente"
+        },
+        {
+          "option_key": "Día 4 - Prepago y Pospago",
+          "option_value": "Día 4 - Prepago y Pospago"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 20,
+      "title": "Módulo de Entrenamiento Avanzado",
+      "slug": "advanced_training_module",
+      "type": "multiple_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Día 5 - Ventas con Propósito",
+          "option_value": "Día 5 - Ventas con Propósito"
+        },
+        {
+          "option_key": "Día 5 - Digital Life Style",
+          "option_value": "Día 5 - Digital Life Style"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+
+    {
+      "id": 8,
+      "title": "¿Se realizó evaluación?",
+      "slug": "quiz_done",
+      "type": "boolean_option",
+      "flow": 21,
+      "options": {
+        "true": 1,
+        "false": 0
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 21,
+      "title": "Duración del entrenamiento (minutos)",
+      "slug": "training_time",
+      "type": "range_option",
+      "flow": 22,
+      "options": {
+        "min_value": 60,
+        "max_value": 480,
+        "steps": 60
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 22,
+      "title": "Cédula(s) de participante(s)",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 23,
+      "properties": {
+        "required": true,
+        "validate": "cc_id",
+        "multidata": true
+      }
+    },
+    {
+      "id": 23,
+      "title": "Observaciones",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": "_submit",
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    }
+  ]
+}

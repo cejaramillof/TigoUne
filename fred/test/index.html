@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>jQuery CircleMenu: A Fancy Radial Menu Demo</title>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" item-content="IE=edge,chrome=1">
+		<meta name="description" item-content="">
+		<meta name="keywords" content="">
+
+		<!--remove if not responsive-->
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" >
+
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../dist/css/circlemenu.css" type="text/css">
+
+		<style type="text/css">
+			body { font-family: 'Lato', sans-serif; background-color:#333; }
+			.ui-loading .ui-loader { display: block; }
+			.ui-loader { display: none; position: absolute; opacity: .85; z-index: 100; left: 50%; width: 200px; margin-left: -130px; margin-top: -35px; padding: 10px 30px; }}
+			.ui-page-active {min-height: 0px!Important;}
+			.unmute{background-image: url(http://franriavilla.in/images/unmute.png);background-size: cover;width:35px;height:30px;cursor: pointer;}
+			.mute{background-image: url(http://franriavilla.in/images/mute.png);}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="my-circle-menu" class="cm-container">
+				<ul class="cm-items">
+				</ul>
+				<div class="cm-selected-container">
+					<div class="cm-selected-label">
+						<span><!-- Menu Pertama --></span>
+					</div>
+					<a class="cm-button cm-button-prev" type="button" title="Previous"><i class="fa fa-chevron-left"></i></a>
+					<a class="cm-button cm-button-next" type="button" title="Next"><i class="fa fa-chevron-right"></i></a>
+				</div>
+			</div>
+			<div id="div0" class="infoDiv right">Pregunta 0</div>
+			<div id="div1" class="infoDiv right">Pregunta 1</div>
+			<div id="div2" class="infoDiv right">Pregunta 2</div>
+			<div id="div3" class="infoDiv right">Pregunta 3</div>
+			<div id="div4" class="infoDiv right">Pregunta 4</div>
+			<div id="div5" class="infoDiv right">Pregunta 5</div>
+			<div id="div6" class="infoDiv right">Pregunta 6</div>
+			<div id="div7" class="infoDiv right">Pregunta 7</div>
+			<div id="div8" class="infoDiv right">Pregunta 8</div>
+			<div id="div9" class="infoDiv right">Pregunta 9</div>
+			<div id="div10" class="infoDiv right">Pregunta 10</div>
+			<div id="div11" class="infoDiv right">Pregunta 11</div>
+			<div id="div12" class="infoDiv right">Pregunta 12</div>
+			<div id="div13" class="infoDiv right">Pregunta 13</div>
+			<div id="div14" class="infoDiv right">Pregunta 14</div>
+			<div id="div15" class="infoDiv right">Pregunta 15</div>
+		</div>
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js" type="text/javascript"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js" type="text/javascript"></script>
+		<script src="../dist/js/circlemenu.js" type="text/javascript"></script>
+		<script src="site.js" type="text/javascript"></script>
+		<audio id="tap-sound" autoplay="autoplay" style="display:none;">
+		<source src="https://freesound.org/data/previews/387/387935_6904682-lq.mp3" type="audio/mpeg">
+		<embed src="https://freesound.org/data/previews/387/387935_6904682-lq.mp3" hidden="true" autostart="true" loop="false" class="playSound" />
+		</audio>
+		<div class='unmute' onclick="document.getElementById('tap-sound').muted = !document.getElementById('tap-sound').muted;$(this).toggleClass('mute')"></div>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<div class="container">
+  <label for="monthSelect">Seleccione el mes:</label>
+  <select id="monthSelect" class="form-control">
+    <option value="enero">Enero</option>
+    <option value="diciembre">Diciembre</option>
+    <option value="noviembre">Noviembre</option>
+    <option value="octubre">Octubre</option>
+  </select>
+  <br/>
+</div>
+<script>
+$(document).ready(function(){
+  $('.enero').removeClass('hide');
+  $('.octubre').addClass('hide');
+  $('.diciembre').addClass('hide');
+  $('.noviembre').addClass('hide');
+  $('.febrero').addClass('hide');   
+  
+  $('#monthSelect').change(function() {
+      opt = $(this).val()
+      if (opt=="octubre") {
+          $('.octubre').removeClass('hide');
+          $('.noviembre').addClass('hide');
+          $('.diciembre').addClass('hide');
+          $('.enero').addClass('hide');
+          $('.febrero').addClass('hide');
+      }else if (opt == "noviembre") {
+          $('.noviembre').removeClass('hide');
+          $('.octubre').addClass('hide');
+          $('.diciembre').addClass('hide');
+          $('.enero').addClass('hide');
+          $('.febrero').addClass('hide');        
+      }else if (opt == "diciembre") {
+          $('.diciembre').removeClass('hide');
+          $('.octubre').addClass('hide');
+          $('.noviembre').addClass('hide');
+          $('.enero').addClass('hide');
+          $('.febrero').addClass('hide');        
+      }else if (opt == "enero") {
+          $('.enero').removeClass('hide');
+          $('.octubre').addClass('hide');
+          $('.diciembre').addClass('hide');
+          $('.noviembre').addClass('hide');
+          $('.febrero').addClass('hide');    
+      }else if (opt == "febrero") {
+          $('.febrero').removeClass('hide');
+          $('.octubre').addClass('hide');
+          $('.diciembre').addClass('hide');
+          $('.enero').addClass('hide');
+          $('.noviembre').addClass('hide'); 
+      }   
+  });
+});
+</script>

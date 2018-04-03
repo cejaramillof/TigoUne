@@ -1,0 +1,296 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Fecha de la actividad",
+      "slug": "activity_date",
+      "type": "date",
+      "flow": 2,
+      "properties": {
+        "required": true,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Objetivo del entrenamiento",
+      "slug": "channel",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Desarrollo Mapa Formativo",
+          "option_value": "Desarrollo Mapa Formativo",
+          "flow": 4
+        },
+        {
+          "option_key": "Mejoramiento Cuartiles",
+          "option_value": "Mejoramiento Cuartiles",
+          "flow": 8
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Nivel de Entrenamiento",
+      "slug": "training_level",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Inducción al Cargo",
+          "option_value": "Inducción al Cargo",
+          "flow": 9
+        },
+        {
+          "option_key": "Básico",
+          "option_value": "Básico",
+          "flow": 10
+        },
+        {
+          "option_key": "Avanzado",
+          "option_value": "Avanzado",
+          "flow": 11
+        },
+        {
+          "option_key": "Complementario B2B",
+          "option_value": "Complementario B2B",
+          "flow": 12
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Temas de Inducción al Cargo",
+      "slug": "basic_training_module",
+      "type": "unique_option",
+      "flow": 8,
+      "options": [
+      	{
+          "option_key": "Generalidades de telecomunicaciones",
+          "option_value": "Generalidades de telecomunicaciones"
+        },
+        {
+          "option_key": "Entorno Corporativo",
+          "option_value": "Entorno Corporativo"
+        },
+        {
+          "option_key": "Modelo de actuación técnico",
+          "option_value": "Modelo de actuación técnico"
+        },
+        {
+          "option_key": "Portafolio de productos",
+          "option_value": "Portafolio de productos"
+        },
+        {
+          "option_key": "Clicksofware",
+          "option_value": "Clicksofware"
+        },
+        {
+          "option_key": "Fundamentos redes coaxial",
+          "option_value": "Fundamentos redes coaxial"
+        },
+        {
+          "option_key": "Electricidad básica",
+          "option_value": "Electricidad básica"
+        },
+        {
+          "option_key": "Fundamentos redes cobre multipar",
+          "option_value": "Fundamentos redes cobre multipar"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Temas nivel Básico",
+      "slug": "intermediate_training_module",
+      "type": "unique_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Herramientas y materiales redes coaxial",
+          "option_value": "Herramientas y materiales redes coaxial"
+        },
+        {
+          "option_key": "Norma de instalación red abonado coaxial",
+          "option_value": "Norma de instalación red abonado coaxial"
+        },
+        {
+          "option_key": "Instalacion equipos terminales red coaxial",
+          "option_value": "Instalacion equipos terminales red coaxial"
+        },
+        {
+          "option_key": "Herramientas y materiales redes cobre multipar",
+          "option_value": "Herramientas y materiales redes cobre multipar"
+        },
+        {
+          "option_key": "Norma de instalación red abonado cobre",
+          "option_value": "Norma de instalación red abonado cobre"
+        },
+        {
+          "option_key": "Instalación equipos terminales red cobre",
+          "option_value": "Instalación equipos terminales red cobre"
+        },
+        {
+          "option_key": "Redes de datos LAN/WAN",
+          "option_value": "Redes de datos LAN/WAN"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 11,
+      "title": "Módulo de Entrenamiento Intermedio",
+      "slug": "advanced_training_module",
+      "type": "unique_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Redes inalámbricas",
+          "option_value": "Redes inalámbricas"
+        },
+        {
+          "option_key": "Parámetros señales digitales red coaxial",
+          "option_value": "Parámetros señales digitales red coaxial"
+        },
+        {
+          "option_key": "Parámetros señales digitales red cobre multipar",
+          "option_value": "Parámetros señales digitales red cobre multipar"
+        },
+        {
+          "option_key": "Equipos de medida redes coaxiales",
+          "option_value": "Equipos de medida redes coaxiales"
+        },
+        {
+          "option_key": "Equipos de medida red de cobre multipar",
+          "option_value": "Equipos de medida red de cobre multipar"
+        },
+        {
+          "option_key": "Servicio telecomunicaciones UNE",
+          "option_value": "Servicio telecomunicaciones UNE"
+        },
+        {
+          "option_key": "Pruebas eléctricas",
+          "option_value": "Pruebas eléctricas"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 12,
+      "title": "Complementario B2B",
+      "slug": "Complementary_b2b_training_module",
+      "type": "unique_option",
+      "flow": 8,
+      "options": [
+        {
+          "option_key": "Networking",
+          "option_value": "Networking"
+        },
+        {
+          "option_key": "Soluciones de Conectividad",
+          "option_value": "Soluciones de Conectividad"
+        },
+        {
+          "option_key": "Redes WLAN",
+          "option_value": "Redes WLAN"
+        },
+        {
+          "option_key": "Conmutador Virtual IP y Troncal SIP",
+          "option_value": "Conmutador Virtual IP y Troncal SIP"
+        },
+        {
+          "option_key": "Portafolio Productos y Servicios B2B",
+          "option_value": "Portafolio Productos y Servicios B2B"
+        },
+        {
+          "option_key": "Modelo de Actuación Tecnológico B2B",
+          "option_value": "Modelo de Actuación Tecnológico B2B"
+        },
+        {
+          "option_key": "Voz Digital RDSI PRI/BRI",
+          "option_value": "Voz Digital RDSI PRI/BRI"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 8,
+      "title": "¿Se realizó evaluación?",
+      "slug": "quiz_done",
+      "type": "boolean_option",
+      "flow": 21,
+      "options": {
+        "true": 1,
+        "false": 0
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 21,
+      "title": "Duración del entrenamiento (minutos)",
+      "slug": "training_time",
+      "type": "range_option",
+      "flow": 22,
+      "options": {
+        "min_value": 60,
+        "max_value": 480,
+        "steps": 60
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 22,
+      "title": "Cédula(s) de participante(s)",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 23,
+      "properties": {
+        "required": true,
+        "validate": "cc_id",
+        "multidata": true
+      }
+    },
+    {
+      "id": 23,
+      "title": "Observaciones",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": "_submit",
+      "properties": {
+        "required": false,
+        "validate": "text"
+      }
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+.col {padding: 0px !important}
+
+.movil h3 a {
+    color: #fff;
+}
+
+.empresas h3 a {
+    color: #fff;
+}
+
+.home h3 a {
+    color: #fff;
+}
+
+.trnrs-title-primary .trnrs-category-breadcrumb {
+    font-size: 17px !important;
+    color: rgb(255, 255, 255) !important;
+    margin-top: 4px !important;
+}
+
+.tecnicos h3 a {
+    color: #fff;
+}
+
+.trnrs-main {
+    padding-bottom: 0px !important;
+}
+
+.home h3 {
+    position: absolute;
+    bottom: -6%;
+    right: 17%;
+    color: #fff !important;
+}
+
+.home {
+    position: relative;
+    border-bottom: solid 1px #ccc
+}
+
+.movil h3 {
+    position: absolute;
+    bottom: -6%;
+    left: 21%;
+    color: #fff !important;
+}
+
+.movil {
+    position: relative;
+    border-bottom: solid 1px #ccc
+}
+
+.row {
+    margin-bottom: 0px !important;
+}
+
+.trnrs-menu-list > li {
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.empresas h3 {
+    position: absolute;
+    bottom: -6%;
+    left: 1%;
+    color: #fff !important;
+}
+
+.empresas {
+    position: relative;
+    border-bottom: solid 1px #ccc
+}
+
+.row.empresas ul {
+    margin-top: 12%;
+}
+
+.item_img {
+    width: 70px;
+}
+
+li.item {
+    text-align: center;
+    width: 23%;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+    border-right: solid 1px #192c5647;
+    height: 115px;
+}
+
+li.item.10 {border: none !important}
+
+.trnrs-item-list {
+    margin-top: 30px;
+}
+
+.item_sub a {
+    margin-bottom: 10px;
+}
+.item_sub img {
+    margin: 10px auto 10px auto;
+}
+.item_sub {
+    display: grid;
+    margin-bottom: 30px;
+    text-align: center;
+    align-content: center;
+    font-weight: bold;
+    text-transform: initial;
+    border-right: solid 1px #ccc;
+    height: 130px;
+}
+
+.img_subcat_item{width: 80px}
+
+.item_subcat h2 {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+.item_subcat {
+    display: flex;
+    text-align: center;
+    margin: 5% auto 7% auto;
+    width: 100%;
+    border-bottom: solid 1px #253f67;
+    height: 100px;
+}
+
+.b_home{display: block!important}
+.b_movil{display: none!important}
+
+@media only screen and (max-width: 800px) {
+    .item_sub {border: none !important}
+    .img_subcat_item{width: 40px !important}
+    .item_subcat h2 {font-size: 25px !important; margin-top: 10%}
+    li.item {width: 30% !important; height: 160px !important;}
+    .b_home{display: none !important}
+    .b_movil{display: block!important; border-bottom: solid 1px #ccc}
+    .trnrs-item-list a {
+    height: 80px !important;
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+}

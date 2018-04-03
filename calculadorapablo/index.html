@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <title>Simulador de Distancias</title>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    /* label focus color */
+
+    .input-field input[type=number]:focus+label {
+      color: #1a3660!important;
+    }
+
+    /* label underline focus color */
+
+    .input-field input[type=number]:focus {
+      border-bottom: 1px solid #1a3660!important;
+      box-shadow: 0 1px 0 0 #1a3660;
+    }
+
+    .box-table {
+      border-radius: 10px;
+      padding: 15px 20px;
+      background-color: #f3f3f3;
+      border-right: 3px solid #d8d8d8;
+      border-bottom: 4px solid #d8d8d8;
+      display: inline-block;
+    }
+
+  </style>
+</head>
+
+<body>
+  <br/>
+  <br/>
+  <div class="container center-align">
+    <div class="row valign-wrapper">
+      <div class="col s12 valign">
+        <div class="card white darken-1">
+          <img src="./img/banner.png" clas="responsive-img"  style="width: 100%;"/>
+          <div class="card-content darkblue-text">
+            <div class="left-align">
+              <p>Distancia desde el <b>DSLAM</b> hasta el <b>cliente</b> en metros.</p>
+              <div class="input-field">
+                <input id="distancia" type="number" min="0" max="4000" class="validate center-align" ng-model="distancia">
+                <label for="distancia">Metros:</label>
+              </div>
+              <div ng-show="distancia" ng-switch="distancia" class="card-panel blue lighten-4 center-align">
+                <div ng-if="distancia <= 300">
+                  <b>0 a 300 Metros</b>
+                  <p>Permiten hasta <span class="megas">15</span> Megas</p>
+                </div>
+                <div ng-if="distancia > 300 && distancia <= 500">
+                  <b>301 a 500 Metros</b>
+                  <p>Permiten hasta <span class="megas">12</span> Megas</p>
+                </div>
+                <div ng-if="distancia > 500 && distancia <= 800">
+                  <b>501 a 800 Metros</b>
+                  <p>Permiten hasta <span class="megas">10</span> Megas</p>
+                </div>
+                <div ng-if="distancia > 800 && distancia <= 1200">
+                  <b>801 a 1200 Metros</b>
+                  <p>Permiten hasta <span class="megas">8</span> Megas</p>
+                </div>
+                <div ng-if="distancia > 1200 && distancia <= 1500">
+                  <b>1201 a 1500 Metros</b>
+                  <p>Permiten hasta <span class="megas">6</span> Megas</p>
+                </div>
+                <div ng-if="distancia > 1500 && distancia <= 1800">
+                  <b>1501 a 1800 Metros</b>
+                  <p>Permiten hasta <span class="megas">5</span> Megas</p>
+                </div>
+                <div ng-if="distancia > 1800 && distancia <= 2200">
+                  <b>1801 a 2200 Metros</b>
+                  <p>Permiten hasta <span class="megas">4</span> Megas</p>
+                </div>
+                <div ng-if="distancia > 2200 && distancia <= 2500">
+                  <b>2201 a 2500 Metros</b>
+                  <p>Permiten hasta <span class="megas">3</span> Megas</p>
+                </div>
+                <div ng-if="distancia > 2500 && distancia <= 2800">
+                  <b>2501 a 2800 Metros</b>
+                  <p>Permiten hasta <span class="megas">2</span> Megas</p>
+                </div>
+                <div ng-if="distancia > 2800 && distancia <= 3200">
+                  <b>2801 a 3200 Metros</b>
+                  <p>Permiten hasta <span class="megas">1</span> Megas</p>
+                </div>
+                <div ng-if="distancia > 3200 && distancia <= 4000">
+                  <b>3201 a 4000 Metros</b>
+                  <p>Permiten hasta <span class="megas">0.5</span> Megas</p>
+                </div>
+                <div ng-if="distancia > 4000 && distancia > 4000">
+                  <b>+4000 Metros</b>
+                  <p>No registra disponibilidad.</p>
+                </div>
+              </div>
+              <span class="left-align">Ingrese cantidad de decodificadores a instalar:</span>
+            </div>
+            <div class="shadow-z-1">
+              <table class="table centered bordered center-align">
+                <tbody>
+                  <tr>
+
+                    <td style="width:60%"><div class="box-table"><b>Decos TV HD</b><br/><small><b>Máximo:</b> 1 deco<br/><b>Consumo: </b>8 Megas c/u</small></div></td>
+                    <td style="width:40%">
+                      <div class="input-field">
+                        <input id="tvdigital" type="number" min="0" max="1" class="validate center-align" ng-model="tvdigital">
+                        <label for="tvdigital" data-error="Máximo 1 deco" data-success="OK">Unidades:</label>
+                      </div>
+                    </td>
+                    <td class="price hide">
+                      {{ tvdigital * 8 || 0 }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="box-table"><b>Decos TV SD</b><br/><small><b>Máximo:</b> 4 deco<br/><b>Consumo: </b>3 Megas c/u</small></div></td>
+                    <td>
+                      <div class="input-field">
+                        <input id="tvestandar" type="number" min="0" max="4" class="validate center-align" ng-model="tvestandar">
+                        <label for="tvestandar" data-error="Máximo 4 decos" data-success="OK" >Unidades:</label>
+                      </div>
+                    </td>
+                    <td class="price hide">
+                      {{ tvestandar * 3 || 0 }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="box-table"><b>Máxima velocidad <br/> Banda Ancha</b><small><br/><b>Máximo:</b> 12 Megas</small></div></td>
+                    <td>
+                      <div class="input-field">
+                        <input id="bandaancha" type="number" min="0" max="12" step="0.5" class="validate center-align" ng-model="bandaancha">
+                        <label for="bandaancha" data-error="Máximo 12 megas" data-success="OK" >Megas:</label>
+                      </div>
+                    </td>
+                    <td class="price hide">
+                      {{ bandaancha || 0 }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="box-table"><b>Máxima cantidad<br/>de Telefonos IP</b><br/><small><b>Máximo:</b> 1 unidad.<br/><b>Consumo: </b>0.5 Mega c/u</small></div></td>
+                    <td>
+                      <div class="input-field">
+                        <input id="telefonoip" type="number" min="0" max="1" class="validate center-align" ng-model="telefonoip">
+                        <label for="telefonoip" data-error="Máximo 1 unidad" data-success="OK" >Unidades:</label>
+                      </div>
+                    </td>
+                    <td class="hide">
+                      {{ telefonoip || 0 }}
+                    </td>
+                  </tr>
+                  <tr class="">
+                    <td colspan="2"><b><a class="btn-large card-panel blue lighten-4" style="color: #1a3660!important;"></a></b><p class="center-align info"></p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.validate').on("keydown keyup", function() {
+        var sum = 0;
+        var megas = parseFloat($(".megas").text());
+        $('.price').each(function() {
+          sum += parseFloat($(this).text()); // Or this.innerHTML, this.innerText
+        });
+        if (sum <= megas && sum <= 15) {
+          var check = "<span><i class='tiny material-icons green-text'>check</i> La red soporta la cantidad de servicios proyectados.</span>";
+          $(".btn-large").removeClass("red lighten-4").addClass("blue lighten-4");
+        } else {
+          var check = "<span> <i class='tiny material-icons red-text'>clear</i> Los servicios proyectados superan la capacidad de la red.</span>";
+          $(".btn-large").removeClass("blue lighten-4").addClass("red lighten-4");
+        }
+        $(".btn-large").html('<span>' + Math.round(sum) + ' Megas' + '</span>');
+        $(".info").html(check);
+      })
+    })
+
+  </script>
+</body>
+
+</html>

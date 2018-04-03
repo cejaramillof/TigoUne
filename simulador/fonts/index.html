@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <title>Simulador ONLINE</title>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    /* label focus color */
+
+    .input-field input[type=number]:focus+label {
+      color: #1a3660!important;
+    }
+
+    /* label underline focus color */
+
+    .input-field input[type=number]:focus {
+      border-bottom: 1px solid #1a3660!important;
+      box-shadow: 0 1px 0 0 #1a3660;
+    }
+
+  </style>
+</head>
+
+<body>
+  <br/>
+  <br/>
+  <div class="container center-align">
+    <a href="https://tigotrainers.com/">
+    <img src="https://control.tigotrainers.com/img/tigotrainers.svg" class="center-align" alt="">
+    <small style="display:block;">(Click al logo para volver a Control)</small>
+    </a>
+    <br/>
+    <br/>
+    <div class="row valign-wrapper">
+      <div class="col s12 valign">
+        <div class="card white darken-1">
+          <div class="card-content darkblue-text">
+            <span class="card-title"><small><b>SIMULADOR GESTIÓN ENTRENAMIENTO</b></small></span>
+
+            <div class="shadow-z-1">
+              <table class="table highlight centered bordered responsive-table center-align">
+                <thead>
+                  <tr>
+                    <th>KPI</th>
+                    <th>VARIABLE</th>
+                    <th>PESO</th>
+                    <th>PISO - TECHO</th>
+                    <th>META</th>
+                    <th>PONDERACIÓN</th>
+                    <th>% EJECUCIÓN</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><b>Matriz de Entrenamiento</b></td>
+                    <td>Regional</td>
+                    <td>10%</td>
+                    <td>80% - 105%</td>
+                    <td>{{ matrizmeta = 95 }}%</td>
+                    <td class="price" ng-if="matriz <= 79 || !matriz">{{ 0 }}%</td>
+                    <td class="price" ng-if="matriz >= 80 && matriz <= 100">{{(((matriz * 100) / matrizmeta) * 17) / 100 | number:2}}%</td>
+                    <td class="price" ng-if="matriz >= 101 && matriz <= 9999 ">{{ 18 }}%</td>
+                    <td>
+                      <div class="input-field">
+                        <input placeholder="%" id="first_name" type="number" class="validate center-align" ng-model="matriz">
+                        <label for="first_name">Ingrese:</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><b>Acompañamientos</b></td>
+                    <td>Por Entrenador</td>
+                    <td>20%</td>
+                    <td>80% - 120%</td>
+                    <td>{{acometa = 100}}%</td>
+                    <td class="price" ng-if="aco <= 79 || !aco">{{ 0 }}%</td>
+                    <td class="price" ng-if="aco >= 80 && aco <= 120">{{ (((aco * 100) / acometa) * 33) / 100 | number:2}}%</td>
+                    <td class="price" class="price" ng-if="aco >= 121 && aco <= 9999 ">{{ 40 }}%</td>
+                    <td>
+                      <div class="input-field">
+                        <input placeholder="%" id="first_name" type="number" class="validate center-align" ng-model="aco">
+                        <label for="first_name">Ingrese:</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><b>Mi Entrenador Virtual</b></td>
+                    <td>Regional</td>
+                    <td>10%</td>
+                    <td>80% - 118%</td>
+                    <td>{{ mevmeta = 85}}%</td>
+                    <td class="price" ng-if="mev <= 79 || !mev">{{ 0 }}%</td>
+                    <td class="price" ng-if="mev >= 80 && mev <= 100">{{ (((mev * 100) / mevmeta) * 17) / 100 | number:2}}%</td>
+                    <td class="price" ng-if="mev >= 101 && mev <= 9999 ">{{ 20 }}%</td>
+                    <td>
+                      <div class="input-field">
+                        <input placeholder="%" id="first_name" type="number" class="validate center-align" ng-model="mev">
+                        <label for="first_name">Ingrese:</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><b>CNV / Encuesta</b></td>
+                    <td>Regional</td>
+                    <td>20%</td>
+                    <td>80% - 118%</td>
+                    <td>{{ cnvmeta = 85}}%</td>
+                    <td class="price" ng-if="cnv <= 79 || !cnv">{{ 0 }}%</td>
+                    <td class="price" ng-if="cnv >= 80 && cnv <= 100">{{ (((cnv * 100) / cnvmeta) * 33) / 100 | number:2}}%</td>
+                    <td class="price" ng-if="cnv >= 101 && cnv <= 9999 ">{{ 40 }}%</td>
+                    <td>
+                      <div class="input-field">
+                        <input placeholder="%" id="first_name" type="number" class="validate center-align" ng-model="cnv">
+                        <label for="first_name">Ingrese:</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="hide-on-med-and-down">
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><b>GESTIÓN ENTRENAMIENTO</b></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><b><a class="btn-large disabled" style="background-color: #daecf1!important; color: #1a3660!important;"></a></b></td>
+                  </tr>
+                </tbody>
+              </table>
+              <br/>
+              <div class="row hide-on-large-only">
+                <b><small>GESTIÓN ENTRENAMIENTO:</small>
+                <a class="btn-large disabled" style="background-color: #daecf1!important; color: #1a3660!important;"></a></b>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.validate').on("keydown keyup", function() {
+        var sum = 0;
+        $('.price').each(function() {
+          sum += parseFloat($(this).text()); // Or this.innerHTML, this.innerText
+        });
+        $(".btn-large").html(Math.round(sum) + "%");
+      })
+    })
+
+  </script>
+</body>
+
+</html>

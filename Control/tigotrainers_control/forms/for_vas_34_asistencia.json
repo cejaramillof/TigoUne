@@ -1,0 +1,53 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Fecha de la actividad",
+      "slug": "activity_date",
+      "type": "date",
+      "flow": 2,
+      "properties": {
+        "required": true,
+        "disabled": true,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Cédula(s) de participante(s)",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 3,
+      "properties": {
+        "required": true,
+        "validate": "cc_id",
+        "multidata": true
+      }
+    },
+    {
+      "id": 3,
+      "title": "Tema asistencia",
+      "slug": "training_theme",
+      "type": "hidden",
+      "flow": 4,
+      "properties": {
+        "default_value": "B2B Digital Business Day"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Observaciones",
+      "slug": "field_notes",
+      "value": "Asistió",
+      "type": "textarea",
+      "flow": "_submit",
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    }
+  ]
+}

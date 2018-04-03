@@ -1,0 +1,220 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Fecha de la actividad",
+      "slug": "activity_date",
+      "type": "date",
+      "flow": 2,
+      "properties": {
+        "required": true,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 3,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Tipo de entrenamiento",
+      "slug": "training_type",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Acompañamiento uno a uno",
+          "option_value": "Acompañamiento uno a uno",
+          "flow": 4
+        },
+        {
+          "option_key": "Visita PDA/PDV",
+          "option_value": "Visita PDA/PDV",
+          "flow": 11
+        },
+        {
+          "option_key": "Gestores",
+          "option_value": "Gestores",
+          "flow": 11
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Cédula del asesor TAT",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 5,
+      "properties": {
+        "required": true,
+        "validate": "cc_id"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Número móvil del asesor TAT",
+      "slug": "asesor_msisdn",
+      "type": "number",
+      "flow": 6,
+      "properties": {
+        "required": true,
+        "validate": "cellphone_number"
+      }
+    },
+    {
+      "id": 6,
+      "title": "¿Posee carpeta comercial con información vigente?",
+      "slug": "coaching_1",
+      "type": "boolean_option",
+      "flow": 7,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 7,
+      "title": "¿Informa al PDA/PDV la cantidad de revenue hasta la fecha?",
+      "slug": "coaching_2",
+      "type": "boolean_option",
+      "flow": 8,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 8,
+      "title": "¿Entrena sobre la oferta vigente del mes al PDA/PDV?",
+      "slug": "coaching_3",
+      "type": "boolean_option",
+      "flow": 9,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 9,
+      "title": "¿Explica cómo los productos y planes se convierten en comisiones para el PDA/PDV?",
+      "slug": "coaching_4",
+      "type": "boolean_option",
+      "flow": 10,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 10,
+      "title": "¿Entrena al PDA/PDV en el uso de TigoShop, TigoGestión y *111#?",
+      "slug": "coaching_5",
+      "type": "boolean_option",
+      "flow": 15,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 15,
+      "title": "Duración del entrenamiento (minutos)",
+      "slug": "training_time",
+      "type": "hidden",
+      "flow": 14,
+      "properties": {
+        "required": true,
+        "validate": "text",
+        "hidden": true,
+        "default_value":60
+      }
+    },
+    {
+      "id": 11,
+      "title": "ID del punto visitado",
+      "slug": "id_visited",
+      "type": "text",
+      "flow": 12,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 12,
+      "title": "Tema(s) entrenado(s)",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 13,
+      "options": "_db_table_data",
+      "properties": {
+        "required": true,
+        "validate": "text",
+        "free_option": true,
+        "multidata": true,
+        "db_table_name": "control_training_themes"
+      }
+    },
+    {
+      "id": 13,
+      "title": "Duración del entrenamiento (minutos)",
+      "slug": "training_time",
+      "type": "range_option",
+      "flow": 14,
+      "options": {
+        "min_value": 20,
+        "max_value": 480,
+        "steps": 10
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 14,
+      "title": "Observaciones / Plan de acción",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": "_submit",
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    }
+  ]
+}

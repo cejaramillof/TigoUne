@@ -1,0 +1,224 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Fecha de la actividad",
+      "slug": "activity_date",
+      "type": "date",
+      "flow": 2,
+      "properties": {
+        "required": true,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Canal Trabajado",
+      "slug": "channel",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Centro de Experiencia",
+          "option_value": "cde",
+          "flow": 3
+        },
+        {
+          "option_key": "Retail",
+          "option_value": "retail",
+          "flow": 3
+        },
+        {
+          "option_key": "Fuerza de Venta Directa",
+          "option_value": "fvd",
+          "flow": 3
+        },
+        {
+          "option_key": "Contact Center",
+          "option_value": "contact center",
+          "flow": 3
+        },
+        {
+          "option_key": "Distribuidores",
+          "option_value": "dealer",
+          "flow": 11
+        },
+        {
+          "option_key": "Gestores",
+          "option_value": "gestores",
+          "flow": 12
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text",
+        "open_answer": false
+      }
+    },
+    {
+      "id": 3,
+      "title": "Código POS",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 4,
+      "properties": {
+        "required": true,
+        "validate": "text",
+        "multidata": true
+      }
+    },
+    {
+      "id": 8,
+      "title": "Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 10,
+      "properties": {
+        "required": true,
+        "validate": "text",
+        "multidata": true
+      }
+    },
+    {
+      "id": 9,
+      "title": "ID del punto visitado",
+      "slug": "id_visited",
+      "type": "text",
+      "flow": 10,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Tema(s) entrenado(s)",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 6,
+      "options": "_db_table_data",
+      "properties": {
+        "required": true,
+        "validate": "text",
+        "multidata": true,
+        "db_table_name": "control_training_themes"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Tema(s) entrenado(s)",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 6,
+      "options": "_db_table_data",
+      "properties": {
+        "required": true,
+        "validate": "text",
+        "multidata": true,
+        "db_table_name": "control_training_themes"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Duración del entrenamiento (minutos)",
+      "slug": "training_time",
+      "type": "range_option",
+      "flow": 7,
+      "options": {
+        "min_value": 20,
+        "max_value": 480,
+        "steps": 10
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Cédula(s) de participante(s)",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 5,
+      "properties": {
+        "required": true,
+        "validate": "cc_id",
+        "multidata": true
+      }
+    },
+    {
+      "id": 7,
+      "title": "Observaciones",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": "_submit",
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 11,
+      "title": "Tipo de entrenamiento",
+      "slug": "training_type",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Entrenamiento en sala",
+          "option_value": "Entrenamiento en sala",
+          "flow": 8
+        },
+        {
+          "option_key": "Visita PDA/PDV",
+          "option_value": "Visita PDA/PDV",
+          "flow": 12
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 12,
+      "title": "Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 14,
+      "properties": {
+        "required": true,
+        "validate": "text",
+        "multidata": true
+      }
+    },
+    {
+      "id": 14,
+      "title": "ID del punto visitado",
+      "slug": "id_visited",
+      "type": "text",
+      "flow": 15,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 15,
+      "title": "Tema(s) entrenado(s)",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 5,
+      "options": "_db_table_data",
+      "properties": {
+        "required": true,
+        "validate": "text",
+        "multidata": true,
+        "db_table_name": "control_training_themes"
+      }
+    }
+  ]
+}

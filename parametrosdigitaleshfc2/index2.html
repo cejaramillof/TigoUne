@@ -1,0 +1,635 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/animate.css" />
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <title>TigoUne</title>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+
+    table  td, table th {
+      border: 1px solid #d0d0d0;
+    }
+
+    .badge {
+      font-variant: small-caps;
+    }
+
+    .material-icons.home {
+      font-size: 4em;
+    }
+
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .row .col.s6 {
+      margin-right: auto!important;
+    }
+
+    a.modal-trigger {
+      display: block;
+      padding: 20px 0px;
+    }
+
+    .graystyle > div:nth-child(even) {
+      background-color: #ececec;
+    }
+
+    .graystyle > div {
+      padding-top: 20px!important;
+    }
+
+  </style>
+</head>
+
+<body>
+  <br/>
+  <div class="container center-align">
+    <div class="row valign-wrapper">
+      <div class="col s12 valign">
+        <div class="card white darken-1">
+          <div class="header">
+            <img src="./img/banner-dhfc.png" class="responsive-img animated fadeIn" style="width: 100%;">
+          </div>
+          <div class="card-content darkblue-text" style="padding-top: 0px!important;">
+            <div class="row flex">
+              <div class="col s6 m4">
+                <a href="#modal1" class="black-text modal-trigger">
+                  <i class="material-icons home">settings</i><br/><p>Perdidas por elemento<br/> <small>(en función de la frecuencia)</small></p>
+                </a>
+              </div>
+              <div class="col s6 m8"></div>
+              <div class="col s6 m4">
+                <a href="#modal2" class="black-text modal-trigger">
+                  <i class="material-icons home">phonelink_setup</i><br/>En boca de TAP<br/> <small>(downstream)</small>
+                </a>
+              </div>
+              <div class="col s6 m4">
+                <a href="#modal3" class="black-text modal-trigger">
+                  <i class="material-icons home">phonelink_setup</i><br/>RF en la boca de TAP
+                </a>
+              </div>
+              <div class="col s6 m4">
+                <a href="#modal4" class="black-text modal-trigger">
+                  <i class="material-icons home">phonelink_setup</i><br/>Equipos DOCSIS 2.0
+                </a>
+              </div>
+              <div class="col s6 m4">
+                <a href="#modal5" class="black-text modal-trigger">
+                  <i class="material-icons home">phonelink_setup</i><br/>Equipos DOCSIS 3.0
+                </a>
+              </div>
+              <div class="col s6 m4">
+                <a href="#modal6" class="black-text modal-trigger">
+                  <i class="material-icons home">ondemand_video</i><br/>Pruebas DSAM
+                </a>
+              </div>
+              <div class="col s6 m4">
+                <a href="#modal7" class="black-text modal-trigger">
+                  <i class="material-icons home">ondemand_video</i><br/>Pruebas MSQ900
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Structure -->
+  <div id="modal7" class="modal center-align">
+    <div class="modal-content">
+      <h6><b>Pruebas MSQ900</b></h6>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/JwpNUvKVv04?rel=0" frameborder="0" allow="autoplay; encrypted-media" autoplay allowfullscreen></iframe>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+    </div>
+  </div>
+  <div id="modal6" class="modal center-align">
+    <div class="modal-content">
+      <h6><b>Pruebas DSAM</b></h6>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/2T5EUcS3e6s?rel=0" frameborder="0" allow="autoplay; encrypted-media" autoplay allowfullscreen></iframe>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+    </div>
+  </div>
+  <div id="modal5" class="modal center-align">
+    <div class="modal-content">
+      <h5><b>En equipos DOCSIS 3.0</b></h5>
+      <br/>
+      <div class="row graystyle">
+        <div class="col s12">
+          <b>SNR DOWN<BR/>
+            <small>DS CM y STB</small></b><br/>
+          <ul>
+            <li class="valign-wrapper"><span class="new badge green tooltipped" data-delay="10" data-position="right" data-tooltip="Optimo" data-badge-caption="&#10004;" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+            <li class="valign-wrapper"><span class="new badge yellow tooltipped" data-delay="10" data-position="right" data-tooltip="Aceptable" data-badge-caption="--" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+            <li class="valign-wrapper"><span class="new badge red tooltipped" data-delay="10" data-position="right" data-tooltip="No Aceptable" data-badge-caption="&#10006;" style="margin:3px;"> </span> <span> - de 35</span></li>
+          </ul>
+        </div>
+        <div class="col s12">
+          <b>DOWN POWER<BR/>
+            <small>DP CM</small></b><br/>
+          <ul>
+            <li class="valign-wrapper"><span class="new badge green tooltipped" data-delay="10" data-position="right" data-tooltip="Optimo" data-badge-caption="&#10004;" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+            <li class="valign-wrapper"><span class="new badge yellow tooltipped" data-delay="10" data-position="right" data-tooltip="Aceptable" data-badge-caption="--" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+            <li class="valign-wrapper"><span class="new badge red tooltipped" data-delay="10" data-position="right" data-tooltip="No Aceptable" data-badge-caption="&#10006;" style="margin:3px;"> </span> <span> - de 35</span></li>
+          </ul>
+        </div>
+        <div class="col s12">
+          <b>BER DOWN<BR/>
+            <small>BER CM</small></b><br/>
+          <ul>
+            <li class="valign-wrapper"><span class="new badge green tooltipped" data-delay="10" data-position="right" data-tooltip="Optimo" data-badge-caption="&#10004;" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+            <li class="valign-wrapper"><span class="new badge yellow tooltipped" data-delay="10" data-position="right" data-tooltip="Aceptable" data-badge-caption="--" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+            <li class="valign-wrapper"><span class="new badge red tooltipped" data-delay="10" data-position="right" data-tooltip="No Aceptable" data-badge-caption="&#10006;" style="margin:3px;"> </span> <span> - de 35</span></li>
+          </ul>
+        </div>
+        <div class="col s12">
+          <b>UP POWER<BR/>
+          <div class="col s12 l3">
+            <small>1-CH</small></b><br/>
+            <ul>
+              <li class="valign-wrapper"><span class="new badge green tooltipped" data-delay="10" data-position="right" data-tooltip="Optimo" data-badge-caption="&#10004;" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+              <li class="valign-wrapper"><span class="new badge yellow tooltipped" data-delay="10" data-position="right" data-tooltip="Aceptable" data-badge-caption="--" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+              <li class="valign-wrapper"><span class="new badge red tooltipped" data-delay="10" data-position="right" data-tooltip="No Aceptable" data-badge-caption="&#10006;" style="margin:3px;"> </span> <span> - de 35</span></li>
+            </ul>
+          </div>
+          <div class="col s12 l3">
+            <b><small>2-CH</small></b><br/>
+            <ul>
+              <li class="valign-wrapper"><span class="new badge green tooltipped" data-delay="10" data-position="right" data-tooltip="Optimo" data-badge-caption="&#10004;" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+              <li class="valign-wrapper"><span class="new badge yellow tooltipped" data-delay="10" data-position="right" data-tooltip="Aceptable" data-badge-caption="--" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+              <li class="valign-wrapper"><span class="new badge red tooltipped" data-delay="10" data-position="right" data-tooltip="No Aceptable" data-badge-caption="&#10006;" style="margin:3px;"> </span> <span> - de 35</span></li>
+            </ul>
+          </div>
+          <div class="col s12 l3">
+            <b><small>3-CH</small></b><br/>
+            <ul>
+              <li class="valign-wrapper"><span class="new badge green tooltipped" data-delay="10" data-position="right" data-tooltip="Optimo" data-badge-caption="&#10004;" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+              <li class="valign-wrapper"><span class="new badge yellow tooltipped" data-delay="10" data-position="right" data-tooltip="Aceptable" data-badge-caption="--" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+              <li class="valign-wrapper"><span class="new badge red tooltipped" data-delay="10" data-position="right" data-tooltip="No Aceptable" data-badge-caption="&#10006;" style="margin:3px;"> </span> <span> - de 35</span></li>
+            </ul>
+          </div>
+          <div class="col s12 l3">
+            <b><small>4-CH</small></b><br/>
+            <ul>
+              <li class="valign-wrapper"><span class="new badge green tooltipped" data-delay="10" data-position="right" data-tooltip="Optimo" data-badge-caption="&#10004;" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+              <li class="valign-wrapper"><span class="new badge yellow tooltipped" data-delay="10" data-position="right" data-tooltip="Aceptable" data-badge-caption="--" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+              <li class="valign-wrapper"><span class="new badge red tooltipped" data-delay="10" data-position="right" data-tooltip="No Aceptable" data-badge-caption="&#10006;" style="margin:3px;"> </span> <span> - de 35</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col s12">
+          <b>SNR UP<BR/>
+          <div class="col s12 l4">
+            <small>64 QAM</small></b><br/>
+            <ul>
+              <li class="valign-wrapper"><span class="new badge green tooltipped" data-delay="10" data-position="right" data-tooltip="Optimo" data-badge-caption="&#10004;" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+              <li class="valign-wrapper"><span class="new badge yellow tooltipped" data-delay="10" data-position="right" data-tooltip="Aceptable" data-badge-caption="--" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+              <li class="valign-wrapper"><span class="new badge red tooltipped" data-delay="10" data-position="right" data-tooltip="No Aceptable" data-badge-caption="&#10006;" style="margin:3px;"> </span> <span> - de 35</span></li>
+            </ul>
+          </div>
+          <div class="col s12 l4">
+            <b><small>16 QAM</small></b><br/>
+            <ul>
+              <li class="valign-wrapper"><span class="new badge green tooltipped" data-delay="10" data-position="right" data-tooltip="Optimo" data-badge-caption="&#10004;" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+              <li class="valign-wrapper"><span class="new badge yellow tooltipped" data-delay="10" data-position="right" data-tooltip="Aceptable" data-badge-caption="--" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+              <li class="valign-wrapper"><span class="new badge red tooltipped" data-delay="10" data-position="right" data-tooltip="No Aceptable" data-badge-caption="&#10006;" style="margin:3px;"> </span> <span> - de 35</span></li>
+            </ul>
+          </div>
+          <div class="col s12 l4">
+            <b><small>QPSK</small></b><br/>
+            <ul>
+              <li class="valign-wrapper"><span class="new badge green tooltipped" data-delay="10" data-position="right" data-tooltip="Optimo" data-badge-caption="&#10004;" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+              <li class="valign-wrapper"><span class="new badge yellow tooltipped" data-delay="10" data-position="right" data-tooltip="Aceptable" data-badge-caption="--" style="margin:3px;"> </span> <span> 35 ó +</span></li>
+              <li class="valign-wrapper"><span class="new badge red tooltipped" data-delay="10" data-position="right" data-tooltip="No Aceptable" data-badge-caption="&#10006;" style="margin:3px;"> </span> <span> - de 35</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal center-align">
+    <div class="modal-content">
+      <h5><b>En equipos DOCSIS 2.0</b></h5>
+        <br/>
+        <table class="centered bordered">
+          <tbody>
+            </div>
+            <tr>
+              <b>SNR DOWN<BR/><small>DS CM y STB</small></b><br/>
+              <div class="col s4 red center-align">No Aceptable<br/>< 35</div>
+              <div class="col s4 yellow center-align">Aceptable<br/>>= 35</div>
+              <div class="col s4 green center-align">Optimo<br/>>= 35</div><br/>
+            </tr>
+            <br/>
+            <tr>
+              <b>SNR DOWN<BR/><small>DS CM y STB</small></b><br/>
+              <div class="row">
+                <div class="col s4"><i class="fas fa-frown" style="color:red;font-size:3em;"></i><br/>< 35</div>
+                <div class="col s4"><i class="fas fa-smile" style="color:yellow;font-size:3em;"></i><br/>>= 35</div>
+                <div class="col s4"><i class="fas fa-meh" style="color:green;font-size:3em;"></i><br/>>= 35</div><br/>
+              </div>
+            </tr>
+            <br/>
+            <tr>
+              <b>SNR DOWN<BR/><small>DS CM y STB</small></b><br/>
+              <div class="row">
+                <div class="col s4"><i class="far fa-frown" style="color:red;font-size:3em;"></i><br/>< 35</div>
+                <div class="col s4"><i class="far fa-smile" style="color:yellow;font-size:3em;"></i><br/>>= 35</div>
+                <div class="col s4"><i class="far fa-meh" style="color:green;font-size:3em;"></i><br/>>= 35</div><br/>
+              </div>
+            </tr>
+            <br/>
+            <tr>
+              <b>DOWN POWER<BR/><small>DP CM</small></b><br/>
+              <div ng-if="dpcmdods" class="col s4 red center-align">No Aceptable<br/>< -13db y<br/> > +13db</div>
+              <div ng-if="dpcmdods >= -13 && dpcmdods <= 13" class="col s4 yellow center-align">Aceptable<br/>> -13db y<br/> < -10db <br/> <+ 13db y<br/> >+10db</div>
+              <div ng-if="dpcmdods >= -10 && dpcmdods < 10" class="col s4 green center-align">Optimo<br/>>-10db y<br/> < +10db</div><br/>
+              <div class="input-field">
+                <span></span><input placeholder="Ingrese valor:" id="dpcmdods" ng-model="dpcmdods" type="number">
+              </div>
+            </tr>
+            <br/>
+            <tr>
+              <b>UP POWER<BR/><small>UP CM</small></b><br/>
+              <div ng-if="upcmdosds" class="col s4 red center-align">No Aceptable<br/>< 35db y<br/> > 54db</div>
+              <div ng-if="upcmdosds >= 35 && upcmdosds <= 52" class="col s4 yellow center-align">Aceptable<br/>>= 35db y<br/> < 38db<br/> >52db y<br/> <= 54db</div>
+              <div ng-if="upcmdosds >= 38 && upcmdosds <= 52" class="col s4 green center-align">Optimo<br/>=> 38db y<br/> < 52db</div><br/>
+              <div class="input-field">
+                <span></span><input placeholder="Ingrese valor:" id="upcmdosds" ng-model="upcmdosds" type="number">
+              </div>
+            </tr>
+            <br/>
+            <tr>
+              <b>SNR UP<BR/><small>64 QAM</small></b><br/>
+              <div ng-if="qamdocd" class="col s4 red center-align">No Aceptable<br/>< 24</div>
+              <div ng-if="qamdocd >= 24" class="col s4 yellow center-align">Aceptable<br/>>=24 y <27</div>
+              <div ng-if="qamdocd >= 27" class="col s4 green center-align">Optimo<br/>=27</div><br/>
+              <div class="input-field">
+                <span></span><input placeholder="Ingrese valor:" id="qamdocd" ng-model="qamdocd" type="number">
+              </div>
+            </tr>
+            <br/>
+            <tr>
+              <b>SNR UP<BR/><small>16 QAM</small></b><br/>
+              <div ng-if="qamdodocsd" class="col s4 red center-align">No Aceptable<br/>< 19</div>
+              <div ng-if="qamdodocsd >= 19" class="col s4 yellow center-align">Aceptable<br/>>=19 y <22</div>
+              <div ng-if="qamdodocsd >= 22" class="col s4 green center-align">Optimo<br/>=22</div><br/>
+              <div class="input-field">
+                <span></span><input placeholder="Ingrese valor:" id="qamdodocsd" ng-model="qamdodocsd" type="number">
+              </div>
+            </tr>
+            <br/>
+            <tr>
+              <b>SNR UP<BR/><small>QPSK</small></b><br/>
+              <div ng-if="qpskdocd" class="col s4 red center-align">No Aceptable<br/>< 13</div>
+              <div ng-if="qpskdocd >= 13" class="col s4 yellow center-align">Aceptable<br/>>=13 y <16</div>
+              <div ng-if="qpskdocd >= 26" class="col s4 green center-align">Optimo<br/>=16</div><br/>
+              <div class="input-field">
+                <span></span><input placeholder="Ingrese valor:" id="qpskdocd" ng-model="qpskdocd" type="number">
+              </div>
+            </tr>
+            <br/>
+            <tr>
+              <b>BER DOWN<BR/><small>BER CM</small></b><br/>
+              <div ng-if="bercmdocd" class="col s4 red center-align">No Aceptable<br/>>=10 E -8</div>
+              <div ng-if="bercmdocd < -8" class="col s4 yellow center-align">Aceptable<br/><10 E -8</div>
+              <div ng-if="bercmdocd <= -9" class="col s4 green center-align">Optimo<br/>< 10 E -9</div><br/>
+              <div class="input-field">
+                <span></span><input placeholder="Ingrese valor:" id="bercmdocd" ng-model="bercmdocd" type="number" style="max-width:80%;">
+                <label for="bercmdocd">Ingrese valor: 10 E </label>
+              </div>
+            </tr>
+            <br/>
+          </tbody>
+        </table>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal center-align">
+    <div class="modal-content">
+      <h5><b>RF en la boca de TAP</b></h5>
+        <br/>
+        <div class="row">
+          <div class="col s12">
+            <ul class="tabs" style="background-color:transparent!important;">
+              <li class="tab disabled hide"><a class="active grey-text" href="#test4">Seleccione:</a></li>
+              <li class="tab col s4"><a href="#test1" class="animated rubberBand indigo-text text-darken-3 active">40mts +4 EXT</a></li>
+              <li class="tab col s4"><a href="#test2" class="animated rubberBand indigo-text text-darken-3">30mts +4 EXT</a></li>
+              <li class="tab col s4"><a href="#test3" class="animated rubberBand indigo-text text-darken-3">20mts +4 EXT</a></li>
+              <div class="indicator indigo darken-3" style="z-index:1"></div>
+            </ul>
+            <br/>
+          </div>
+          <div id="test4" class="">Seleccione la distancia.</div>
+          <div id="test1" class="col s12">
+            <table class="centered bordered">
+              <tbody>
+                <tr>
+                  <b>CH2</b><br/>
+                  <div ng-if="cuchdos" class="col s4 red center-align">Mínima<br/>(-3 dB u)<br/>6</div>
+                  <div ng-if="cuchdos >= 9" class="col s4 green center-align">Óptimo<br/>(0 dB u)<br/>9</div>
+                  <div ng-if="cuchdos >= 19" class="col s4 yellow center-align">Máxima<br/>(+10 dB u)<br/>19</div><br/>
+                  <div class="input-field">
+                    <input placeholder="Ingrese valor:" id="cuchdos" ng-model="cuchdos" type="number">
+                  </div>
+                </tr>
+                <br/>
+                <tr>
+                  <b>CH117</b><br/>
+                  <div ng-if="cuchcientodi" class="col s4 red center-align">Mínima<br/>(-3 dB u)<br/>12</div>
+                  <div ng-if="cuchcientodi >= 15" class="col s4 green center-align">Óptimo<br/>(0 dB u)<br/>15</div>
+                  <div ng-if="cuchcientodi >= 25" class="col s4 yellow center-align">Máxima<br/>(+10 dB u)<br/>25</div><br/>
+                  <div class="input-field">
+                    <input placeholder="Ingrese valor:" id="cuchcientodi" ng-model="cuchcientodi" type="number">
+                  </div>
+                </tr>
+                <br/>
+                <tr>
+                  <b>CH135</b><br/>
+                  <div ng-if="cuchcientotre" class="col s4 red center-align">Mínima<br/>(-3 dB u)<br/>14</div>
+                  <div ng-if="cuchcientotre >= 17" class="col s4 green center-align">Óptimo<br/>(0 dB u)<br/>17</div>
+                  <div ng-if="cuchcientotre >= 26" class="col s4 yellow center-align">Máxima<br/>(+10 dB u)<br/>26</div><br/>
+                  <div class="input-field">
+                    <input placeholder="Ingrese valor:" id="cuchcientotre" ng-model="cuchcientotre" type="number">
+                  </div>
+                </tr>
+                <br/>
+                <tr>
+                  <b>Señal Digital<br/><small>+- 3 dB</small></b><br/>
+                  <div ng-if="cusenal" class="col s4 red center-align">Mínima<br/>(-3 dB u)<br/>9</div>
+                  <div ng-if="cusenal >= 12" class="col s4 green center-align">Óptimo<br/>(0 dB u)<br/>12</div>
+                  <div ng-if="cusenal >= 21" class="col s4 yellow center-align">Máxima<br/>(+10 dB u)<br/>21</div><br/>
+                  <div class="input-field">
+                    <input placeholder="Ingrese valor:" id="cusenal" ng-model="cusenal" type="number">
+                  </div>
+                </tr>
+                <br/>
+              </tbody>
+            </table>
+          </div>
+          <div id="test2" class="col s12"><table class="centered bordered">
+            <tbody>
+              <tr>
+                <b>CH2</b><br/>
+                <div ng-if="cuchdos" class="col s4 red center-align">Mínima<br/>(-3 dB u)<br/>5</div>
+                <div ng-if="cuchdos >= 8" class="col s4 green center-align">Óptimo<br/>(0 dB u)<br/>8</div>
+                <div ng-if="cuchdos >= 18" class="col s4 yellow center-align">Máxima<br/>(+10 dB u)<br/>18</div><br/>
+                <div class="input-field">
+                  <input placeholder="Ingrese valor:" id="cuchdos" ng-model="cuchdos" type="number">
+                </div>
+              </tr>
+              <br/>
+              <tr>
+                <b>CH117</b><br/>
+                <div ng-if="cuchcientodi" class="col s4 red center-align">Mínima<br/>(-3 dB u)<br/>10</div>
+                <div ng-if="cuchcientodi >= 13" class="col s4 green center-align">Óptimo<br/>(0 dB u)<br/>13</div>
+                <div ng-if="cuchcientodi >= 23" class="col s4 yellow center-align">Máxima<br/>(+10 dB u)<br/>23</div><br/>
+                <div class="input-field">
+                  <input placeholder="Ingrese valor:" id="cuchcientodi" ng-model="cuchcientodi" type="number">
+                </div>
+              </tr>
+              <br/>
+              <tr>
+                <b>CH135</b><br/>
+                <div ng-if="cuchcientotre" class="col s4 red center-align">Mínima<br/>(-3 dB u)<br/>12</div>
+                <div ng-if="cuchcientotre >= 15" class="col s4 green center-align">Óptimo<br/>(0 dB u)<br/>15</div>
+                <div ng-if="cuchcientotre >= 25" class="col s4 yellow center-align">Máxima<br/>(+10 dB u)<br/>25</div><br/>
+                <div class="input-field">
+                  <input placeholder="Ingrese valor:" id="cuchcientotre" ng-model="cuchcientotre" type="number">
+                </div>
+              </tr>
+              <br/>
+              <tr>
+                <b>Señal Digital<br/><small>+- 3 dB</small></b><br/>
+                <div ng-if="cusenal" class="col s4 red center-align">Mínima<br/>(-3 dB u)<br/>7</div>
+                <div ng-if="cusenal >= 10" class="col s4 green center-align">Óptimo<br/>(0 dB u)<br/>10</div>
+                <div ng-if="cusenal >= 20" class="col s4 yellow center-align">Máxima<br/>(+10 dB u)<br/>20</div><br/>
+                <div class="input-field">
+                  <input placeholder="Ingrese valor:" id="cusenal" ng-model="cusenal" type="number">
+                </div>
+              </tr>
+              <br/>
+            </tbody>
+          </table>
+        </div>
+          <div id="test3" class="col s12">
+            <table class="centered bordered">
+              <tbody>
+                <tr>
+                  <b>CH2</b><br/>
+                  <div ng-if="cuchdos" class="col s4 red center-align">Mínima<br/>(-3 dB u)<br/>5</div>
+                  <div ng-if="cuchdos >= 8" class="col s4 green center-align">Óptimo<br/>(0 dB u)<br/>8</div>
+                  <div ng-if="cuchdos >= 18" class="col s4 yellow center-align">Máxima<br/>(+10 dB u)<br/>18</div><br/>
+                  <div class="input-field">
+                    <input placeholder="Ingrese valor:" id="cuchdos" ng-model="cuchdos" type="number">
+                  </div>
+                </tr>
+                <br/>
+                <tr>
+                  <b>CH117</b><br/>
+                  <div ng-if="cuchcientodi" class="col s4 red center-align">Mínima<br/>(-3 dB u)<br/>9</div>
+                  <div ng-if="cuchcientodi >= 12" class="col s4 green center-align">Óptimo<br/>(0 dB u)<br/>12</div>
+                  <div ng-if="cuchcientodi >= 22" class="col s4 yellow center-align">Máxima<br/>(+10 dB u)<br/>22</div><br/>
+                  <div class="input-field">
+                    <input placeholder="Ingrese valor:" id="cuchcientodi" ng-model="cuchcientodi" type="number">
+                  </div>
+                </tr>
+                <br/>
+                <tr>
+                  <b>CH135</b><br/>
+                  <div ng-if="cuchcientotre" class="col s4 red center-align">Mínima<br/>(-3 dB u)<br/>10</div>
+                  <div ng-if="cuchcientotre >= 13" class="col s4 green center-align">Óptimo<br/>(0 dB u)<br/>13</div>
+                  <div ng-if="cuchcientotre >= 23" class="col s4 yellow center-align">Máxima<br/>(+10 dB u)<br/>23</div><br/>
+                  <div class="input-field">
+                    <input placeholder="Ingrese valor:" id="cuchcientotre" ng-model="cuchcientotre" type="number">
+                  </div>
+                </tr>
+                <br/>
+                <tr>
+                  <b>Señal Digital<br/><small>+- 3 dB</small></b><br/>
+                  <div ng-if="cusenal" class="col s4 red center-align">Mínima<br/>(-3 dB u)<br/>5</div>
+                  <div ng-if="cusenal >= 8" class="col s4 green center-align">Óptimo<br/>(0 dB u)<br/>8</div>
+                  <div ng-if="cusenal >= 18" class="col s4 yellow center-align">Máxima<br/>(+10 dB u)<br/>18</div><br/>
+                  <div class="input-field">
+                    <input placeholder="Ingrese valor:" id="cusenal" ng-model="cusenal" type="number">
+                  </div>
+                </tr>
+                <br/>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal center-align">
+    <div class="modal-content">
+      <h5><b>En boca de TAP (downstream)</b></h5>
+        <br/>
+        <table class="centered bordered">
+          <tbody>
+            <tr>
+              <b>SNR DOWN<BR/><small>DS CM y STB</small></b><br/>
+              <div ng-if="snrdown" class="col s4 red center-align">No Aceptable<br/>< 34</div>
+              <div ng-if="snrdown >= 34" class="col s4 yellow center-align">Aceptable<br/><36 y >34</div>
+              <div ng-if="snrdown >= 36" class="col s4 green center-align">Optimo<br/>>= 36</div><br/>
+              <div class="input-field">
+                <input placeholder="Ingrese valor:" id="snrdown" ng-model="snrdown" type="number">
+              </div>
+            </tr>
+            <br/>
+            <tr>
+              <b>BER DOWN<BR/><small>BER CM</small></b><br/>
+              <div ng-if="bercm" class="col s4 red center-align">No Aceptable<br/>>=10 E -7</div>
+              <div ng-if="bercm <= -8" class="col s4 yellow center-align">Aceptable<br/>=10 E -8</div>
+              <div ng-if="bercm <= -9" class="col s4 green center-align">Optimo<br/><= 10 E -9</div><br/>
+              <div class="input-field">
+                <span></span><input placeholder="Ingrese valor:" id="bercm" ng-model="bercm" type="number" style="max-width:80%;">
+                <label for="bercm">Ingrese valor: 10 E</label>
+              </div>
+            </tr>
+            <br/>
+            <tr>
+              <b>BER DOWN<BR/><small>BER STB</small></b><br/>
+              <div ng-if="berstb" class="col s4 red center-align">No Aceptable<br/>>=10 E -7</div>
+              <div ng-if="berstb <= -8" class="col s4 yellow center-align">Aceptable<br/>=10 E -8</div>
+              <div ng-if="berstb <= -9" class="col s4 green center-align">Optimo<br/><= 10 E -9</div><br/>
+              <div class="input-field">
+                <span></span><input placeholder="Ingrese valor:" id="berstb" ng-model="berstb" type="number" style="max-width:80%;">
+                <label for="berstb">Ingrese valor: 10 E </label>
+              </div>
+            </tr>
+            <br/>
+            <tr>
+              <b>DOWN POWER<BR/><small>DP CM STB</small></b><br/>
+              <p>VER TABLA NIVELES RF</p>
+            </tr>
+            <br/>
+          </tbody>
+        </table>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+    </div>
+  </div>
+
+  <div id="modal1" class="modal center-align">
+    <div class="modal-content">
+      <h5><b>Perdidas por elemento<br/> <small>(en función de la frecuencia)</small></b></h5>
+      <div class="input-field col s12">
+        <select id="perdida-input" onchange="perdida()">
+          <option value="">Tod@s</option>
+          <option value="10 mts RG6">10 mts RG6</option>
+          <option value="10 mts RG11">10 mts RG11</option>
+          <option value="1 Splitter 2 vías">1 Splitter 2 vías</option>
+          <option value="1 Splitter 3 vías">1 Splitter 3 vías</option>
+          <option value="1 Splitter 4 vías">1 Splitter 4 vías</option>
+        </select>
+        <label>Seleccione la Distancia/Splitter</label>
+      </div>
+      <table id="perdida" class="centered bordered">
+        <thead>
+          <tr>
+              <th>Distancia/Splitter</th>
+              <th>CH2</th>
+              <th>CH135</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+          </tr>
+          <tr>
+            <td class="nombre">10 mts RG6</td>
+            <td>0,472</td>
+            <td>1,9</td>
+          </tr>
+          <tr>
+            <td class="nombre">10 mts RG11</td>
+            <td>0,31</td>
+            <td>1,25</td>
+          </tr>
+          <tr>
+            <td class="nombre">1 Splitter 2 vías</td>
+            <td>3,5</td>
+            <td>3,9</td>
+          </tr>
+          <tr>
+            <td class="nombre">1 Splitter 3 vías</td>
+            <td>7,5</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td class="nombre">1 Splitter 4 vías</td>
+            <td>7,5</td>
+            <td>9</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+    </div>
+  </div>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.collapsible').collapsible();
+      $('.modal').modal();
+      $('select').material_select({
+        closeOnSelect: true
+      });
+    });
+
+    function perdida() {
+      // Declare variables
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("perdida-input");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("perdida");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    };
+  </script>
+</body>
+
+</html>

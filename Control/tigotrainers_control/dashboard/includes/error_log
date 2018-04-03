@@ -1,0 +1,361 @@
+[02-Aug-2017 16:12:13 UTC] PHP Fatal error:  Uncaught Error: Call to a member function format() on boolean in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php on line 18
+[22-Aug-2017 21:02:04 UTC] PHP Fatal error:  Uncaught Error: Call to a member function format() on boolean in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php on line 16
+[10-Sep-2017 02:08:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function format() on boolean in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php on line 18
+[22-Sep-2017 14:57:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function format() on boolean in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php on line 18
+[03-Oct-2017 23:38:01 UTC] PHP Fatal error:  Uncaught Error: Call to a member function format() on boolean in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php on line 18
+[08-Nov-2017 13:17:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function format() on boolean in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php on line 16
+[17-Nov-2017 16:54:33 UTC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 20480 bytes) in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 1841
+[01-Dec-2017 15:22:18 UTC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 20480 bytes) in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 1841
+[01-Dec-2017 16:06:49 UTC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 20480 bytes) in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 1841
+[01-Dec-2017 16:07:41 UTC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 20480 bytes) in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 1841
+[11-Dec-2017 12:57:26 UTC] PHP Warning:  mysqli_query(): (HY000/1021): Disk full (/tmp/#sql_7984_1.MAI); waiting for someone to free some space... (errno: 28 &quot;No space left on device&quot;) in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 1877
+[11-Dec-2017 12:57:26 UTC] Error Disk full (/tmp/#sql_7984_1.MAI); waiting for someone to free some space... (errno: 28 "No space left on device") de la base de datos de WordPress para la consulta SELECT
+	ttr_control_forms.id AS id,
+	ttr_control_forms.user_id AS usuario,
+	CONVERT_TZ(ttr_control_forms.timestamp, '-00:00', '-05:00') AS fecha_registro,
+	latitud,
+	longitud,
+	pos_circuito,
+	observaciones,
+	estado,
+	CONCAT('http://www.maps.google.com/?q=',latitud,',',longitud) AS Geolocalizar
+
+	FROM ttr_control_forms
+
+	INNER JOIN
+
+	(SELECT
+	 ttr_control_forms_meta.form_id AS id,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'latitu[09-Jan-2018 12:53:36 UTC] PHP Fatal error:  Uncaught Error: Call to a member function format() on boolean in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php on line 16
+[18-Jan-2018 01:47:22 UTC] PHP Fatal error:  Uncaught Error: Call to a member function format() on boolean in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php on line 18
+[29-Jan-2018 20:48:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function format() on boolean in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php on line 16
+[01-Feb-2018 14:20:36 UTC] Error Table 'tigotrai_ners.trnrs_forvas10' doesn't exist de la base de datos de WordPress para la consulta SELECT * FROM trnrs_forvas10 WHERE fecha_actividad BETWEEN '2018-02-01' AND '2018-02-28' realizada por query_forvas_10
+[01-Feb-2018 14:20:36 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[01-Feb-2018 14:35:26 UTC] Error Table 'tigotrai_ners.trnrs_forvas10' doesn't exist de la base de datos de WordPress para la consulta SELECT * FROM trnrs_forvas10 WHERE fecha_actividad BETWEEN '2018-02-01' AND '2018-02-28' realizada por query_forvas_10
+[01-Feb-2018 14:35:26 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[01-Feb-2018 14:35:30 UTC] Error Table 'tigotrai_ners.trnrs_forvas10' doesn't exist de la base de datos de WordPress para la consulta SELECT * FROM trnrs_forvas10 WHERE fecha_actividad BETWEEN '2018-02-01' AND '2018-02-28' realizada por query_forvas_10
+[01-Feb-2018 14:35:30 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[01-Feb-2018 14:36:00 UTC] Error Table 'tigotrai_ners.trnrs_forvas10' doesn't exist de la base de datos de WordPress para la consulta SELECT * FROM trnrs_forvas10 WHERE fecha_actividad BETWEEN '2018-02-01' AND '2018-02-28' realizada por query_forvas_10
+[01-Feb-2018 14:36:00 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[01-Feb-2018 15:26:02 UTC] Error Table 'tigotrai_ners.trnrs_forvas10' doesn't exist de la base de datos de WordPress para la consulta SELECT * FROM trnrs_forvas10 WHERE fecha_actividad BETWEEN '2018-02-01' AND '2018-02-28' realizada por query_forvas_10
+[01-Feb-2018 15:26:02 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[01-Feb-2018 15:26:09 UTC] Error Table 'tigotrai_ners.trnrs_forvas10' doesn't exist de la base de datos de WordPress para la consulta SELECT * FROM trnrs_forvas10 WHERE fecha_actividad BETWEEN '2018-02-01' AND '2018-02-28' realizada por query_forvas_10
+[01-Feb-2018 15:26:09 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[01-Feb-2018 15:26:45 UTC] Error Table 'tigotrai_ners.trnrs_forvas10' doesn't exist de la base de datos de WordPress para la consulta SELECT * FROM trnrs_forvas10 WHERE fecha_actividad BETWEEN '2018-02-01' AND '2018-02-28' realizada por query_forvas_10
+[01-Feb-2018 15:26:45 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[01-Feb-2018 15:26:52 UTC] Error Table 'tigotrai_ners.trnrs_forvas10' doesn't exist de la base de datos de WordPress para la consulta SELECT * FROM trnrs_forvas10 WHERE fecha_actividad BETWEEN '2018-02-01' AND '2018-02-28' realizada por query_forvas_10
+[01-Feb-2018 15:26:52 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[01-Feb-2018 15:27:34 UTC] Error Unknown column 'pos_circuito' in 'field list' de la base de datos de WordPress para la consulta SELECT
+	ttr_control_forms.id AS id,
+	ttr_control_forms.user_id AS usuario,
+	CONVERT_TZ(ttr_control_forms.timestamp, '-00:00', '-05:00') AS fecha_registro,
+	latitud,
+	longitud,
+	pos_circuito,
+	observaciones,
+	estado,
+	CONCAT('http://www.maps.google.com/?q=',latitud,',',longitud) AS Geolocalizar
+
+	FROM ttr_control_forms
+
+	INNER JOIN
+
+	(SELECT
+	 ttr_control_forms_meta.form_id AS id,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'latitude' THEN ttr_control_forms_meta.value END) latitud,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'longitude' THEN ttr_control_forms_meta.value END) longitud,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'asesor_cc' THEN ttr_control_forms_meta.value END) asesor_cc,
+	 IFNULL(MAX(CASE WHEN ttr_control_forms_meta.meta = 'field_notes' THEN ttr_control_forms_meta.value END), '') observaciones
+	 FROM ttr_control_forms_meta
+	GROUP BY ttr_control_forms_meta.form_id
+	) AS form_data
+
+	ON form_data.id = ttr_control_forms.id
+
+	AND ttr_control_forms.timestamp BETWEEN CONVERT_TZ('2018-02-01 00:00:00', '-05:00', '+00:00') AND CONVERT_TZ('2018-02-28 23:59:59', '-05:00', '+00:00')
+	AND ttr_control_forms.user_id != ''
+	AND ttr_control_forms.form = 'for_vas_10_asistencia' realizada por query_forvas_10
+[01-Feb-2018 15:27:34 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[01-Feb-2018 15:27:36 UTC] Error Unknown column 'pos_circuito' in 'field list' de la base de datos de WordPress para la consulta SELECT
+	ttr_control_forms.id AS id,
+	ttr_control_forms.user_id AS usuario,
+	CONVERT_TZ(ttr_control_forms.timestamp, '-00:00', '-05:00') AS fecha_registro,
+	latitud,
+	longitud,
+	pos_circuito,
+	observaciones,
+	estado,
+	CONCAT('http://www.maps.google.com/?q=',latitud,',',longitud) AS Geolocalizar
+
+	FROM ttr_control_forms
+
+	INNER JOIN
+
+	(SELECT
+	 ttr_control_forms_meta.form_id AS id,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'latitude' THEN ttr_control_forms_meta.value END) latitud,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'longitude' THEN ttr_control_forms_meta.value END) longitud,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'asesor_cc' THEN ttr_control_forms_meta.value END) asesor_cc,
+	 IFNULL(MAX(CASE WHEN ttr_control_forms_meta.meta = 'field_notes' THEN ttr_control_forms_meta.value END), '') observaciones
+	 FROM ttr_control_forms_meta
+	GROUP BY ttr_control_forms_meta.form_id
+	) AS form_data
+
+	ON form_data.id = ttr_control_forms.id
+
+	AND ttr_control_forms.timestamp BETWEEN CONVERT_TZ('2018-02-01 00:00:00', '-05:00', '+00:00') AND CONVERT_TZ('2018-02-28 23:59:59', '-05:00', '+00:00')
+	AND ttr_control_forms.user_id != ''
+	AND ttr_control_forms.form = 'for_vas_10_asistencia' realizada por query_forvas_10
+[01-Feb-2018 15:27:36 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[01-Feb-2018 15:27:52 UTC] Error Unknown column 'pos_circuito' in 'field list' de la base de datos de WordPress para la consulta SELECT
+	ttr_control_forms.id AS id,
+	ttr_control_forms.user_id AS usuario,
+	CONVERT_TZ(ttr_control_forms.timestamp, '-00:00', '-05:00') AS fecha_registro,
+	latitud,
+	longitud,
+	pos_circuito,
+	observaciones,
+	estado,
+	CONCAT('http://www.maps.google.com/?q=',latitud,',',longitud) AS Geolocalizar
+
+	FROM ttr_control_forms
+
+	INNER JOIN
+
+	(SELECT
+	 ttr_control_forms_meta.form_id AS id,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'latitude' THEN ttr_control_forms_meta.value END) latitud,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'longitude' THEN ttr_control_forms_meta.value END) longitud,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'asesor_cc' THEN ttr_control_forms_meta.value END) asesor_cc,
+	 IFNULL(MAX(CASE WHEN ttr_control_forms_meta.meta = 'field_notes' THEN ttr_control_forms_meta.value END), '') observaciones
+	 FROM ttr_control_forms_meta
+	GROUP BY ttr_control_forms_meta.form_id
+	) AS form_data
+
+	ON form_data.id = ttr_control_forms.id
+
+	AND ttr_control_forms.timestamp BETWEEN CONVERT_TZ('2018-02-01 00:00:00', '-05:00', '+00:00') AND CONVERT_TZ('2018-02-28 23:59:59', '-05:00', '+00:00')
+	AND ttr_control_forms.user_id != ''
+	AND ttr_control_forms.form = 'for_vas_10_asistencia' realizada por query_forvas_10
+[01-Feb-2018 15:27:52 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[01-Feb-2018 15:30:45 UTC] Error Unknown column 'pos_circuito' in 'field list' de la base de datos de WordPress para la consulta SELECT
+	ttr_control_forms.id AS id,
+	ttr_control_forms.user_id AS usuario,
+	CONVERT_TZ(ttr_control_forms.timestamp, '-00:00', '-05:00') AS fecha_registro,
+	latitud,
+	longitud,
+	pos_circuito,
+	observaciones,
+	estado,
+	CONCAT('http://www.maps.google.com/?q=',latitud,',',longitud) AS Geolocalizar
+
+	FROM ttr_control_forms
+
+	INNER JOIN
+
+	(SELECT
+	 ttr_control_forms_meta.form_id AS id,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'latitude' THEN ttr_control_forms_meta.value END) latitud,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'longitude' THEN ttr_control_forms_meta.value END) longitud,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'asesor_cc' THEN ttr_control_forms_meta.value END) asesor_cc,
+	 IFNULL(MAX(CASE WHEN ttr_control_forms_meta.meta = 'field_notes' THEN ttr_control_forms_meta.value END), '') observaciones
+	 FROM ttr_control_forms_meta
+	GROUP BY ttr_control_forms_meta.form_id
+	) AS form_data
+
+	ON form_data.id = ttr_control_forms.id
+
+	AND ttr_control_forms.timestamp BETWEEN CONVERT_TZ('2018-02-01 00:00:00', '-05:00', '+00:00') AND CONVERT_TZ('2018-02-28 23:59:59', '-05:00', '+00:00')
+	AND ttr_control_forms.user_id != ''
+	AND ttr_control_forms.form = 'for_vas_10_asistencia' realizada por query_forvas_10
+[01-Feb-2018 15:30:45 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[01-Feb-2018 15:40:19 UTC] Error Unknown column 'pos_circuito' in 'field list' de la base de datos de WordPress para la consulta SELECT
+	ttr_control_forms.id AS id,
+	ttr_control_forms.user_id AS usuario,
+	CONVERT_TZ(ttr_control_forms.timestamp, '-00:00', '-05:00') AS fecha_registro,
+	latitud,
+	longitud,
+	pos_circuito,
+	observaciones,
+	estado,
+	CONCAT('http://www.maps.google.com/?q=',latitud,',',longitud) AS Geolocalizar
+
+	FROM ttr_control_forms
+
+	INNER JOIN
+
+	(SELECT
+	 ttr_control_forms_meta.form_id AS id,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'latitude' THEN ttr_control_forms_meta.value END) latitud,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'longitude' THEN ttr_control_forms_meta.value END) longitud,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'asesor_cc' THEN ttr_control_forms_meta.value END) asesor_cc,
+	 IFNULL(MAX(CASE WHEN ttr_control_forms_meta.meta = 'field_notes' THEN ttr_control_forms_meta.value END), '') observaciones
+	 FROM ttr_control_forms_meta
+	GROUP BY ttr_control_forms_meta.form_id
+	) AS form_data
+
+	ON form_data.id = ttr_control_forms.id
+
+	AND ttr_control_forms.timestamp BETWEEN CONVERT_TZ('2018-02-01 00:00:00', '-05:00', '+00:00') AND CONVERT_TZ('2018-02-28 23:59:59', '-05:00', '+00:00')
+	AND ttr_control_forms.user_id != ''
+	AND ttr_control_forms.form = 'for_vas_10_asistencia' realizada por query_forvas_10
+[01-Feb-2018 15:40:19 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[01-Feb-2018 15:40:21 UTC] Error Unknown column 'pos_circuito' in 'field list' de la base de datos de WordPress para la consulta SELECT
+	ttr_control_forms.id AS id,
+	ttr_control_forms.user_id AS usuario,
+	CONVERT_TZ(ttr_control_forms.timestamp, '-00:00', '-05:00') AS fecha_registro,
+	latitud,
+	longitud,
+	pos_circuito,
+	observaciones,
+	estado,
+	CONCAT('http://www.maps.google.com/?q=',latitud,',',longitud) AS Geolocalizar
+
+	FROM ttr_control_forms
+
+	INNER JOIN
+
+	(SELECT
+	 ttr_control_forms_meta.form_id AS id,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'latitude' THEN ttr_control_forms_meta.value END) latitud,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'longitude' THEN ttr_control_forms_meta.value END) longitud,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'asesor_cc' THEN ttr_control_forms_meta.value END) asesor_cc,
+	 IFNULL(MAX(CASE WHEN ttr_control_forms_meta.meta = 'field_notes' THEN ttr_control_forms_meta.value END), '') observaciones
+	 FROM ttr_control_forms_meta
+	GROUP BY ttr_control_forms_meta.form_id
+	) AS form_data
+
+	ON form_data.id = ttr_control_forms.id
+
+	AND ttr_control_forms.timestamp BETWEEN CONVERT_TZ('2018-02-01 00:00:00', '-05:00', '+00:00') AND CONVERT_TZ('2018-02-28 23:59:59', '-05:00', '+00:00')
+	AND ttr_control_forms.user_id != ''
+	AND ttr_control_forms.form = 'for_vas_10_asistencia' realizada por query_forvas_10
+[01-Feb-2018 15:40:21 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[01-Feb-2018 15:40:32 UTC] Error Unknown column 'pos_circuito' in 'field list' de la base de datos de WordPress para la consulta SELECT
+	ttr_control_forms.id AS id,
+	ttr_control_forms.user_id AS usuario,
+	CONVERT_TZ(ttr_control_forms.timestamp, '-00:00', '-05:00') AS fecha_registro,
+	latitud,
+	longitud,
+	pos_circuito,
+	observaciones,
+	estado,
+	CONCAT('http://www.maps.google.com/?q=',latitud,',',longitud) AS Geolocalizar
+
+	FROM ttr_control_forms
+
+	INNER JOIN
+
+	(SELECT
+	 ttr_control_forms_meta.form_id AS id,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'latitude' THEN ttr_control_forms_meta.value END) latitud,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'longitude' THEN ttr_control_forms_meta.value END) longitud,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'asesor_cc' THEN ttr_control_forms_meta.value END) asesor_cc,
+	 IFNULL(MAX(CASE WHEN ttr_control_forms_meta.meta = 'field_notes' THEN ttr_control_forms_meta.value END), '') observaciones
+	 FROM ttr_control_forms_meta
+	GROUP BY ttr_control_forms_meta.form_id
+	) AS form_data
+
+	ON form_data.id = ttr_control_forms.id
+
+	AND ttr_control_forms.timestamp BETWEEN CONVERT_TZ('2018-02-01 00:00:00', '-05:00', '+00:00') AND CONVERT_TZ('2018-02-01 23:59:59', '-05:00', '+00:00')
+	AND ttr_control_forms.user_id != ''
+	AND ttr_control_forms.form = 'for_vas_10_asistencia' realizada por query_forvas_10
+[01-Feb-2018 15:40:32 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[01-Feb-2018 20:22:49 UTC] Error Unknown column 'estado' in 'field list' de la base de datos de WordPress para la consulta SELECT
+	ttr_control_forms.id AS id,
+	ttr_control_forms.user_id AS usuario,
+	CONVERT_TZ(ttr_control_forms.timestamp, '-00:00', '-05:00') AS fecha_registro,
+	latitud,
+	longitud,
+	cedula_asesor,
+	observaciones,
+	estado,
+	CONCAT('http://www.maps.google.com/?q=',latitud,',',longitud) AS Geolocalizar
+
+	FROM ttr_control_forms
+
+	INNER JOIN
+
+	(SELECT
+	 ttr_control_forms_meta.form_id AS id,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'latitude' THEN ttr_control_forms_meta.value END) latitud,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'longitude' THEN ttr_control_forms_meta.value END) longitud,
+	 IFNULL( MAX(CASE WHEN ttr_control_forms_meta . meta = 'asesor_cc' THEN ttr_control_forms_meta . value END), '') cedula_asesor,
+	 IFNULL(MAX(CASE WHEN ttr_control_forms_meta.meta = 'field_notes' THEN ttr_control_forms_meta.value END), '') observaciones
+	 FROM ttr_control_forms_meta
+	GROUP BY ttr_control_forms_meta.form_id
+	) AS form_data
+
+	ON form_data.id = ttr_control_forms.id
+
+	AND ttr_control_forms.timestamp BETWEEN CONVERT_TZ('2018-02-01 00:00:00', '-05:00', '+00:00') AND CONVERT_TZ('2018-02-01 23:59:59', '-05:00', '+00:00')
+	AND ttr_control_forms.user_id != ''
+	AND ttr_control_forms.form = 'for_vas_10_asistencia' realizada por query_forvas_10
+[01-Feb-2018 20:22:49 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[01-Feb-2018 20:22:51 UTC] Error Unknown column 'estado' in 'field list' de la base de datos de WordPress para la consulta SELECT
+	ttr_control_forms.id AS id,
+	ttr_control_forms.user_id AS usuario,
+	CONVERT_TZ(ttr_control_forms.timestamp, '-00:00', '-05:00') AS fecha_registro,
+	latitud,
+	longitud,
+	cedula_asesor,
+	observaciones,
+	estado,
+	CONCAT('http://www.maps.google.com/?q=',latitud,',',longitud) AS Geolocalizar
+
+	FROM ttr_control_forms
+
+	INNER JOIN
+
+	(SELECT
+	 ttr_control_forms_meta.form_id AS id,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'latitude' THEN ttr_control_forms_meta.value END) latitud,
+	 MAX(CASE WHEN ttr_control_forms_meta.meta = 'longitude' THEN ttr_control_forms_meta.value END) longitud,
+	 IFNULL( MAX(CASE WHEN ttr_control_forms_meta . meta = 'asesor_cc' THEN ttr_control_forms_meta . value END), '') cedula_asesor,
+	 IFNULL(MAX(CASE WHEN ttr_control_forms_meta.meta = 'field_notes' THEN ttr_control_forms_meta.value END), '') observaciones
+	 FROM ttr_control_forms_meta
+	GROUP BY ttr_control_forms_meta.form_id
+	) AS form_data
+
+	ON form_data.id = ttr_control_forms.id
+
+	AND ttr_control_forms.timestamp BETWEEN CONVERT_TZ('2018-02-01 00:00:00', '-05:00', '+00:00') AND CONVERT_TZ('2018-02-01 23:59:59', '-05:00', '+00:00')
+	AND ttr_control_forms.user_id != ''
+	AND ttr_control_forms.form = 'for_vas_10_asistencia' realizada por query_forvas_10
+[01-Feb-2018 20:22:51 UTC] PHP Warning:  mysqli_num_fields() expects parameter 1 to be mysqli_result, boolean given in /home/entren8/public_html/tigotrainers/wp-includes/wp-db.php on line 3091
+[02-Feb-2018 16:44:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function format() on boolean in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php on line 18
+[16-Feb-2018 02:03:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function format() on boolean in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/entren8/public_html/tigotrainers/wp-content/plugins/tigotrainers_control/dashboard/includes/download_forms.php on line 16

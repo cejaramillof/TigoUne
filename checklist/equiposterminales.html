@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Equipos terminales</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="wrapper">
+
+
+    <!--seleccion-->
+
+    <label class="hero button" for="lightbox-1"><img class="labelIMG" src="homicon.svg"/><span class="tittle">Ubicación</span></label>
+    <label class="hero button" for="lightbox-2"><img class="labelIMG" src="homicon.svg"/><span class="tittle">Conexión de red</span></label>
+    <label class="hero button" for="lightbox-3"><img class="labelIMG" src="homicon.svg"/><span class="tittle">Conexión de voz</span></label>
+    <label class="hero button" for="lightbox-4"><img class="labelIMG" src="homicon.svg"/><span class="tittle">Conexión electrica</span></label>
+
+    <!--fin seleccion-->
+
+    <!--Comienzo de lightbox-->
+
+    <aside id="1" class="lightbox">
+        <input type="checkbox" class="state" id="lightbox-1"/>
+        <div class="content">
+
+            <h1 style="display: inline">Ubicación</h1>
+            <label class="buttonClose" for="lightbox-1">x</label>
+
+            <div class="descripcion">
+                <p>Los equipos como el cable modem o el decodificador, se deben instalar en zonas abiertas y aireadas.
+                    No deben quedar sobre telas o carpetas de lana, cubiertos por algún objeto ni encerrados en algún
+                    tipo de mueble.
+                </p>
+                <p>Para los Cable Modem Wi-Fi. Se deben ubicar de forma tal que se garantice la mayor cobertura
+                    inalámbrica posible.
+                </p>
+            </div>
+            <div class="imgdescription">
+                <img src="img/Ubicacion.png"/>
+            </div>
+        </div>
+        <label class="backdrop" for="lightbox-1"></label>
+    </aside>
+
+    <!--fin lightbox-->
+
+    <!--Comienzo de lightbox-->
+
+    <aside id="2" class="lightbox">
+        <input type="checkbox" class="state" id="lightbox-2"/>
+        <div class="content">
+
+            <h1 style="display: inline">Conexión de red</h1>
+            <label class="buttonClose" for="lightbox-2">x</label>
+
+            <div class="descripcion">
+                <p>La conexión de los puertos de datos(ETHERNET) debe hacerse con cable UTP categoría 5E o superior,
+                    conector RJ-45 y mapeado de hilos según la norma 568 A en ambos extremos.
+                </p>
+            </div>
+            <div class="imgdescription">
+                <img src="img/Conexion%20de%20red.png"/>
+            </div>
+
+        </div>
+        <label class="backdrop" for="lightbox-2"></label>
+    </aside>
+
+    <!--fin lightbox-->
+
+    <!--Comienzo de lightbox-->
+
+    <aside id="3" class="lightbox">
+        <input type="checkbox" class="state" id="lightbox-3"/>
+        <div class="content">
+
+            <h1 style="display: inline">Conexión de voz</h1>
+            <label class="buttonClose" for="lightbox-3">x</label>
+
+            <div class="descripcion">
+                <p>La conexión de los puertos de voz (FXS), en los equipos cable modem tipo EMTA hacia la red interna de
+                    voz o el aparato telefónico, debe hacerse con cable plano flexible de 4 hilos y conector RJ-11,
+                    según la norma USOC.
+                </p>
+            </div>
+            <div class="imgdescription">
+                <img src="img/Conexion%20de%20voz.jpg"/>
+            </div>
+
+        </div>
+        <label class="backdrop" for="lightbox-3"></label>
+    </aside>
+
+    <!--fin lightbox-->
+
+    <!--Comienzo de lightbox-->
+
+    <aside id="4" class="lightbox">
+        <input type="checkbox" class="state" id="lightbox-4"/>
+        <div class="content">
+
+            <h1 style="display: inline">Conexión electrica</h1>
+            <label class="buttonClose" for="lightbox-4">x</label>
+
+            <div class="descripcion">
+                <p>Las conexiones eléctrica de los adaptadores que alimentan a los equipos como el cable modem o el
+                    decodificador, deben quedar firmes, haciendo buen contacto eléctrico y en una forma tal que sea
+                    difícil de desconectarse accidentalmente.
+                </p>
+                <p>Evitar conectar los equipos terminales de red a cortapicos o extensiones eléctricas.
+                </p>
+            </div>
+            <div class="imgdescription">
+                <img src="img/Conexion%20electrica.jpg"/>
+            </div>
+
+        </div>
+        <label class="backdrop" for="lightbox-4"></label>
+    </aside>
+
+    <!--fin lightbox-->
+
+</div>
+
+
+</body>
+</html>

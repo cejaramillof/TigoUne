@@ -1,0 +1,810 @@
+/*
+Theme Name: Tigo Trainers
+Theme URI: https://www.tigotrainers.com
+Author: Juan Felipe Tobon Gutierrez
+Author URI: https://www.tigotrainers.com
+Description: Portal Tigo Trainers.
+Version: 1.0
+License: GPLv2
+
+Copyright (C) 2015 Juan Felipe Tobon Gutierrez
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+@import "css/bourbon/bourbon";
+@import "css/init.scss";
+@import "css/colors";
+
+@font-face {
+	font-family: 'CronoPro';
+	src: url("font/CronosPro-Regular.woff"), url("font/CronosPro-Regular.eot"), url("font/CronosPro-Regular.svg#CronoPro") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+$headerH: 50px;
+
+$blue: rgba(0, 46, 110, 1);
+$ebonyBlue: rgb(0, 27, 64);
+$sky: rgb(27, 151, 215);
+
+$blackA: rgba(0, 0, 0, 1);
+$blackB: rgba(0, 0, 0, 0.7);
+$blackC: rgba(0, 0, 0, 0.5);
+$blackD: rgba(0, 0, 0, 0.3);
+
+$whiteA: rgba(255, 255, 255, 1);
+$whiteB: rgba(255, 255, 255, 0.7);
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.ttr-user-name{
+  text-transform: capitalize;
+}
+
+#ttr-header {
+	position: fixed;
+	height: $headerH;
+	width: 100%;
+	background: $blue;
+	z-index: 999999;
+  text-align: center;
+	@include box-shadow(0, 0, 4px, $blackC);
+	@include clearfix;
+}
+
+#ttr-header-logo {
+  display: inline-block;
+  position: relative;
+  float: left;
+  line-height: $headerH;
+  height: $headerH;
+  margin: 0 15px auto 15px;
+  color: white;
+
+  img {
+      display: inline-block;
+      height: 80%;
+      width: auto;
+      vertical-align: middle;
+  }
+}
+
+#ttr-header-back {
+  display: inline-block;
+  position: relative;
+  float: left;
+  line-height: $headerH;
+  height: $headerH;
+  margin: 0 15px auto 15px;
+  color: white;
+
+  img {
+    display: inline-block;
+    height: 30%;
+    width: auto;
+    vertical-align: middle;
+  }
+
+  span{
+    display: inline-block;
+    line-height: 1rem;
+    vertical-align: middle;
+    margin-left: 0.4rem;
+  }
+}
+
+
+#ttr-navicon {
+	$time2: 180ms;
+	float: left;
+	height: $headerH;
+	width: $headerH;
+	line-height: $headerH;
+	text-align: center;
+	cursor: pointer;
+	@extend %tap-higlight;
+
+	span {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		height: 2px;
+		width: 45%;
+		margin-top: -1px;
+		background-color: $whiteA;
+		@include border-radius(1px);
+		@include transition(background-color 0 ease-in-out $time2);
+
+		&::before, &::after {
+			position: absolute;
+			display: block;
+			height: 2px;
+			width: 100%;
+			background: white;
+			content: "";
+			@include border-radius(1px);
+			@include transition(transform $time2 ease-in-out, top $time2 ease-in-out $time2);
+		}
+		&::before {
+			top: -7px;
+		}
+		&::after {
+			top: 7px;
+		}
+	}
+	&.ttr-open-sidemenu {
+
+		span {
+			background-color: color(white, 0);
+			&::before, &::after {
+				@include transition(transform $time2 ease-in-out $time2, top $time2 ease-in-out);
+				top: 0;
+			}
+			&::before {
+				@include rotate(45);
+			}
+			&::after {
+				@include rotate(-45);
+			}
+		}
+	}
+}
+
+#ttr-sidebar-left {
+  $time: 500ms;
+  $padd: 15px;
+  $easing: cubic-bezier(0.77, 0, 0.175, 1);
+  $sidebarW: 270px;
+  position: fixed;
+  top: $headerH;
+  bottom: 0;
+  width: $sidebarW;
+  background-color: $ebonyBlue;
+  z-index: 9900;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @extend %box-sizing;
+  @include box-shadow(0, 0, 10px, color($blackB));
+  @include translate(-$sidebarW - 10px, 0);
+  @include transition(transform $time $easing);
+
+  &.ttr-open-sidemenu {
+      @include translate(0, 0);
+  }
+
+  .menu-title {
+      display: block;
+      background-color: $blackD;
+      padding: $padd * 0.8 $padd;
+      text-transform: uppercase;
+      color: $whiteB;
+      font-size: rem(12px);
+  }
+
+  .ttr-sidemenu {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      color: white;
+      .menu-item {
+          @extend %tap-higlight;
+          a {
+              display: block;
+              padding: $padd $padd $padd $padd*3.5;
+              color: white;
+              border-bottom: 1px solid rgba(0,17,39,1);
+              &:hover {
+                  background-color: $blue;
+              }
+          }
+      }
+  }
+  .ttr-logout {
+    display: block;
+    width: 100%;
+    padding: $padd $padd $padd $padd*3.5;
+    background-color: $sky;
+    @extend %box-sizing;
+    @include box-shadow(0, 1px, 2px, color(black, 0.3));
+    color: white;
+    text-shadow: 0 1px 2px color(black, 0.6);
+  }
+}
+
+#ttr-screen-overlay {
+	$time: 500ms;
+	$easing: ease-in-out;
+	@include position(absolute, $headerH, 0, 0, 0);
+	visibility: hidden;
+	opacity: 0;
+	z-index: 9800;
+	@include transition(visibility 0ms $easing $time, opacity $time $easing);
+
+	&.ttr-open-sidemenu {
+		visibility: visible;
+		opacity: 1;
+		transition-delay: 0ms;
+	}
+}
+
+#ttr-main {
+	position: relative;
+	top: $headerH;
+	overflow: auto;
+	background: #f1f2f2;
+	@extend %box-sizing;
+    padding-bottom: 100px;
+}
+
+/****************************************************
+OPERATION: SAFE JOB
+The next rules are declared to create a simulated
+content for prepaid and postpaid products
+
+Date: April 06, 2015
+*****************************************************/
+
+.ttr-productos{
+	position: relative;
+	width: 100%;
+	max-width: 1024px;
+	min-height: 100%;
+	padding: 15px 15px 30px 15px;
+	margin: 0 auto;
+	@extend %box-sizing;
+	background-color: #fafafa;
+	@include box-shadow(0px, 1px, 2px, color(black, 0.3));
+
+	h1 {
+		font-size: 1.4rem;
+		margin:1rem 0;
+		font-family: "CronoPro", Arial, sans-serif;
+		color: #333;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			display: block;
+			background-color: white;
+			margin: 5px 0;
+			@include border-radius(3px);
+			@include box-shadow(0px, 1px, 1px, color(black, 0.2));
+
+			a{
+				display: block;
+				color: $blue;
+				padding: 15px;
+				&:hover{
+					color: white;
+					background-color: $sky;
+					text-shadow: 0 1px 1px color(black, 0.5);
+					@include border-radius(3px);
+					@extend %tap-higlight;
+				}
+			}
+		}
+	}
+}
+
+#ttr-single-productos{
+  position: relative;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 15px;
+  @extend %box-sizing;
+  background-color: #fafafa;
+  @include box-shadow(0px, 1px, 2px, color(black, 0.3));
+  overflow: auto;
+  h1{
+    position: absolute;
+    font-size: 1.4rem;
+    padding:0 0 0.7rem 0;
+    margin: 0;
+    font-family: "CronoPro", Arial, sans-serif;
+    color: #333;
+  }
+
+  iframe {
+    position: absolute;
+    top:55px;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: calc(100% - 55px);
+    @extend %box-sizing;
+  }
+
+  .content{
+    position: relative;
+    top:55px;
+    width: 100%;
+  }
+}
+
+#ttr-single-ayuda{
+  position: relative;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 15px;
+  @extend %box-sizing;
+  background-color: #fafafa;
+  @include box-shadow(0px, 1px, 2px, color(black, 0.3));
+  h1{
+    position: relative;
+    font-size: 1.4rem;
+    padding:0 0 0.7rem 0;
+    margin: 0;
+    font-family: "CronoPro", Arial, sans-serif;
+    color: #333;
+  }
+
+  iframe {
+    position: absolute;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: calc(100% - 55px);
+    @extend %box-sizing;
+  }
+
+  .content{
+    position: relative;
+    width: 100%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+#pospago-selection, #channel-selection, #item-selection {
+  padding: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  .placeholder{
+    display: none;
+  }
+}
+
+#foco-pospago-results{
+  overflow: auto;
+  min-height: 400px;
+  img{
+    float: left;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  iframe {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+#ttr-slider-wrap {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media screen and ( min-width : 960px){
+  #ttr-slider-wrap {
+    padding: 0 15px;
+    margin-top:15px;
+  }
+
+}
+
+#ttr-content-wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  h1, h2 {
+    color: $blue;
+    font-family: "Cronopro", Arial, sans-serif;
+    font-weight: normal;
+  }
+}
+
+.alert {
+  padding: 10px 15px;
+  color: #333;
+  position: relative;
+  font-size: 1rem;
+  @include border-radius(3px);
+  @include box-shadow(0, 1px, 2px, color(black, 0.1));
+
+}
+
+.alert .msg {
+  padding: 0 20px 0 40px;
+}
+
+.info-box {
+  background: $whiteB url(img/info.png) no-repeat left 14px center;
+}
+
+.ttr-prepado-emphasis {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: $blue;
+}
+
+
+/*****************************
+ NEW NAVIGATION
+******************************/
+
+.ttt-main-header-burger {
+
+  $burgerH: $headerH*0.6;
+  $burgerW: 24px;
+  $burgerL: 2px;
+  $burgerColor: $mainBlue;
+
+  display: block;
+  position: relative;
+  float: right;
+  right: 0;
+  height: $burgerH;
+  width: $burgerW;
+  padding: $headerH*0.2 15px;
+  background: white;
+  line-height: $burgerH;
+  text-align: left;
+
+  span {
+    position: absolute;
+    display: block;
+    top: 50%;
+    height: $burgerL;
+    width: $burgerW;
+    margin-top: -$burgerL/2;
+    background: $burgerColor;
+    border-radius: $burgerL/2;
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      height: $burgerL;
+      width: $burgerW;
+      background: $burgerColor;
+      border-radius: $burgerL/2;
+    }
+
+    &:before{
+      top: -7px;
+    }
+
+    &:after{
+      top: 7px;
+    }
+  }
+
+  &.closed{
+    background: transparent;
+    @include transition-delay(400ms);
+
+    span, span:before, span:after {
+      background: white;
+      @include transition-delay(400ms);
+    }
+  }
+}
+
+$headerH: 50px;
+
+.ttt-header-nav {
+
+  $darkFont: #444;
+
+  display: block;
+  position: absolute;
+  right: 0;
+  top: $headerH;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #ababab;
+  border-left: 1px solid #ababab;
+  border-right: 1px solid #ababab;
+  border-radius: 0 0 0 3px;
+  list-style-type: none;
+  background: white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  color: $darkFont;
+  z-index: 999998;
+  @include transform-origin(right top);
+  @include transform(scale(1));
+  @include transition(all 400ms cubic-bezier(0.77, 0, 0.175, 1));
+
+  a {
+    color: $darkFont;
+  }
+
+  & ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    .list-title{
+      padding: rem(7px) rem(15px);
+      line-height: rem(25px);
+      font-size: rem(12px);
+      text-transform: uppercase;
+      color: rgba($darkFont,0.8);
+    }
+    .list-item {
+      a {
+        display: block;
+        padding: 0 rem(15px);
+        line-height: rem(32px);
+        font-size: rem(14px);
+
+        &:hover {
+          background: #cccccc;
+        }
+      }
+    }
+  }
+
+  .ttt-header-nav-logout {
+    display: block;
+    margin: rem(15px);
+    padding: rem(8px);
+    border: 1px solid $mainBlue;
+    border-top-color: #4d6cb6;
+    border-bottom-color: rgb(16, 53, 116);
+    border-radius: 2px;
+    @include background-image(linear-gradient($mainBlue 0, rgb(16, 53, 116) 100%));
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0,0,0,1);
+    color: white;
+  }
+
+  &.closed{
+    top: -230px + $headerH;
+  }
+
+}
+
+.welcome-msg{
+  color: #666;
+  font-size: rem(14px);
+}
+
+/*****************************
+ HOME TABS
+******************************/
+
+.tabs {
+  position: relative;
+  width:100%;
+  display:inline-block;
+  margin-top: 1rem;
+}
+
+/*----- Tab Links -----*/
+
+.tab-links{
+  margin: 0;
+  padding: 0;
+}
+
+/* Clearfix */
+.tab-links:after {
+  display:block;
+  clear:both;
+  content:'';
+}
+
+.tab-links li {
+  float:left;
+  list-style:none;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.tab-links a {
+  padding:9px 15px;
+  display:block;
+  border: 1px solid transparent;
+  border-bottom: none;
+  background-image: -webkit-linear-gradient(#10357f 0, #10336c 100%);
+  background-image: linear-gradient(to bottom, rgba(16,53,127,1) 0%, rgba(16,51,108,1) 100%);
+  font-size:16px;
+  font-family: "CronoPro", Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color:white;
+}
+
+li.active a, li.active a:hover {
+  position: relative;
+  background-image: -webkit-linear-gradient(#fafafa 0, #ffffff 50%);
+  background-image: linear-gradient(to bottom, #fafafa 0%, #ffffff 50%);
+  color:#4c4c4c;
+  z-index: 50;
+}
+
+@media (max-width: 480px) {
+
+  .tab-links li {
+    margin-right: 0;
+    width: 33.333333%;
+  }
+
+  .tab-links a {
+    padding:9px 9px;
+    border-radius:0;
+
+  }
+}
+
+/*----- Content of Tabs -----*/
+.tab-content {
+  position: relative;
+  padding:15px;
+  border-radius:2px;
+  border-top: 5px solid #10336C;
+  background:#fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: -5px;
+}
+
+.tab {
+  display:none;
+}
+
+.tab.active {
+  display:block;
+}
+
+
+.ttt-home-list-articles{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li{
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    width: 100%;
+
+    a {
+      display: block;
+      padding: 10px;
+      border: 1px solid #eaeaea;
+      border-radius: 2px;
+      color: $mainBlue;
+      @include background-image(linear-gradient(#ffffff 0, #f9f9f9 100%));
+
+      &:hover{
+        border: 1px solid rgba($mainBlue,0.5);
+      }
+    }
+  }
+}
+
+@media (min-width: 580px) {
+
+  .ttt-home-list-articles{
+    li {
+      width: 47%;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+
+  .ttt-home-list-articles {
+    li {
+      width: 32.7%;
+    }
+  }
+}
+
+.flexslider {
+  margin-bottom: 0 !important;
+}
+
+.flex-control-nav {
+  bottom: 5px !important;
+  z-index: 10;
+}
+
+.flex-control-paging li  a{
+  background: rgba(255,255,255, 0.6) !important;
+  height: 8px !important;
+  width: 8px !important;
+}
+
+.flex-control-paging li  a.flex-active{
+  background: rgba(255,255,255, 1) !important;
+}
+
+
+/*****************************
+ WELCOME CHANNEL
+******************************/
+
+.ttt-welcome-channel{
+  position: relative;
+  color: $mainBlue;
+  padding-top: 1px;
+  top: -1px;
+}
+
+.ttt-welcome-channel-list{
+  position: relative;
+  display: block;
+  margin: 200px auto 0 auto;
+  padding: 0;
+  width: 200px;
+  list-style-type: none;
+  text-align: center;
+
+
+  a{
+    display: block;
+    color: $mainBlue;
+  }
+
+  .list-title{
+    margin-bottom: 10px;
+  }
+
+  .channel-item{
+    padding: 8px;
+    margin-bottom: 5px;
+    background-color: $mainBlue;
+    border-radius: 2px;
+    color: white;
+
+    &:hover{
+      background: $sky;
+    }
+  }
+}

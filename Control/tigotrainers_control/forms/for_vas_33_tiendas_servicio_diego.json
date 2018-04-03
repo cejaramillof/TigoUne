@@ -1,0 +1,1059 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Fecha de la actividad",
+      "slug": "activity_date",
+      "type": "date",
+      "flow": 2,
+      "properties": {
+        "required": true,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Entrenamiento",
+      "slug": "entrenamiento",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Producto",
+          "option_value": "producto",
+          "flow": 3
+        },
+        {
+          "option_key": "Servicio básico",
+          "option_value": "serviciobasico",
+          "flow": 12
+        },
+        {
+          "option_key": "Servicio completo",
+          "option_value": "serviciocompleto",
+          "flow": 20
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Portafolio",
+      "slug": "portafolio",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Home",
+          "option_value": "Home",
+          "flow": 4
+        },
+        {
+          "option_key": "Movil",
+          "option_value": "Movil",
+          "flow": 8
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Módulo de Entrenamiento",
+      "slug": "training_day",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Día 1",
+          "option_value": "Día 1",
+          "flow": 5
+        },
+        {
+          "option_key": "Día 2",
+          "option_value": "Día 2",
+          "flow": 6
+        },
+        {
+          "option_key": "Día 3",
+          "option_value": "Día 3",
+          "flow": 7
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Temas de entrenamiento - Día 1",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Entorno Corporativo",
+          "option_value": "Entorno Corporativo"
+        },
+        {
+          "option_key": "Super MacGo",
+          "option_value": "Super MacGo"
+        },
+        {
+          "option_key": "Conceptos Técnicos",
+          "option_value": "Conceptos Tecnicos"
+        },
+        {
+          "option_key": "Banda Ancha",
+          "option_value": "Banda Ancha"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+	  {
+      "id": 6,
+      "title": "Temas de entrenamiento - Día 2",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Telefonia",
+          "option_value": "Telefonia"
+        },
+        {
+          "option_key": "Television",
+          "option_value": "Television"
+        },
+        {
+          "option_key": "Ofertas y Promociones",
+          "option_value": "Ofertas y Promociones"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Temas de entrenamiento - Día 3",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Ofertas y Promociones",
+          "option_value": "Ofertas y Promociones"
+        },
+        {
+          "option_key": "Competencia",
+          "option_value": "Competencia"
+        },
+        {
+          "option_key": "Proceso de la Venta",
+          "option_value": "Proceso de la Venta"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Módulo de Entrenamiento",
+      "slug": "training_day",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Día 4",
+          "option_value": "Día 4",
+          "flow": 10
+        },
+        {
+          "option_key": "Día 5",
+          "option_value": "Día 5",
+          "flow": 11
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },    
+    {
+      "id": 10,
+      "title": "Temas de entrenamiento - Día 4",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Super MacGo",
+          "option_value": "Super MacGo"
+        },
+        {
+          "option_key": "Portabilidad + Prepago",
+          "option_value": "Portabilidad + Prepago"
+        },
+        {
+          "option_key": "Pospago",
+          "option_value": "Pospago"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 11,
+      "title": "Temas de entrenamiento - Día 5",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Pospago",
+          "option_value": "Pospago"
+        },
+        {
+          "option_key": "Facturación básica",
+          "option_value": "Facturacion basica"
+        },
+        {
+          "option_key": "Digital Life Style",
+          "option_value": "Digital Life Style"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 12,
+      "title": "Portafolio",
+      "slug": "portafolio",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Home",
+          "option_value": "Home",
+          "flow": 13
+        },
+        {
+          "option_key": "Movil",
+          "option_value": "Movil",
+          "flow": 16
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 13,
+      "title": "Módulo de Entrenamiento",
+      "slug": "training_day",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Día 6",
+          "option_value": "Día 6",
+          "flow": 14
+        },
+        {
+          "option_key": "Día 7",
+          "option_value": "Día 7",
+          "flow": 15
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 14,
+      "title": "Temas de entrenamiento - Día 6",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Sistemas de información",
+          "option_value": "Sistemas de informacion"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+	  {
+      "id": 15,
+      "title": "Temas de entrenamiento - Día 7",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Sistemas de información",
+          "option_value": "Sistemas de informacion"
+        },
+        {
+          "option_key": "Practica Si",
+          "option_value": "Practica Si"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 16,
+      "title": "Módulo de Entrenamiento",
+      "slug": "training_day",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Día 8",
+          "option_value": "Día 8",
+          "flow": 17
+        },
+        {
+          "option_key": "Día 9",
+          "option_value": "Día 9",
+          "flow": 18
+        },
+        {
+          "option_key": "Día 10",
+          "option_value": "Día 10",
+          "flow": 19
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 17,
+      "title": "Temas de entrenamiento - Día 8",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "EPOS / CRM",
+          "option_value": "EPOS / CRM"
+        },
+        {
+          "option_key": "4625 + Tigo Docs",
+          "option_value": "4625 + Tigo Docs"
+        },
+        {
+          "option_key": "Datafono - Pago en caja",
+          "option_value": "Datafono - Pago en caja"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+	  {
+      "id": 18,
+      "title": "Temas de entrenamiento - Día 9",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Credivalores venta y posventa",
+          "option_value": "Credivalores venta y posventa"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+	  {
+      "id": 19,
+      "title": "Temas de entrenamiento - Día 10",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Evoluciona",
+          "option_value": "Evoluciona"
+        },
+        {
+          "option_key": "Portabilidad incidencias",
+          "option_value": "Portabilidad incidencias"
+        },
+        {
+          "option_key": "Posventas basicas",
+          "option_value": "Posventas basicas"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 20,
+      "title": "Portafolio",
+      "slug": "portafolio",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Definiciones basicas",
+          "option_value": "Definiciones basicas",
+          "flow": 21
+        },
+        {
+          "option_key": "Procesos Tecnicos",
+          "option_value": "Procesos Tecnicos",
+          "flow": 26
+        },
+        {
+          "option_key": "Etapa de Refuerzo",
+          "option_value": "Etapa de Refuerzo",
+          "flow": 37
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 21,
+      "title": "Módulo de Entrenamiento",
+      "slug": "training_day",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Día 11",
+          "option_value": "Día 11",
+          "flow": 22
+        },
+        {
+          "option_key": "Día 12",
+          "option_value": "Día 12",
+          "flow": 23
+        },
+        {
+          "option_key": "Día 13",
+          "option_value": "Día 13",
+          "flow": 24
+        },
+        {
+          "option_key": "Día 14",
+          "option_value": "Día 14",
+          "flow": 25
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 22,
+      "title": "Temas de entrenamiento - Día 11",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Modelo de operación Tiendas",
+          "option_value": "Modelo de operacion Tiendas"
+        },
+        {
+          "option_key": "Bloque de introduccion a las PQR",
+          "option_value": "Bloque de introduccion a las PQR"
+        },
+        {
+          "option_key": "Digiturno",
+          "option_value": "Digiturno"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 23,
+      "title": "Temas de entrenamiento - Día 12",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Definiciones Basicas",
+          "option_value": "Definiciones Basicas"
+        },
+        {
+          "option_key": "Nuestra Regulacion",
+          "option_value": "Nuestra Regulacion"
+        },
+        {
+          "option_key": "Peticiones y Posventas (PC Movil y Hogar)",
+          "option_value": "Peticiones y Posventas (PC Movil y Hogar)"
+        }
+
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 24,
+      "title": "Temas de entrenamiento - Día 13",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Principales Peticiones (Hogar)",
+          "option_value": "Principales Peticiones (Hogar)"
+        },
+        {
+          "option_key": "Ingreso Sistemas de Informacion",
+          "option_value": "Ingreso Sistemas de Informacion"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 25,
+      "title": "Temas de entrenamiento - Día 14",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Procesos Posventas",
+          "option_value": "Procesos Posventas"
+        },
+        {
+          "option_key": "Gestion Documental",
+          "option_value": "Gestion Documental"
+        },
+        {
+          "option_key": "Posventas Adicionales",
+          "option_value": "Posventas Adicionales"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 26,
+      "title": "Módulo de Entrenamiento",
+      "slug": "training_day",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Día 15",
+          "option_value": "Día 15",
+          "flow": 27
+        },
+        {
+          "option_key": "Día 16",
+          "option_value": "Día 16",
+          "flow": 28
+        },
+        {
+          "option_key": "Día 17",
+          "option_value": "Día 17",
+          "flow": 29
+        },
+        {
+          "option_key": "Día 18",
+          "option_value": "Día 18",
+          "flow": 30
+        },
+        {
+          "option_key": "Día 19",
+          "option_value": "Día 19",
+          "flow": 31
+        },
+        {
+          "option_key": "Día 20",
+          "option_value": "Día 20",
+          "flow": 32
+        },
+        {
+          "option_key": "Día 21",
+          "option_value": "Día 21",
+          "flow": 33
+        },
+        {
+          "option_key": "Día 22",
+          "option_value": "Día 22",
+          "flow": 34
+        },
+        {
+          "option_key": "Día 23",
+          "option_value": "Día 23",
+          "flow": 35
+        },
+        {
+          "option_key": "Día 24",
+          "option_value": "Día 24",
+          "flow": 36
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 27,
+      "title": "Temas de entrenamiento - Día 15",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Consulta Integral",
+          "option_value": "Consulta Integral"
+        },
+        {
+          "option_key": "Empotrados",
+          "option_value": "Empotrados"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 28,
+      "title": "Temas de entrenamiento - Día 16",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Facturacion Hogar",
+          "option_value": "Facturacion Hogar"
+        },
+        {
+          "option_key": "Elementos Facturacion",
+          "option_value": "Elementos Facturacion"
+        },
+        {
+          "option_key": "Nemonicos Financiacion",
+          "option_value": "Nemonicos Financiacion"
+        },
+        {
+          "option_key": "Otras Transacciones",
+          "option_value": "Otras Transacciones"
+        }
+
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 29,
+      "title": "Temas de entrenamiento - Día 17",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Facturacion Movil",
+          "option_value": "Facturacion Movil"
+        },
+        {
+          "option_key": "Definicion Basica",
+          "option_value": "Definicion Basica"
+        },
+        {
+          "option_key": "Cambios de Plan",
+          "option_value": "Cambios de Plan"
+        },
+        {
+          "option_key": "Casuisticas",
+          "option_value": "Casuisticas"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 30,
+      "title": "Temas de entrenamiento - Día 18",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Ajustes por Item",
+          "option_value": "Ajustes por Item"
+        },
+        {
+          "option_key": "Conceptos Basicos",
+          "option_value": "Conceptos Basicos"
+        },
+        {
+          "option_key": "Herramienta de Retencion",
+          "option_value": "Herramienta de Retencion"
+        },
+        {
+          "option_key": "Excepcion y Gestion Documental",
+          "option_value": "Excepcion y Gestion Documental"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 31,
+      "title": "Temas de entrenamiento - Día 19",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Retencion Hogar",
+          "option_value": "Retencion Hogar"
+        },
+        {
+          "option_key": "Proceso de Retencion",
+          "option_value": "Proceso de Retencion"
+        },
+        {
+          "option_key": "Ingreso de Retencion",
+          "option_value": "Ingreso de Retencion"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 32,
+      "title": "Temas de entrenamiento - Día 20",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Matriz PQR (Movil y Hogar)",
+          "option_value": "Matriz PQR (Movil y Hogar)"
+        },
+        {
+          "option_key": "Escalamientos",
+          "option_value": "Escalamientos"
+        },
+        {
+          "option_key": "Practica en Sistemas",
+          "option_value": "Practica en Sistemas"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 33,
+      "title": "Temas de entrenamiento - Día 21",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Queja Factura Hogar",
+          "option_value": "Queja Factura Hogar"
+        },
+        {
+          "option_key": "Protocolo de Reliquidacion",
+          "option_value": "Protocolo de Reliquidacion"
+        },
+        {
+          "option_key": "Casuisticas",
+          "option_value": "Casuisticas"
+        },
+        {
+          "option_key": "Ingreso Reliquidacion",
+          "option_value": "Ingreso Reliquidacion"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 34,
+      "title": "Temas de entrenamiento - Día 22",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Queja Servicio (Hogar)",
+          "option_value": "Queja Servicio (Hogar)"
+        },
+        {
+          "option_key": "Matriz",
+          "option_value": "Matriz"
+        },
+        {
+          "option_key": "Queja Servicio APC",
+          "option_value": "Queja Servicio APC"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 35,
+      "title": "Temas de entrenamiento - Día 23",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Soporte Tecnico",
+          "option_value": "Soporte Tecnico"
+        },
+        {
+          "option_key": "Gestion Documental",
+          "option_value": "Gestion Documental"
+        },
+        {
+          "option_key": "Ley 1480",
+          "option_value": "Ley 1480"
+        },
+        {
+          "option_key": "Roaming",
+          "option_value": "Roaming"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 36,
+      "title": "Temas de entrenamiento - Día 24",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Cartera (Hogar)",
+          "option_value": "Cartera (Hogar)"
+        },
+        {
+          "option_key": "Politicas",
+          "option_value": "Politicas"
+        },
+        {
+          "option_key": "Paz y Salvo",
+          "option_value": "Paz y Salvo"
+        },
+        {
+          "option_key": "Listas Negras Inclusion Exclusion",
+          "option_value": "Listas Negras Inclusion Exclusion"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 37,
+      "title": "Módulo de Entrenamiento",
+      "slug": "training_day",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Día 25",
+          "option_value": "Día 25",
+          "flow": 38
+        },
+        {
+          "option_key": "Día 26",
+          "option_value": "Día 26",
+          "flow": 39
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 38,
+      "title": "Temas de entrenamiento - Día 25",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Refuerzo Movil y Hogar",
+          "option_value": "Refuerzo Movil y Hogar"
+        },
+        {
+          "option_key": "Transacciones Agiles",
+          "option_value": "Transacciones Agiles"
+        },
+        {
+          "option_key": "Formularios y Otras Aplicaciones",
+          "option_value": "Formularios y Otras Aplicaciones"
+        },
+        {
+          "option_key": "Certificacion Induccion",
+          "option_value": "Certificacion Induccion"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 39,
+      "title": "Temas de entrenamiento - Día 26",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 40,
+      "options": [
+        {
+          "option_key": "Refuerzo comercial B2C",
+          "option_value": "Refuerzo comercial B2C"
+        },
+        {
+          "option_key": "Prepago Super MacGo",
+          "option_value": "Prepago Super MacGo"
+        },
+        {
+          "option_key": "Pospago Super MacGo",
+          "option_value": "Pospago Super MacGo"
+        },
+        {
+          "option_key": "Refuerzo Trios / Empaquetamiento",
+          "option_value": "Refuerzo Trios / Empaquetamiento"
+        },
+        {
+          "option_key": "Vendors",
+          "option_value": "Vendors"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 40,
+      "title": "Cédula(s) de participante(s)",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 41,
+      "properties": {
+        "required": true,
+        "validate": "cc_id",
+        "multidata": true
+      }
+    },
+    {
+      "id": 41,
+      "title": "Duración del entrenamiento (minutos)",
+      "slug": "training_time",
+      "type": "range_option",
+      "flow": 42,
+      "options": {
+        "min_value": 60,
+        "max_value": 480,
+        "steps": 60
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 42,
+      "title": "¿Se realizó evaluación?",
+      "slug": "quiz_done",
+      "type": "boolean_option",
+      "flow": 43,
+      "options": {
+        "true": 1,
+        "false": 0
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 43,
+      "title": "Observaciones",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": "_submit",
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    }
+  ]
+}

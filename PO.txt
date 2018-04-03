@@ -1,0 +1,65 @@
+	CREATE TABLE IF NOT EXISTS userstemp (
+	  `cedula` BIGINT(20) NOT NULL,
+	  `nombre_empleado` VARCHAR(255) COLLATE utf8_spanish_ci DEFAULT NULL,
+	  `cargo` VARCHAR(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+	  `empresa` VARCHAR(255) COLLATE utf8_spanish_ci DEFAULT NULL,
+	  `vp` VARCHAR(20) COLLATE utf8_spanish_ci DEFAULT NULL,
+	  `unidad` VARCHAR(20) COLLATE utf8_spanish_ci DEFAULT NULL,
+	  `regional` VARCHAR(20) COLLATE utf8_spanish_ci DEFAULT NULL,
+	  `plaza` VARCHAR(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+	  `canal` VARCHAR(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+	  `fecha_ingreso` VARCHAR(10) COLLATE utf8_spanish_ci DEFAULT NULL,
+	  `fuente` VARCHAR(30) COLLATE utf8_spanish_ci DEFAULT NULL,
+	  `antiguedad_15dias` VARCHAR(10) COLLATE utf8_spanish_ci DEFAULT NULL,
+	  `matriz_comercial` VARCHAR(2) COLLATE utf8_spanish_ci DEFAULT NULL,
+	  `matriz_servicios` VARCHAR(2) COLLATE utf8_spanish_ci DEFAULT NULL,
+	  `jerarquia` VARCHAR(100) COLLATE utf8_spanish_ci DEFAULT NULL,
+	  `linea_contacto` VARCHAR(15) COLLATE utf8_spanish_ci DEFAULT NULL,
+	  PRIMARY KEY (`cedula`)
+	) ENGINE=INNODB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+	LOAD DATA LOCAL INFILE '/home/entren8/public_html/excelfile/NOMBRE_ARCHIVO.csv' REPLACE INTO TABLE userstemp CHARACTER SET 'latin1' FIELDS TERMINATED BY ';' LINES TERMINATED BY '\r\n';
+
+	UPDATE users
+	LEFT JOIN userstemp
+	ON(users.cedula = userstemp.cedula)
+	SET users.estado = 'INACTIVO', updated_at = NOW()
+	WHERE userstemp.cedula IS NULL;
+
+	INSERT INTO users (cedula, nombre_empleado, cargo, empresa, vp, unidad, regional, plaza, canal, fecha_ingreso, fuente, antiguedad_15dias, matriz_comercial, matriz_servicios, estado, jerarquia, linea_contacto, created_at, updated_at)
+		SELECT cedula, nombre_empleado, cargo, empresa, vp, unidad, regional, plaza, canal, STR_TO_DATE(fecha_ingreso, '%d/%m/%Y') AS fecha_ingreso, fuente, antiguedad_15dias, matriz_comercial, matriz_servicios, 'ACTIVO' AS estado, jerarquia, linea_contacto, NOW() AS created_at, NOW() AS updated_at FROM userstemp
+	ON DUPLICATE KEY UPDATE
+	cedula = VALUES( cedula ),
+	nombre_empleado = VALUES( nombre_empleado ),
+	cargo = VALUES( cargo ),
+	empresa = VALUES( empresa ),
+	vp = VALUES( vp ),
+	unidad = VALUES( unidad ),
+	regional = VALUES( regional ),
+	plaza = VALUES( plaza ),
+	canal = VALUES( canal ),
+	fecha_ingreso = VALUES( fecha_ingreso ),
+	fuente = VALUES( fuente ),
+	antiguedad_15dias = VALUES( antiguedad_15dias ),
+	matriz_comercial = VALUES( matriz_comercial ),
+	matriz_servicios = VALUES( matriz_servicios ),
+	estado = VALUES( estado ),
+	jerarquia = VALUES( jerarquia ),
+	linea_contacto = VALUES( linea_contacto ),
+	created_at = VALUES( created_at ),
+	updated_at = VALUES( updated_at );
+
+	DROP TABLE IF EXISTS userstemp;
+
+
+
+revisar contrase�as
+select * from users where jerarquia != 'PO' and password = ''
+
+https://control.tigotrainers.com/e6340067b6584f708b1d78a1b17569c41ca0de3d89dd4d927b443eecd194
+
+/tigotrainers/wp-content/plugins/tigotrainers_control/forms
+
+/testing/control/frwlv52/app/Http/Controllers/ControlApp
+
+SELECT * FROM `users` WHERE password != '' AND estado = 'ACTIVO' GROUP BY jerarquia

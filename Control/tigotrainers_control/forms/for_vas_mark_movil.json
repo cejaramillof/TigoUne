@@ -1,0 +1,57 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Código POS / Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 2,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Actividad",
+      "slug": "training_time",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Entrada",
+          "option_value": "e",
+          "flow": 3
+        },
+        {
+          "option_key": "Salida",
+          "option_value": "s",
+          "flow": 3
+        },
+        {
+          "option_key": "Novedad",
+          "option_value": "n",
+          "flow": 3
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Observaciones",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": "_submit",
+      "properties": {
+        "required": false,
+        "validate": "text"
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="19px" viewBox="0 0 18 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>facebook</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="8.895708 18 17.7912 18 17.7912 0.2088 8.895708 0.2088 0.000216 0.2088 0.000216 18"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="facebook">
+            <g transform="translate(0.000000, -0.000000)" id="Page-1">
+                <g>
+                    <g id="facebook">
+                        <g id="Group-3" transform="translate(0.000000, 0.511344)">
+                            <g id="Fill-1-Clipped">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="path-1"></g>
+                                <path d="M16.809336,18 C17.351496,18 17.791416,17.56008 17.791416,17.01792 L17.791416,1.19088 C17.791416,0.648 17.351496,0.2088 16.809336,0.2088 L0.981576,0.2088 C0.439416,0.2088 0.000216,0.648 0.000216,1.19088 L0.000216,17.01792 C0.000216,17.56008 0.439416,18 0.981576,18 L16.809336,18 L16.809336,18 Z" id="Fill-1" fill="#36538E" mask="url(#mask-2)"></path>
+                            </g>
+                        </g>
+                        <path d="M12.27564,18.511344 L12.27564,11.621664 L14.58828,11.621664 L14.9346,8.936784 L12.27564,8.936784 L12.27564,7.222464 C12.27564,6.444864 12.49164,5.914944 13.6062,5.914944 L15.0282,5.914224 L15.0282,3.513024 C14.78196,3.479904 13.93812,3.407184 12.95604,3.407184 C10.9062,3.407184 9.50292,4.658544 9.50292,6.956064 L9.50292,8.936784 L7.18452,8.936784 L7.18452,11.621664 L9.50292,11.621664 L9.50292,18.511344 L12.27564,18.511344 L12.27564,18.511344 Z" id="Fill-4" fill="#FEFEFE"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

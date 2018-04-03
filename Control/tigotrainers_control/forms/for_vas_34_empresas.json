@@ -1,0 +1,153 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Fecha de la actividad",
+      "slug": "activity_date",
+      "type": "date",
+      "flow": 3,
+      "properties": {
+        "required": true,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Canal Trabajado",
+      "slug": "channel",
+      "type": "unique_option",
+      "flow": 3,
+      "options": [
+        {
+          "option_key": "AGENCIAS COMERCIALES",
+          "option_value": "AGENCIAS COMERCIALES"
+        },
+        {
+          "option_key": "BACK",
+          "option_value": "BACK"
+        },
+        {
+          "option_key": "CDVS",
+          "option_value": "CDVS"
+        },
+        {
+          "option_key": "CDE",
+          "option_value": "CDE"
+        },
+        {
+          "option_key": "CSE",
+          "option_value": "CSE"
+        },
+        {
+          "option_key": "EDATEL",
+          "option_value": "EDATEL"
+        },
+        {
+          "option_key": "EJECUTIVO DE SERVICIO GE&G",
+          "option_value": "EJECUTIVO DE SERVICIO GE&G"
+        },
+        {
+          "option_key": "EJECUTIVO DE SERVICIO PYME",
+          "option_value": "EJECUTIVO DE SERVICIO PYME"
+        },
+        {
+          "option_key": "FARMER",
+          "option_value": "FARMER"
+        },
+        {
+          "option_key": "PRIV & GOB",
+          "option_value": "PRIV & GOB"
+        },
+        {
+          "option_key": "PRIME & WHOLE",
+          "option_value": "PRIME & WHOLE"
+        },
+        {
+          "option_key": "HUNTER",
+          "option_value": "HUNTER"
+        },
+        {
+          "option_key": "INGENIERIA",
+          "option_value": "INGENIERIA"
+        },
+        {
+          "option_key": "INTERNOS",
+          "option_value": "INTERNOS"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text",
+        "open_answer": true
+      }
+    },
+    {
+      "id": 3,
+      "title": "Código(s) POS o Circuito(s)",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 4,
+      "properties": {
+        "required": true,
+        "validate": "text",
+        "multidata": true
+      }
+    },
+    {
+      "id": 4,
+      "title": "Tema(s) entrenado(s)",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 5,
+      "options": "_db_table_data",
+      "properties": {
+        "required": true,
+        "validate": "text",
+        "multidata": true,
+        "db_table_name": "control_training_themes"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Duración del entrenamiento (minutos)",
+      "slug": "training_time",
+      "type": "range_option",
+      "flow": 6,
+      "options": {
+        "min_value": 20,
+        "max_value": 480,
+        "steps": 10
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Cédula(s) de participante(s)",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 7,
+      "properties": {
+        "required": true,
+        "validate": "cc_id",
+        "multidata": true
+      }
+    },
+    {
+      "id": 7,
+      "title": "Observaciones",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": "_submit",
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    }
+  ]
+}

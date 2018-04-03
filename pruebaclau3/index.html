@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/animate.css" />
+  <title>TigoUne</title>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    /* label focus color */
+
+    .input-field input[type=number]:focus+label {
+      color: #1a3660!important;
+    }
+
+    /* label underline focus color */
+
+    .input-field input[type=number]:focus {
+      border-bottom: 1px solid #1a3660!important;
+      box-shadow: 0 1px 0 0 #1a3660;
+    }
+
+  </style>
+</head>
+
+<body style="background: url(./img/bg.png) no-repeat top center;background-attachment: fixed;">
+  <br/>
+  <br/>
+  <div class="container center-align">
+    <div class="row valign-wrapper">
+      <div class="col s12 valign">
+        <div class="card white darken-1">
+          <div class="header">
+            <img src="./img/banner-tv.png" class="responsive-img" style="width: 100%;">
+          </div>
+          <div class="card-content darkblue-text">
+            <!--<div class="left-align">
+              <span class="card-title center-align">
+                <small><h6 class="animated bounceInRight"><b>Diagnostico de daños: Banda Ancha</b></h6></small>
+              </span>
+              <p class="animated bounceInLeft">Elige el problema.</p>
+              <br/>
+            </div>-->
+            <div class="container">
+              <div class="row center-align">
+              <div class="col s5">
+                <a class="dropdown-button" data-beloworigin="true" data-activates='wifi' data-constrainWidth="false">
+                  <img class="responsive-img" style="max-width: 100px;" src="./img/pix.png"><p>
+                  <b>PIXELACIÓN</b></p>
+                </a>
+                <ul id='wifi' class='dropdown-content' style="width: 1!important;">
+                  <li><a class="indigo-text text-darken-4 animated bounceIn"><b>PIXELACIÓN</b></a></li>
+                  <li class="divider"></li>
+                  <li><a href="#wifi1" class="indigo-text text-darken-4 waves-effect modal-trigger">Preguntas al Cliente</a></li>
+                  <li><a href="#wifi2" class="indigo-text text-darken-4 waves-effect modal-trigger">Check List</a></li>
+                  <li><a href="#wifi3" class="indigo-text text-darken-4 waves-effect modal-trigger">Apoyo despacho</a></li>
+                  <li><a href="#wifi4" class="indigo-text text-darken-4 waves-effect modal-trigger">Escalamiento</a></li>
+                </ul>
+                <div id="wifi1" class="modal">
+                  <div class="modal-content">
+                    <h4>Modal Header</h4>
+                    <p>A bunch of text</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+                <div id="wifi2" class="modal">
+                  <div class="modal-content">
+                    <h4>Modal Header 2</h4>
+                    <p>A bunch of text</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+                <div id="wifi3" class="modal">
+                  <div class="modal-content">
+                    <h4>Modal Header 3</h4>
+                    <p>A bunch of text</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+                <div id="wifi4" class="modal">
+                  <div class="modal-content">
+                    <h4>Modal Header 4</h4>
+                    <p>A bunch of text</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s5 offset-s2"><a class="dropdown-button" data-beloworigin="true" data-activates='wifi-no' data-constrainWidth="false"><img class="responsive-img" style="max-width: 100px;" src="./img/sins.png"><p><b>SIN SEÑAL</b></p></div></a>
+              <ul id='wifi-no' class='dropdown-content' style="width: 1!important;">
+                <li><a class="indigo-text text-darken-4 animated bounceIn"><b>SIN SEÑAL</b></a></li>
+                <li class="divider"></li>
+                <li><a href="#wifi-no-1" class="indigo-text text-darken-4 waves-effect modal-trigger">Preguntas al Cliente</a></li>
+                <li><a href="#wifi-no-2" class="indigo-text text-darken-4 waves-effect modal-trigger">Check List</a></li>
+                <li><a href="#wifi-no-3" class="indigo-text text-darken-4 waves-effect modal-trigger">Apoyo despacho</a></li>
+                <li><a href="#wifi-no-4" class="indigo-text text-darken-4 waves-effect modal-trigger">Escalamiento</a></li>
+              </ul>
+              <div id="wifi-no-1" class="modal">
+                <div class="modal-content">
+                  <h4>Modal Header</h4>
+                  <p>A bunch of text</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                </div>
+              </div>
+              <div id="wifi-no-2" class="modal">
+                <div class="modal-content">
+                  <h4>Modal Header 2</h4>
+                  <p>A bunch of text</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                </div>
+              </div>
+              <div id="wifi-no-3" class="modal">
+                <div class="modal-content">
+                  <h4>Modal Header 3</h4>
+                  <p>A bunch of text</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                </div>
+              </div>
+              <div id="wifi-no-4" class="modal">
+                <div class="modal-content">
+                  <h4>Modal Header 4</h4>
+                  <p>A bunch of text</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                </div>
+              </div>
+              </div>
+              <div class="row">
+              <div class="col s12"><a class="dropdown-button" data-beloworigin="true" data-activates='wifi-low' data-constrainWidth="false"><img class="responsive-img" style="max-width: 100px;" src="./img/sub.png"><p><b>NO VISUALIZA CANALES O PAQUETES</b></p></a>
+                <ul id='wifi-low' class='dropdown-content' style="width: 1!important;">
+                  <li><a class="indigo-text text-darken-4 animated bounceIn"><b>NO VISUALIZA CANALES O PAQUETES</b></a></li>
+                  <li class="divider"></li>
+                  <li><a href="#wifi-low-1" class="indigo-text text-darken-4 waves-effect modal-trigger">Preguntas al Cliente</a></li>
+                  <li><a href="#wifi-low-2" class="indigo-text text-darken-4 waves-effect modal-trigger">Check List</a></li>
+                  <li><a href="#wifi-low-3" class="indigo-text text-darken-4 waves-effect modal-trigger">Apoyo despacho</a></li>
+                  <li><a href="#wifi-low-4" class="indigo-text text-darken-4 waves-effect modal-trigger">Escalamiento</a></li>
+                </ul>
+                <div id="wifi-low-1" class="modal">
+                  <div class="modal-content">
+                    <h4>Modal Header</h4>
+                    <p>A bunch of text</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+                <div id="wifi-low-2" class="modal">
+                  <div class="modal-content">
+                    <h4>Modal Header 2</h4>
+                    <p>A bunch of text</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+                <div id="wifi-low-3" class="modal">
+                  <div class="modal-content">
+                    <h4>Modal Header 3</h4>
+                    <p>A bunch of text</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+                <div id="wifi-low-4" class="modal">
+                  <div class="modal-content">
+                    <h4>Modal Header 4</h4>
+                    <p>A bunch of text</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">OK</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.collapsible').collapsible();
+      $('.modal').modal();
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,348 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Fecha de la actividad",
+      "slug": "activity_date",
+      "type": "date",
+      "flow": 2,
+      "properties": {
+        "required": true,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Canal Trabajado",
+      "slug": "channel",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "CDVS",
+          "option_value": "cvds",
+          "flow": 3
+        },
+        {
+          "option_key": "Contact Center",
+          "option_value": "contact center",
+          "flow": 3
+        },
+        {
+          "option_key": "PAP",
+          "option_value": "pap",
+          "flow": 3
+        },
+        {
+          "option_key": "Puntos Fijos",
+          "option_value": "puntos fijos",
+          "flow": 3
+        },
+        {
+          "option_key": "AUR y Constructores",
+          "option_value": "aur y contructores",
+          "flow": 3
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Código POS / Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 8,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Cédula del asesor",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 12,
+      "properties": {
+        "required": true,
+        "validate": "cc_id"
+      }
+    },
+    {
+      "id": 12,
+      "title": "Nombre del asesor",
+      "slug": "asesor_name",
+      "type": "text",
+      "flow": 16,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 16,
+      "title": "Número móvil del asesor",
+      "slug": "asesor_msisdn",
+      "type": "number",
+      "flow": 20,
+      "properties": {
+        "required": true,
+        "validate": "cellphone_number"
+      }
+    },
+    {
+      "id": 20,
+      "title": "Nombre del jefe inmediato del asesor",
+      "slug": "asesor_boss_name",
+      "type": "text",
+      "flow": 24,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 24,
+      "title": "Antigüedad del asesor en el cargo",
+      "slug": "asesor_antiquity",
+      "type": "unique_option",
+      "flow": 28,
+      "options": [
+        {
+          "option_key": "Menos de 3 meses",
+          "option_value": "Menos de 3 meses"
+        },
+        {
+          "option_key": "De 3 a 6 meses",
+          "option_value": "De 3 a 6 meses"
+        },
+        {
+          "option_key": "Más de 6 meses",
+          "option_value": "Más de 6 meses"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 28,
+      "title": "¿Cumple los requerimientos de presentación personal?",
+      "slug": "mac_1",
+      "type": "boolean_option",
+      "flow": 29,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 29,
+      "title": "¿Se encuentra en el punto de venta?",
+      "slug": "mac_2",
+      "type": "boolean_option",
+      "flow": 30,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 30,
+      "title": "¿Aborda al cliente? Tiene inicitativa de acercamiento y aplica el protocolo de saludo.",
+      "slug": "mac_3",
+      "type": "boolean_option",
+      "flow": 31,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 31,
+      "title": "¿Genera Conexión con el cliente? Actitud: Acogida, cordialidad, amabilidad y disposición de servicio.",
+      "slug": "mac_4",
+      "type": "boolean_option",
+      "flow": 32,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 32,
+      "title": "¿Entiende al cliente? Realiza preguntas poderosas, identifica su motivo de compra, escucha y parafrasea.",
+      "slug": "mac_5",
+      "type": "range_option",
+      "flow": 33,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 33,
+      "title": "¿Ofrece beneficios y soluciones? Utiliza la estructura: Característica - Conector - Beneficio. ",
+      "slug": "mac_6",
+      "type": "range_option",
+      "flow": 34,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 34,
+      "title": "¿Conoce la oferta de la competencia y sabe manejar las objeciones del cliente?",
+      "slug": "mac_7",
+      "type": "boolean_option",
+      "flow": 35,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 35,
+      "title": "¿Realiza validación de la información relevante (cobertura, disponibilidad técnica)?",
+      "slug": "mac_8",
+      "type": "boolean_option",
+      "flow": 36,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 36,
+      "title": "¿Cierra con calidad? Ofrece opciones, realiza preguntas de cierre y muestra agresividad comercial.",
+      "slug": "mac_9",
+      "type": "range_option",
+      "flow": 37,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 37,
+      "title": "¿Genera valor a la venta? Repasa beneficios, incentiva el upselling, ofreciendo más productos y / o Servicios (mayor velocidad, larga distancia, DVR y/o canales premium)",
+      "slug": "mac_10",
+      "type": "range_option",
+      "flow": 38,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 38,
+      "title": "¿Cumple con el proceso de gestión documental? Ingresa correctamente la venta y gestiona la documentación.",
+      "slug": "mac_11",
+      "type": "boolean_option",
+      "flow": 39,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 39,
+      "title": "¿Explica al cliente facturación, términos y condiciones?",
+      "slug": "mac_12",
+      "type": "boolean_option",
+      "flow": 40,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 40,
+      "title": "Duración del entrenamiento (minutos)",
+      "slug": "training_time",
+      "type": "hidden",
+      "type": "range_option",
+      "flow": 41,
+      "options": {
+        "min_value": 20,
+        "max_value": 480,
+        "steps": 10
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 41,
+      "title": "Observaciones / Plan de acción",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": "_submit",
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    }
+  ]
+}

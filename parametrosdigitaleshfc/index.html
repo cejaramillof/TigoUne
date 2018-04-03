@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/animate.css" />
+  <title>TigoUne</title>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    /* label focus color */
+
+    .input-field input[type=number]:focus+label {
+      color: #1a3660!important;
+    }
+
+    /* label underline focus color */
+
+    .input-field input[type=number]:focus {
+      border-bottom: 1px solid #1a3660!important;
+      box-shadow: 0 1px 0 0 #1a3660;
+    }
+
+    .no-display {
+      display: none;
+    }
+
+    .select2-container {
+      width: 100%!important;
+    }
+
+    .video-link {
+      display: flex;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      line-height: 1.5;
+      padding: 1rem;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    .video-link i {
+        width: 2rem;
+        font-size: 1.6rem;
+        display: inline-block;
+        text-align: center;
+        margin-right: 1rem;
+    }
+
+    .green {
+      margin-top: 7px;
+      border-radius: 10px;
+      padding: 15px 20px;
+      background-color: #a6ff34;
+      border-right: 3px solid #5b9e04;
+      border-bottom: 4px solid #5b9e04;
+      display: inline-block;
+    }
+
+    .yellow {
+      margin-top: 7px;
+      border-radius: 10px;
+      padding: 15px 20px;
+      background-color: #edff00;
+      border-right: 3px solid #bec501;
+      border-bottom: 4px solid #bec501;
+      display: inline-block;
+    }
+
+    .red {
+      margin-top: 7px;
+      border-radius: 10px;
+      padding: 15px 20px;
+      background-color: #ff0000;
+      border-right: 3px solid #900000;
+      border-bottom: 4px solid #900000;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <br/>
+  <br/>
+  <div class="container center-align">
+    <div class="row valign-wrapper">
+      <div class="col s12 valign">
+        <div class="card white darken-1">
+          <div class="header">
+            <img src="./img/banner-dhfc.png" class="responsive-img animated fadeIn" style="width: 100%;">
+          </div>
+          <div class="card-content darkblue-text">
+            <ul class="collapsible popout collapsible-accordion" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header"><i class="material-icons">settings</i><p>Perdidas por elemento<br/> <small>(en función de la frecuencia)</small></p></div>
+                <div class="collapsible-body">
+                  <div class="input-field col s12">
+                    <select id="perdida-input" onchange="perdida()">
+                      <option value="aoksdaod" selected disabled>Seleccione</option>
+                      <option value="">Tod@s</option>
+                      <option value="10 mts RG6">10 mts RG6</option>
+                      <option value="10 mts RG11">10 mts RG11</option>
+                      <option value="1 Splitter 2 vías">1 Splitter 2 vías</option>
+                      <option value="1 Splitter 3 vías">1 Splitter 3 vías</option>
+                      <option value="1 Splitter 4 vías">1 Splitter 4 vías</option>
+                    </select>
+                    <label>Seleccione la Distancia/Splitter</label>
+                  </div>
+                  <table id="perdida" class="centered bordered">
+                    <thead>
+                      <tr>
+                          <th>Distancia/Splitter</th>
+                          <th>CH2</th>
+                          <th>CH135</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                      </tr>
+                      <tr>
+                        <td class="nombre">10 mts RG6</td>
+                        <td>0,472</td>
+                        <td>1,9</td>
+                      </tr>
+                      <tr>
+                        <td class="nombre">10 mts RG11</td>
+                        <td>0,31</td>
+                        <td>1,25</td>
+                      </tr>
+                      <tr>
+                        <td class="nombre">1 Splitter 2 vías</td>
+                        <td>3,5</td>
+                        <td>3,9</td>
+                      </tr>
+                      <tr>
+                        <td class="nombre">1 Splitter 3 vías</td>
+                        <td>7,5</td>
+                        <td>8</td>
+                      </tr>
+                      <tr>
+                        <td class="nombre">1 Splitter 4 vías</td>
+                        <td>7,5</td>
+                        <td>9</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">phonelink_setup</i>En boca de TAP (downstream) </div>
+                <div class="collapsible-body">
+                  <div class="input-field col s12">
+                    <select id="bocatap-input" onchange="bocatap()">
+                      <option value="aoksdaod" selected disabled>Seleccione</option>
+                      <option value="SNR DOWN">SNR DOWN</option>
+                      <option value="BER CM">BER CM</option>
+                      <option value="BER STB">BER STB</option>
+                      <option value="DOWN POWER">DOWN POWER</option>
+                    </select>
+                    <label>Seleccione Estado</label>
+                  </div>
+                  <table id="bocatap" class="centered bordered">
+                    <thead>
+                      <tr>
+                          <th style="background-color: #a6ff34;border:1px solid white">Optimo</th>
+                          <th style="background-color: yellow;border:1px solid white">Aceptable</th>
+                          <th style="background-color: red;border:1px solid white">NO Aceptable</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                      </tr>
+                      <tr>
+                        <td class="no-display">SNR DOWN</td>
+                        <td>SNR<br/> >= 36</td>
+                        <td>SNR<br/> > 34 y < 36</td>
+                        <td>SNR<br/> < 34</td>
+
+                      </tr>
+                      <tr>
+                        <td class="no-display">BER CM</td>
+                        <td><= 10 E -9</td>
+                        <td>=10 E -8</td>
+                        <td>>=10 E -7</td>
+                      </tr>
+                      <tr>
+                        <td class="no-display">BER STB</td>
+                        <td><= 10 E -9</td>
+                        <td>=10 E -8</td>
+                        <td>>=10 E -7</td>
+                      </tr>
+                      <tr>
+                        <td class="no-display">DOWN POWER</td>
+                        <td colspan="3">Ver tabla niveles RF</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">phonelink_setup</i>En boca de TAP (downstream) </div>
+                <div class="collapsible-body">
+                  <table class="centered bordered">
+                    <tbody>
+                      <tr>
+                        <th>SNR DOWN<BR/><small>CM y STB</small></th>
+                        <td><input ng-model="snrdown" type="number"></td>
+                        <td ng-if="snrdown >= 36" class="green">Optimo<br/>>= 36</td>
+                        <td ng-if="snrdown >= 34 && snrdown < 36" class="yellow">Aceptable<br/><36 y >34 </td>
+                        <td ng-if="snrdown < 34" class="red">NO Aceptable<br/>< 34</td>
+                      </tr>
+                      <tr>
+                        <th>BER DOWN<BR/><small>BER CM</small></th>
+                        <td>10 E <input style="width:90%" ng-model="bercm" type="number"></td>
+                        <td ng-if="bercm <= -9" class="green">Optimo<br/><= 10 E -9</td>
+                        <td ng-if="bercm <= -8 && bercm > -9" class="yellow">Aceptable<br/>=10 E -8</td>
+                        <td ng-if="bercm >= -7" class="red">NO Aceptable<br/>>=10 E -7</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">phonelink_setup</i>RF en la boca de TAP</div>
+                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">phonelink_setup</i>Equipos DOCSIS 2.0</div>
+                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">phonelink_setup</i>Equipos DOCSIS 3.0</div>
+                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+              </li>
+              <li>
+                <a href="#modal1" class="black-text modal-trigger"><div class="video-link"><i class="material-icons">ondemand_video</i>Pruebas MSQ900</div></a>
+              </li>
+              <li>
+                <a href="#modal2" class="black-text modal-trigger"><div class="video-link"><i class="material-icons">ondemand_video</i>Pruebas DSAM</div></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4> </h4>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/JwpNUvKVv04?rel=0" frameborder="0" allow="autoplay; encrypted-media" autoplay allowfullscreen></iframe>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+    </div>
+  </div>
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4> </h4>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/2T5EUcS3e6s?rel=0" frameborder="0" allow="autoplay; encrypted-media" autoplay allowfullscreen></iframe>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+    </div>
+  </div>
+  </div>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.collapsible').collapsible();
+      $('.modal').modal();
+      $('select').material_select({
+        closeOnSelect: true
+      });
+      perdida();
+      bocatap();
+    });
+
+    function perdida() {
+      // Declare variables
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("perdida-input");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("perdida");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    };
+
+    function bocatap() {
+      // Declare variables
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("bocatap-input");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("bocatap");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    };
+  </script>
+</body>
+
+</html>

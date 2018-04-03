@@ -1,0 +1,441 @@
+<script src="js/general-values.js"></script>
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="#">Dashboard</a>
+  </li>
+  <li class="breadcrumb-item active">General</li>
+</ol>
+<!-- Area Chart
+<div class="card mb-3">
+	<div class="card-header">
+		<i class="fa fa-area-chart"></i> Seguimiento meses</div>
+	<div class="card-body">
+		<canvas id="myAreaChart" width="100%" height="30"></canvas>
+	</div>
+	<div class="card-footer small text-muted actualizated"></div>
+</div>
+-->
+<div id="filter">
+  <!-- cont filtro mes -->
+</div>
+<div class="row">
+  <!--
+	<div class="col-lg-6">
+		<div class="card mb-3">
+			<div class="card-header">
+				<i class="fa fa-bar-chart"></i> Matriz General</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-12 my-auto">
+						<canvas id="matrizBarChart"></canvas>
+					</div>
+				</div>
+			</div>
+			<div class="card-footer small text-muted actualizated"></div>
+		</div>
+	</div>
+	-->
+  <div class="col-lg-6">
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fa fa-table"></i> Matriz General</div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <div class="octubre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>UNIDAD</th>
+                  <th>Cobertura General</th>
+                  <th>Cumplimiento Matriz</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MÓVIL COMERCIAL</td>
+                  <td>93%</td>
+                  <td>80%</td>
+                </tr>
+                <tr>
+                  <td>HOME COMERCIAL</td>
+                  <td>95%</td>
+                  <td>90%</td>
+                </tr>
+                <tr>
+                  <td>EMPRESAS Y GOBIERNO</td>
+                  <td>88%</td>
+                  <td>95%</td>
+                </tr>
+                <tr>
+                  <td>MÓVIL SERVICIO</td>
+                  <td>97%</td>
+                  <td>85%</td>
+                </tr>
+                <tr>
+                  <td>HOME SERVICIO</td>
+                  <td>98%</td>
+                  <td>80%</td>
+                </tr>
+                <tr>
+                  <td>ESCUELA TÉCNICA HOME</td>
+                  <td>100%</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>95%</td>
+                  <td>88%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="noviembre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>UNIDAD</th>
+                  <th>Cobertura General</th>
+                  <th>Cumplimiento Matriz</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MÓVIL COMERCIAL</td>
+                  <td>95%</td>
+                  <td>86%</td>
+                </tr>
+                <tr>
+                  <td>HOME COMERCIAL</td>
+                  <td>96%</td>
+                  <td>73%</td>
+                </tr>
+                <tr>
+                  <td>EMPRESAS Y GOBIERNO</td>
+                  <td>96%</td>
+                  <td>87%</td>
+                </tr>
+                <tr>
+                  <td>MÓVIL SERVICIO</td>
+                  <td>89%</td>
+                  <td>84%</td>
+                </tr>
+                <tr>
+                  <td>HOME SERVICIO</td>
+                  <td>87%</td>
+                  <td>81%</td>
+                </tr>
+                <tr>
+                  <td>ENTRENAMIENTO TÉCNICO</td>
+                  <td>75%</td>
+                  <td>73%</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>90%</td>
+                  <td>81%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="diciembre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>UNIDAD</th>
+                  <th>Cobertura General</th>
+                  <th>Cumplimiento Matriz</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MÓVIL COMERCIAL</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>HOME COMERCIAL</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>EMPRESAS Y GOBIERNO</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>MÓVIL SERVICIO</td>
+                  <td>87,1%</td>
+                  <td>38,6%</td>
+                </tr>
+                <tr>
+                  <td>HOME SERVICIO</td>
+                  <td>89,6%</td>
+                  <td>39,9%</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="enero">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>UNIDAD</th>
+                  <th>Cobertura General</th>
+                  <th>Cumplimiento Matriz</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MÓVIL COMERCIAL</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>HOME COMERCIAL</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>EMPRESAS Y GOBIERNO</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>TIENDAS SERVICIO</td>
+                  <td>81,6%</td>
+                  <td>53,6%</td>
+                </tr>
+                <tr>
+                  <td>ENTRENAMIENTO TÉCNICO HOME</td>
+                  <td>67,7%</td>
+                  <td>67,5%</td>
+                </tr>
+                <tr>
+                  <td>ENTRENAMIENTO TÉCNICO B2B</td>
+                  <td>34,6%</td>
+                  <td>34,6%</td>
+                </tr>
+                <tr>
+                  <td>GENERAL</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer small text-muted actualizated"></div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fa fa-table"></i> Digital MEV General</div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <div class="octubre">
+            <table class="table table-bordered text-center" id="general-digital" width="100%" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>UNIDAD</th>
+                  <th>% ANTERIOR</th>
+                  <th>% ACTUAL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MÓVIL COMERCIAL</td>
+                  <td>83%</td>
+                  <td>84%</td>
+                </tr>
+                <tr>
+                  <td>HOME COMERCIAL</td>
+                  <td>83%</td>
+                  <td>87%</td>
+                </tr>
+                <tr>
+                  <td>EMPRESAS Y GOBIERNO</td>
+                  <td>73%</td>
+                  <td>84%</td>
+                </tr>
+                <tr>
+                  <td>MÓVIL SERVICIO</td>
+                  <td>45%</td>
+                  <td>46%</td>
+                </tr>
+                <tr>
+                  <td>HOME SERVICIO</td>
+                  <td>53%</td>
+                  <td>55%</td>
+                </tr>
+                <tr>
+                  <td>ENTRENAMIENTO TÉCNICO</td>
+                  <td>24%</td>
+                  <td>26%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="noviembre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>UNIDAD</th>
+                  <th>% ANTERIOR</th>
+                  <th>% ACTUAL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MÓVIL COMERCIAL</td>
+                  <td>83,5%</td>
+                  <td>84,7%</td>
+                </tr>
+                <tr>
+                  <td>HOME COMERCIAL</td>
+                  <td>87,6%</td>
+                  <td>88,5%</td>
+                </tr>
+                <tr>
+                  <td>EMPRESAS Y GOBIERNO</td>
+                  <td>84,3%</td>
+                  <td>84,9%</td>
+                </tr>
+                <tr>
+                  <td>MÓVIL SERVICIO</td>
+                  <td>48,6%</td>
+                  <td>49,4%</td>
+                </tr>
+                <tr>
+                  <td>HOME SERVICIO</td>
+                  <td>55,4%</td>
+                  <td>56,0%</td>
+                </tr>
+                <tr>
+                  <td>ENTRENAMIENTO TÉCNICO</td>
+                  <td>31,5%</td>
+                  <td>39,3%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="diciembre">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>UNIDAD</th>
+                  <th>% ANTERIOR</th>
+                  <th>% ACTUAL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MÓVIL COMERCIAL</td>
+                  <td>83,8%</td>
+                  <td>84,5%</td>
+                </tr>
+                <tr>
+                  <td>HOME COMERCIAL</td>
+                  <td>87,6%</td>
+                  <td>87,9%</td>
+                </tr>
+                <tr>
+                  <td>EMPRESAS Y GOBIERNO</td>
+                  <td>87,1%</td>
+                  <td>90,2%</td>
+                </tr>
+                <tr>
+                  <td>MÓVIL SERVICIO</td>
+                  <td>46,4%</td>
+                  <td>46,7%</td>
+                </tr>
+                <tr>
+                  <td>HOME SERVICIO</td>
+                  <td>44,1%</td>
+                  <td>50,5%</td>
+                </tr>
+                <tr>
+                  <td>ENTRENAMIENTO TÉCNICO</td>
+                  <td>46,7%</td>
+                  <td>47,0%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="enero">
+            <table class="table table-bordered text-center" id="general-matriz" cellspacing="0">
+              <thead>
+                <tr class="tableizer-firstrow">
+                  <th>UNIDAD</th>
+                  <th>% ANTERIOR</th>
+                  <th>% ACTUAL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MÓVIL COMERCIAL</td>
+                  <td>84,1%</td>
+                  <td>84,7%</td>
+                </tr>
+                <tr>
+                  <td>HOME COMERCIAL</td>
+                  <td>88,8%</td>
+                  <td>89,2%</td>
+                </tr>
+                <tr>
+                  <td>EMPRESAS Y GOBIERNO</td>
+                  <td>82,7%</td>
+                  <td>82,7%</td>
+                </tr>
+                <tr>
+                  <td>MÓVIL SERVICIO</td>
+                  <td>46,8%</td>
+                  <td>47,0%</td>
+                </tr>
+                <tr>
+                  <td>HOME SERVICIO</td>
+                  <td>51,4%</td>
+                  <td>51,6%</td>
+                </tr>
+                <tr>
+                  <td>ENTRENAMIENTO TÉCNICO</td>
+                  <td>42,3%</td>
+                  <td>46,0%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer small text-muted actualizated"></div>
+    </div>
+  </div>
+  <!--
+	<div class="col-lg-6">	
+		<div class="card mb-3">
+			<div class="card-header">
+				<i class="fa fa-bar-chart"></i> Digital MEV General</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-12 my-auto">
+						<canvas id="digitalBarChart"></canvas>
+					</div>
+				</div>
+			</div>
+			<div class="card-footer small text-muted actualizated"></div>
+		</div>
+	</div>
+	-->
+</div>
+<!-- Custom scripts for this page-->
+<script src="js/sb-admin-charts.js"></script>
+<script src="js/table-colors.js"></script>
+<script src="js/sb-admin-datatables.js"></script>
+<script src="js/fecha-act.js"></script>

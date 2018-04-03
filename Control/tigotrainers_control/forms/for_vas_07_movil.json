@@ -1,0 +1,1009 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Fecha de la actividad",
+      "slug": "activity_date",
+      "type": "date",
+      "flow": 2,
+      "properties": {
+        "required": true,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Canal Trabajado",
+      "slug": "channel",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Retail",
+          "option_value": "retail",
+          "flow": 3
+        },
+        {
+          "option_key": "Centro de Experiencia",
+          "option_value": "cde",
+          "flow": 4
+        },
+        {
+          "option_key": "Fuerza de Venta Directa",
+          "option_value": "fvd",
+          "flow": 5
+        },
+        {
+          "option_key": "Distribuidores",
+          "option_value": "dealer",
+          "flow": 58
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 58,
+      "title": "Tipo de asesor",
+      "slug": "asesor_tipo",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Fuerza de venta",
+          "option_value": "fvd",
+          "flow": 6
+        },
+        {
+          "option_key": "TAT",
+          "option_value": "tat",
+          "flow": 59
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Código POS / Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 8,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Código POS / Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 9,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Código POS / Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 10,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Código POS / Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 11,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 59,
+      "title": "Código POS / Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 60,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Cédula del asesor",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 12,
+      "properties": {
+        "required": true,
+        "validate": "cc_id"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Cédula del asesor",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 13,
+      "properties": {
+        "required": true,
+        "validate": "cc_id"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Cédula del asesor",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 14,
+      "properties": {
+        "required": true,
+        "validate": "cc_id"
+      }
+    },
+    {
+      "id": 11,
+      "title": "Cédula del asesor",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 15,
+      "properties": {
+        "required": true,
+        "validate": "cc_id"
+      }
+    },
+    {
+      "id": 60,
+      "title": "Cédula del asesor",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 61,
+      "properties": {
+        "required": true,
+        "validate": "cc_id"
+      }
+    },
+    {
+      "id": 12,
+      "title": "Nombre del asesor",
+      "slug": "asesor_name",
+      "type": "text",
+      "flow": 16,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 13,
+      "title": "Nombre del asesor",
+      "slug": "asesor_name",
+      "type": "text",
+      "flow": 17,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 14,
+      "title": "Nombre del asesor",
+      "slug": "asesor_name",
+      "type": "text",
+      "flow": 18,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 15,
+      "title": "Nombre del asesor",
+      "slug": "asesor_name",
+      "type": "text",
+      "flow": 19,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 61,
+      "title": "Nombre del asesor",
+      "slug": "asesor_name",
+      "type": "text",
+      "flow": 62,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 16,
+      "title": "Número móvil del asesor",
+      "slug": "asesor_msisdn",
+      "type": "number",
+      "flow": 20,
+      "properties": {
+        "required": true,
+        "validate": "cellphone_number"
+      }
+    },
+    {
+      "id": 17,
+      "title": "Número móvil del asesor",
+      "slug": "asesor_msisdn",
+      "type": "number",
+      "flow": 21,
+      "properties": {
+        "required": true,
+        "validate": "cellphone_number"
+      }
+    },
+    {
+      "id": 18,
+      "title": "Número móvil del asesor",
+      "slug": "asesor_msisdn",
+      "type": "number",
+      "flow": 22,
+      "properties": {
+        "required": true,
+        "validate": "cellphone_number"
+      }
+    },
+    {
+      "id": 19,
+      "title": "Número móvil del asesor",
+      "slug": "asesor_msisdn",
+      "type": "number",
+      "flow": 23,
+      "properties": {
+        "required": true,
+        "validate": "cellphone_number"
+      }
+    },
+    {
+      "id": 62,
+      "title": "Número móvil del asesor",
+      "slug": "asesor_msisdn",
+      "type": "number",
+      "flow": 63,
+      "properties": {
+        "required": true,
+        "validate": "cellphone_number"
+      }
+    },
+    {
+      "id": 20,
+      "title": "Nombre del jefe inmediato del asesor",
+      "slug": "asesor_boss_name",
+      "type": "text",
+      "flow": 24,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 21,
+      "title": "Nombre del jefe inmediato del asesor",
+      "slug": "asesor_boss_name",
+      "type": "text",
+      "flow": 25,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 22,
+      "title": "Nombre del jefe inmediato del asesor",
+      "slug": "asesor_boss_name",
+      "type": "text",
+      "flow": 26,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 23,
+      "title": "Nombre del jefe inmediato del asesor",
+      "slug": "asesor_boss_name",
+      "type": "text",
+      "flow": 27,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 63,
+      "title": "Nombre del jefe inmediato del asesor",
+      "slug": "asesor_boss_name",
+      "type": "text",
+      "flow": 64,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 24,
+      "title": "Antigüedad del asesor en el cargo",
+      "slug": "asesor_antiquity",
+      "type": "unique_option",
+      "flow": 45,
+      "options": [
+        {
+          "option_key": "Menos de 3 meses",
+          "option_value": "Menos de 3 meses"
+        },
+        {
+          "option_key": "De 3 a 6 meses",
+          "option_value": "De 3 a 6 meses"
+        },
+        {
+          "option_key": "Más de 6 meses",
+          "option_value": "Más de 6 meses"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 25,
+      "title": "Antigüedad del asesor en el cargo",
+      "slug": "asesor_antiquity",
+      "type": "unique_option",
+      "flow": 38,
+      "options": [
+        {
+          "option_key": "Menos de 3 meses",
+          "option_value": "Menos de 3 meses"
+        },
+        {
+          "option_key": "De 3 a 6 meses",
+          "option_value": "De 3 a 6 meses"
+        },
+        {
+          "option_key": "Más de 6 meses",
+          "option_value": "Más de 6 meses"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 26,
+      "title": "Antigüedad del asesor en el cargo",
+      "slug": "asesor_antiquity",
+      "type": "unique_option",
+      "flow": 45,
+      "options": [
+        {
+          "option_key": "Menos de 3 meses",
+          "option_value": "Menos de 3 meses"
+        },
+        {
+          "option_key": "De 3 a 6 meses",
+          "option_value": "De 3 a 6 meses"
+        },
+        {
+          "option_key": "Más de 6 meses",
+          "option_value": "Más de 6 meses"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 27,
+      "title": "Antigüedad del asesor en el cargo",
+      "slug": "asesor_antiquity",
+      "type": "unique_option",
+      "flow": 28,
+      "options": [
+        {
+          "option_key": "Menos de 3 meses",
+          "option_value": "Menos de 3 meses"
+        },
+        {
+          "option_key": "De 3 a 6 meses",
+          "option_value": "De 3 a 6 meses"
+        },
+        {
+          "option_key": "Más de 6 meses",
+          "option_value": "Más de 6 meses"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 64,
+      "title": "Antigüedad del asesor en el cargo",
+      "slug": "asesor_antiquity",
+      "type": "unique_option",
+      "flow": 65,
+      "options": [
+        {
+          "option_key": "Menos de 3 meses",
+          "option_value": "Menos de 3 meses"
+        },
+        {
+          "option_key": "De 3 a 6 meses",
+          "option_value": "De 3 a 6 meses"
+        },
+        {
+          "option_key": "Más de 6 meses",
+          "option_value": "Más de 6 meses"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 65,
+      "title": "¿Posee carpeta comercial con información vigente?",
+      "slug": "mac_1",
+      "type": "boolean_option",
+      "flow": 66,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 66,
+      "title": "¿Informa al PDA/PDV la cantidad de revenue hasta la fecha?",
+      "slug": "mac_2",
+      "type": "boolean_option",
+      "flow": 67,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 67,
+      "title": "¿Entrena sobre la oferta vigente del mes al PDA/PDV?",
+      "slug": "mac_3",
+      "type": "boolean_option",
+      "flow": 68,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 68,
+      "title": "¿Explica cómo los productos y planes se convierten en comisiones para el PDA/PDV?",
+      "slug": "mac_4",
+      "type": "boolean_option",
+      "flow": 69,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 69,
+      "title": "¿Entrena al PDA/PDV en el uso de TigoShop, TigoGestión y *111#?",
+      "slug": "mac_5",
+      "type": "boolean_option",
+      "flow": 53,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 28,
+      "title": "¿Cumple los requerimientos de presentación personal?",
+      "slug": "mac_1",
+      "type": "boolean_option",
+      "flow": 29,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 29,
+      "title": "¿Aborda al cliente? Tiene inicitativa de acercamiento y aplica el protocolo de saludo.",
+      "slug": "mac_2",
+      "type": "boolean_option",
+      "flow": 30,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 30,
+      "title": "¿Genera conexión con el cliente? Es empático e identifica el tipo de cliente",
+      "slug": "mac_3",
+      "type": "boolean_option",
+      "flow": 31,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 31,
+      "title": "¿Indaga y entiende las necesidades del cliente? Escucha activamente y confirma lo que el cliente le está diciendo.",
+      "slug": "mac_4",
+      "type": "boolean_option",
+      "flow": 32,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 32,
+      "title": "¿Presenta la oferta comercial? Identifica la necesidad del cliente y resalta características vs beneficios, siempre pensando en lo que el cliente necesita.",
+      "slug": "mac_5",
+      "type": "range_option",
+      "flow": 33,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 33,
+      "title": "¿Entiende y soluciona las objeciones del cliente? Transforma con argumentos las objeciones en confirmaciones",
+      "slug": "mac_6",
+      "type": "range_option",
+      "flow": 55,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 55,
+      "title": "¿Conoce la oferta de la competencia y sabe manejar las objeciones del cliente?",
+      "slug": "mac_7",
+      "type": "boolean_option",
+      "flow": 34,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 34,
+      "title": "¿Explica, confirma e impulsa la venta? Cierra correctamente, realiza un resumen, presenta beneficios y confirma la aceptación del cliente.",
+      "slug": "mac_8",
+      "type": "range_option",
+      "flow": 35,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 35,
+      "title": "¿Cumple con el proceso de gestión documental? Explica al cliente facturación, términos y condiciones y gestiona la documentación en general.",
+      "slug": "mac_9",
+      "type": "boolean_option",
+      "flow": 36,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 36,
+      "title": "¿Potencializa la Venta? Genera valor agregado y solicita referidos.",
+      "slug": "mac_10",
+      "type": "range_option",
+      "flow": 37,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 37,
+      "title": "¿Informa al cliente sobre las ofertas comerciales del mes?",
+      "slug": "mac_11",
+      "type": "range_option",
+      "flow": 53,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 38,
+      "title": "¿Cumple los requerimientos de Presentación Personal? ¿Se encuentra en el punto de venta?",
+      "slug": "mac_1",
+      "type": "boolean_option",
+      "flow": 39,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 39,
+      "title": "¿Genera Conexión con el cliente? Actitud: Acogida, cordialidad, amabilidad y disposición de servicio.",
+      "slug": "mac_2",
+      "type": "boolean_option",
+      "flow": 40,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 40,
+      "title": "¿Entiende al cliente? Realiza preguntas poderosas, identifica su motivo de compra, escucha y parafrasea.",
+      "slug": "mac_3",
+      "type": "range_option",
+      "flow": 41,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 41,
+      "title": "¿Ofrece beneficios y soluciones? Utiliza la estructura: Característica - Conector - Beneficio. ",
+      "slug": "mac_4",
+      "type": "range_option",
+      "flow": 56,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 56,
+      "title": "¿Conoce la oferta de la competencia y sabe manejar las objeciones del cliente?",
+      "slug": "mac_5",
+      "type": "boolean_option",
+      "flow": 42,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 42,
+      "title": "¿Cierra con calidad? Ofrece opciones, realiza preguntas de cierre y muestra agresividad comercial.",
+      "slug": "mac_6",
+      "type": "range_option",
+      "flow": 43,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 43,
+      "title": "¿Genera valor a la venta? Repasa beneficios, configura el SP, instala Tigo Shop / Mi Tigo y solicita referidos.",
+      "slug": "mac_7",
+      "type": "range_option",
+      "flow": 44,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 44,
+      "title": "¿Cumple con el proceso de gestión documental? Explica al cliente facturación, términos y condiciones y gestiona la documentación en general.",
+      "slug": "mac_8",
+      "type": "boolean_option",
+      "flow": 53,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 45,
+      "title": "¿Cumple los requerimientos de Presentación Personal? ¿Se encuentra en el punto de venta?",
+      "slug": "mac_1",
+      "type": "boolean_option",
+      "flow": 46,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 46,
+      "title": "¿Identifica al cliente? Aborda a los clientes, demuestra actitud, seguridad e identificación de diferentes perfiles.",
+      "slug": "mac_2",
+      "type": "boolean_option",
+      "flow": 47,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 47,
+      "title": "¿Capta su atención? Realiza preguntas poderosas, sonríe, realiza contacto visual.",
+      "slug": "mac_3",
+      "type": "boolean_option",
+      "flow": 48,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 48,
+      "title": "¿Entiende al cliente? Realiza preguntas poderosas, identifica su motivo de compra, escucha y parafrasea.",
+      "slug": "mac_4",
+      "type": "range_option",
+      "flow": 49,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 49,
+      "title": "¿Ofrece beneficios y soluciones? Utiliza la estructura: Característica - Conector - Beneficio. ",
+      "slug": "mac_5",
+      "type": "range_option",
+      "flow": 57,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 57,
+      "title": "¿Conoce la oferta de la competencia y sabe manejar las objeciones del cliente?",
+      "slug": "mac_6",
+      "type": "boolean_option",
+      "flow": 50,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 50,
+      "title": "¿Finaliza y agrega valor? Ofrece opciones, realiza preguntas de cierre y muestra agresividad comercial.",
+      "slug": "mac_7",
+      "type": "range_option",
+      "flow": 51,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 51,
+      "title": "¿Recuerda al cliente? Repasa beneficios, configura el SP e instala Tigo Shop / Mi Tigo y solicita referidos.",
+      "slug": "mac_8",
+      "type": "range_option",
+      "flow": 52,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 52,
+      "title": "¿Cumple con el proceso de gestión documental? Explica al cliente facturación, términos y condiciones y gestiona la documentación en general.",
+      "slug": "mac_9",
+      "type": "boolean_option",
+      "flow": 53,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 53,
+      "title": "Observaciones / Plan de acción",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": 54,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 54,
+      "title": "Duración del entrenamiento (minutos)",
+      "slug": "training_time",
+      "type": "range_option",
+      "flow": "_submit",
+      "options": {
+        "min_value": 20,
+        "max_value": 480,
+        "steps": 10
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    }
+  ]
+}

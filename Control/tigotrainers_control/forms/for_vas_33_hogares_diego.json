@@ -1,0 +1,219 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Fecha de la actividad",
+      "slug": "activity_date",
+      "type": "date",
+      "flow": 3,
+      "properties": {
+        "required": true,
+        "validate": "date"
+      }
+    },  
+    {
+      "id": 3,
+      "title": "Módulo de Entrenamiento",
+      "slug": "training_day",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Día 1",
+          "option_value": "Día 1",
+          "flow": 4
+        },
+        {
+          "option_key": "Día 2",
+          "option_value": "Día 2",
+          "flow": 5
+        },
+        {
+          "option_key": "Día 3",
+          "option_value": "Día 3",
+          "flow": 6
+        },
+        {
+          "option_key": "Día 4",
+          "option_value": "Día 4",
+          "flow": 7
+        },
+        {
+          "option_key": "Día 5",
+          "option_value": "Día 5",
+          "flow": 8
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Temas de entrenamiento - Día 1",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 9,
+      "options": [
+        {
+          "option_key": "Entorno Corporativo",
+          "option_value": "Entorno Corporativo"
+        },
+        {
+          "option_key": "Conceptos Técnicos",
+          "option_value": "Conceptos Técnicos"
+        },
+        {
+          "option_key": "Telefonía",
+          "option_value": "Telefonía"
+        },
+        {
+          "option_key": "Banda Ancha",
+          "option_value": "Banda Ancha"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+	{
+      "id": 5,
+      "title": "Temas de entrenamiento - Día 2",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 9,
+      "options": [
+        {
+          "option_key": "Televisión",
+          "option_value": "Televisión"
+        },
+        {
+          "option_key": "Empaquetamientos",
+          "option_value": "Empaquetamientos"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Temas de entrenamiento - Día 3",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 9,
+      "options": [
+        {
+          "option_key": "Competencia",
+          "option_value": "Competencia"
+        },
+        {
+          "option_key": "Procesos de la Venta",
+          "option_value": "Procesos de la Venta"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Temas de entrenamiento - Día 4",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 9,
+      "options": [
+        {
+          "option_key": "Súper MacGO",
+          "option_value": "Súper MacGO"
+        },
+        {
+          "option_key": "Certificación",
+          "option_value": "Certificación"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Temas de entrenamiento - Día 5",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 9,
+      "options": [
+        {
+          "option_key": "Venta Móvil o Siebel Mobile y Tigo Docs",
+          "option_value": "Venta Móvil o Siebel Mobile y Tigo Docs"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 9,
+      "title": "¿Se realizó evaluación?",
+      "slug": "quiz_done",
+      "type": "boolean_option",
+      "flow": 21,
+      "options": {
+        "true": 1,
+        "false": 0
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 21,
+      "title": "Duración del entrenamiento (minutos)",
+      "slug": "training_time",
+      "type": "range_option",
+      "flow": 22,
+      "options": {
+        "min_value": 60,
+        "max_value": 480,
+        "steps": 60
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 22,
+      "title": "Cédula(s) de participante(s)",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 23,
+      "properties": {
+        "required": true,
+        "validate": "cc_id",
+        "multidata": true
+      }
+    },
+    {
+      "id": 23,
+      "title": "Observaciones",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": "_submit",
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    }
+  ]
+}

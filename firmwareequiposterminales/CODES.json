@@ -1,0 +1,120 @@
+[{
+    "Brand": "TC8305",
+    "Brand2": "TECHNICOLOR",
+    "code1": "HFC",
+    "code2": "EMTA",
+    "code3": "(1.5)(1.4)\n",
+    "code4": "10.E6.31.14.00"
+  },
+  {
+    "Brand": "TC7300.E",
+    "Brand2": "TECHNICOLOR",
+    "code1": "HFC",
+    "code2": "EMTA",
+    "code3": "1.0",
+    "code4": "STF2.09.25"
+  },
+  {
+    "Brand": "TC7300.d1E",
+    "Brand2": "TECHNICOLOR",
+    "code1": "HFC",
+    "code2": "CM",
+    "code3": "1.0",
+    "code4": "STF4.09.11"
+  },
+  {
+    "Brand": "TC7110.E",
+    "Brand2": "TECHNICOLOR",
+    "code1": "HFC",
+    "code2": "EMTA",
+    "code3": "1.0",
+    "code4": "STD4.02.17"
+  },
+  {
+    "Brand": "MOCA DPC3941T2",
+    "Brand2": "TECHNICOLOR",
+    "code1": "HFC",
+    "code2": "EMTA",
+    "code3": "2.0",
+    "code4": "dpc3941t2-PSIP-11-v303r204318-171002a-TIGO"
+  },
+  {
+    "Brand": "CGNV2",
+    "Brand2": "Hitron",
+    "code1": "HFC",
+    "code2": "EMTA",
+    "code3": "1A",
+    "code4": "3.1.2.26-SIP-UNE"
+  },
+  {
+    "Brand": "CVE-30360",
+    "Brand2": "Hitron",
+    "code1": "HFC",
+    "code2": "EMTA",
+    "code3": "1.A",
+    "code4": "3.1.1.40-SIP-UNE"
+  },
+  {
+    "Brand": "CGN2",
+    "Brand2": "Hitron",
+    "code1": "HFC",
+    "code2": "CM",
+    "code3": "1A",
+    "code4": "3.1.1.44"
+  },
+  {
+    "Brand": "CDW31235-UNE",
+    "Brand2": "Hitron",
+    "code1": "HFC",
+    "code2": "CM",
+    "code3": "1A",
+    "code4": "4.05.10-CDW31235-UNE"
+  },
+  {
+    "Brand": "DPC2425",
+    "Brand2": "Cisco",
+    "code1": "HFC",
+    "code2": "EMTA",
+    "code3": "1.0",
+    "code4": "D2425-PSIP-12-v202r12811-120518as-UNE"
+  },
+  {
+    "Brand": "DPC2320R2",
+    "Brand2": "Cisco",
+    "code1": "HFC",
+    "code2": "CM",
+    "code3": "1.0",
+    "code4": "dpc2300r2-v202r124482-141017as-UNE-v6"
+  },
+  {
+    "Brand": "DPC2325",
+    "Brand2": "Cisco",
+    "code1": "HFC",
+    "code2": "CM",
+    "code3": "1.0",
+    "code4": "dpc2325-v202r12811-120518as-UNE"
+  },
+  {
+    "Brand": "DPC3925",
+    "Brand2": "Cisco",
+    "code1": "HFC",
+    "code2": "EMTA",
+    "code3": "1.0",
+    "code4": "d3925-PS-12-c1100r5593-150807a-UNE"
+  },
+  {
+    "Brand": "DPC3825 ",
+    "Brand2": "Cisco",
+    "code1": "HFC",
+    "code2": "CM",
+    "code3": "1.0",
+    "code4": "dpc3825-v302r125574-151007a-UNE"
+  },
+  {
+    "Brand": "DCW725",
+    "Brand2": "Thomson",
+    "code1": "HFC",
+    "code2": "CM",
+    "code3": "(6.0)(5.0)",
+    "code4": "ST5A.09.17"
+  }]

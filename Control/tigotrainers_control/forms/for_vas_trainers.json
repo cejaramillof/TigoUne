@@ -1,0 +1,519 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Fecha de la actividad",
+      "slug": "activity_date",
+      "type": "date",
+      "flow": 2,
+      "properties": {
+        "required": true,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Cargo del evaluador",
+      "slug": "user_position",
+      "type": "unique_option",
+      "flow": 3,
+      "options": [
+        {
+          "option_key": "Entrenador Líder",
+          "option_value": "Entrenador Líder"
+        },
+        {
+          "option_key": "Especialista de entrenamiento",
+          "option_value": "Especialista de entrenamiento"
+        },
+        {
+          "option_key": "Especialista de producto",
+          "option_value": "Especialista de producto"
+        },
+        {
+          "option_key": "Especialista TSS",
+          "option_value": "Especialista TSS"
+        },
+        {
+          "option_key": "Líder de entrenamiento",
+          "option_value": "Líder de entrenamiento"
+        },
+        {
+          "option_key": "Gerente de entrenamiento",
+          "option_value": "Gerente de entrenamiento"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    }, 
+    {
+      "id": 3,
+      "title": "Regional",
+      "slug": "regional",
+      "type": "unique_option",
+      "flow": 4,
+      "options": [
+        {
+          "option_key": "Costa",
+          "option_value": "COSTA"
+        },
+        {
+          "option_key": "Centro",
+          "option_value": "CENTRO"
+        },
+        {
+          "option_key": "Eje Cafetero",
+          "option_value": "EJE_CAFETERO"
+        },
+        {
+          "option_key": "Noroccidente",
+          "option_value": "NOROCCIDENTE"
+        },
+        {
+          "option_key": "Oriente",
+          "option_value": "ORIENTE"
+        },
+        {
+          "option_key": "Suroccidente",
+          "option_value": "SUROCCIDENTE"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+     {
+      "id": 4,
+      "title": "Canal Trabajado",
+      "slug": "channel",
+      "type": "unique_option",
+      "flow": 5,
+      "options": [
+        {
+          "option_key": "Agentes Comerciales",
+          "option_value": "agentes comerciales"
+        },
+        {
+          "option_key": "AUR y Constructores",
+          "option_value": "aur y contructores"
+        },
+        {
+          "option_key": "Centro de Experiencia",
+          "option_value": "cde"
+        },
+        {
+          "option_key": "CDVS",
+          "option_value": "cvds"
+        },
+        {
+          "option_key": "Contact Center",
+          "option_value": "contact center"
+        },
+        {
+          "option_key": "Distribuidores",
+          "option_value": "dealer"
+        },
+        {
+          "option_key": "Fuerza de Venta Directa",
+          "option_value": "fvd"
+        },
+        {
+          "option_key": "Retail",
+          "option_value": "retail"
+        },
+        {
+          "option_key": "PAP",
+          "option_value": "pap"
+        },
+        {
+          "option_key": "Puntos Fijos",
+          "option_value": "puntos fijos"
+        }, 
+        {
+          "option_key": "Preventa",
+          "option_value": "preventa"
+        }, 
+        {
+          "option_key": "Servicio",
+          "option_value": "servicio"
+        }, 
+        {
+          "option_key": "Farmer",
+          "option_value": "farmer"
+        }, 
+        {
+          "option_key": "Hunter",
+          "option_value": "hunter"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Código POS / Circuito",
+      "slug": "poscode_circuit",
+      "type": "text",
+      "flow": 6,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Cédula del evaluado",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 7,
+      "properties": {
+        "required": true,
+        "validate": "cc_id"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Nombre del evaluado",
+      "slug": "asesor_name",
+      "description": "<strong>Nombre del participante: </strong>Marcar nombres y apellidos completos.<p>Ejemplo: MARIA ANDREA PEREZ ALVEAR</p>",
+      "type": "text",
+      "flow": 8,
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Número móvil del evaluado",
+      "slug": "asesor_msisdn",
+      "type": "number",
+      "flow": 9,
+      "properties": {
+        "required": true,
+        "validate": "cellphone_number"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Cargo del evaluado",
+      "slug": "asesor_tipo",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Entrenador",
+          "option_value": "Entrenador",
+          "flow": 17
+        },
+        {
+          "option_key": "Supervisor",
+          "option_value": "Supervisor",
+          "flow":10
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 17,
+      "title": "Tipo de actividad",
+      "slug": "actividad",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Entrenamiento",
+          "option_value": "Entrenamiento",
+          "flow": 18
+        },
+        {
+          "option_key": "Acompañamiento",
+          "option_value": "Acompañamiento",
+          "flow": 10
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 18,
+      "title": "1. Prepara",
+      "slug": "mac_1",
+      "description":"El formador demuestra preparación en los siguientes aspectos:<br>1. Puntualidad<br>2. Ambiente y Salón organizado<br>3. Materiales del entrenamiento previamente organizados<br>4.Presentacion personal",
+      "type": "range_option",
+      "flow": 19,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 19,
+      "title": "2.  Conoce",
+      "slug": "mac_2",
+      "description":"Demuestra conocimiento del tema sobre el que está realizando la actividad formativa y resuelve las inquietudes de los estudiantes apoyandose en casos, cifras y hechos claves para generar convencimiento",
+      "type": "boolean_option",
+      "flow": 20,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 20,
+      "title": "3. Dinamiza",
+      "slug": "mac_3",
+      "description":"Prepara actividades (Dinamicas) desde juegos, gamificación, herramientas virtuales, role playing para reforzar el entrenamiento entregado",
+      "type": "boolean_option",
+      "flow": 21,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+ 	{
+      "id": 21,
+      "title": "4. Conecta",
+      "slug": "mac_4",
+      "description":"El formador prepara y dispone a su grupo para el aprendizaje aplicando las siguientes estrategias<br>1. Musica ambiental<br>2. Actividades rompehielos y/o disposicion grupal<br>3. Se muestra respetuoso con los participantes<br>4. Identifica las reacciones del publico y se ajusta para faciilitar el aprendizaje",
+      "type": "range_option",
+      "flow": 22,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 22,
+      "title": "5. Estructura y encuadra",
+      "slug": "mac_5",
+      "description":"El formador tiene evidencia estructura al momento de dictar el entrenamiento:<br>1. Utiliza una metodologia organizada y preparada apropiada para el tema a entregar<br>2. Presenta de forma la clara los objetivos, contenido, e importancia del entrenamiento<br>3. Hace un buen manejo del tiempo del entrenamiento y las actividades<br>4. Explica correctamente las actividades a desarrollar al interior de los equipos",
+      "type": "range_option",
+      "flow": 23,
+      "options": {
+        "min_value": 1,
+        "max_value": 4, 
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 23,
+      "title": "6. Comunica",
+      "slug": "mac_7",
+      "description":"El formador maneja un lenguaje verbal y no verbal correcto que contenga:<br>1. Una buena postura y movimiento de brazos (Cercana al publico)<br>2. Lenguaje verbal adaptado al publico (Concreto y simple)<br>3. Dicción y velocidad correcta (Impacto en el tono de la voz )<br>4. Lenguaje NO verbal (Agradable, positivo)",
+      "type": "range_option",
+      "flow": 25,
+      "options": {
+        "min_value": 1,
+        "max_value": 4, 
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 25,
+      "title": "7. Asegura",
+      "slug": "mac_6",
+      "description":"Valida con los participantes la comprensión de los temas entregados a través de preguntas, ejercicios de repaso o resumen del entrenamiento",
+      "type": "boolean_option",
+      "flow": 26,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 26,
+      "title": "8. Vende 1",
+      "slug": "mac_8",
+      "description":"Enfoca su entrenamiento en el Modelo de actuación comercial, incentivando al asesor en la mejor forma de vender el servicio, manejar objeciones, reforzar la habilidad comercial para presentare el producto",
+      "type": "boolean_option",
+      "flow": 27,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 27,
+      "title": "9. Vende 2",
+      "slug": "mac_9",
+      "description":"Realiza actividades prácticas o de aplicación con enfoque comercial como role play, clinica de ventas, etc.",
+      "type": "boolean_option",
+      "flow": 16,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Presencia de clientes",
+      "slug": "client_present",
+      "description": "",
+      "type": "boolean_option",
+      "flow": 11,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 11,
+      "title": "1. Observa:",
+      "slug": "mac_1",
+      "description": "<strong>Observa:</strong><br>*Formador o líder observa al asesor de forma constructiva sin perturbar su asesoría<br>*Toma notas de lo observado para hablar con argumentos puntuales al asesor",
+      "type": "unique_option",
+      "flow": 12,
+      "options": [
+        {
+          "option_key": "Si",
+          "option_value": 4
+        },
+        {
+          "option_key": "No",
+          "option_value": 1
+        },
+        {
+          "option_key": "No aplica",
+          "option_value": "na"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 12,
+      "title": "2. Enseña:",
+      "slug": "mac_2",
+      "description": "<strong>Enseña:</strong><br>*Formador o líder  consulta al asesor como se siente con su asesoría, que considera que le hace falta<br>*Formador invita practicar el proceso de la venta con el asesor<br>*Demuestra como se debe realizar la venta", 
+      "type": "range_option",
+      "flow": 13,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 13,
+      "title": "3. Practica Role Playing:",
+      "slug": "mac_3",
+      "description": "<strong>Practica Role Playing:</strong><br>*Formador o líder invita al asesor a jugar un role playing de acuerdo a las debilidades presentadas en terreno (Según la programación de role playing mensuales)", 
+      "type": "boolean_option",
+      "flow": 14,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 14,
+      "title": "4. Conversaciones de cambio:",
+      "slug": "mac_4",
+      "description": "<strong>Conversaciones de cambio:</strong><br>*El formador busca un espacio para conversar con el asesor comercial en privado.<br>*Realiza las siguientes preguntas buscando la reflexión del asesor<br>1) ¿Cómo te sentiste?<br>2) ¿Cuáles crees que son tus mayores fortalezas?<br>3) ¿Cuáles crees que son tus mayores oportunidades?<br>4) ¿Qué crees que debemos hacer para que tu hagas mejor estos pasos?",
+      "type": "range_option",
+      "flow": 15,
+      "options": {
+        "min_value": 1,
+        "max_value": 4,
+        "steps": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 15,
+      "title": "5. Califica y Plan de Acción:",
+      "slug": "mac_5",
+      "description": "<strong>Califica y Plan de Acción:</strong><br>*Formador o líder  Califica al asesor en frente de el y lo hace de forma objetiva<br>*Señala el plan de acción definido por el asesor<br>*Se despide", 
+      "type": "boolean_option",
+      "flow": 16,
+      "options": {
+        "true": 4,
+        "false": 1
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 16,
+      "title": "Observaciones",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": "_submit",
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    }
+  ]
+}

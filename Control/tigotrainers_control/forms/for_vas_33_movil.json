@@ -1,0 +1,411 @@
+{
+  "properties": {
+    "geolocation": true
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Fecha de la actividad",
+      "slug": "activity_date",
+      "type": "date",
+      "flow": 2,
+      "properties": {
+        "required": true,
+        "validate": "date"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Canal Trabajado",
+      "slug": "channel",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Tiendas",
+          "option_value": "tiendas",
+          "flow": 3
+        },
+        {
+          "option_key": "Retail",
+          "option_value": "retail",
+          "flow": 3
+        },
+        {
+          "option_key": "Fuerza de Venta Directa",
+          "option_value": "fvd",
+          "flow": 9
+        },
+        {
+          "option_key": "Distribuidor Movil",
+          "option_value": "dmovil",
+          "flow": 3
+        },
+        {
+          "option_key": "Distribuidor Hogares",
+          "option_value": "dhogares",
+          "flow": 3
+        },
+        {
+          "option_key": "Todos los canales",
+          "option_value": "all",
+          "flow": 3
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Módulo de Entrenamiento",
+      "slug": "training_day",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Día 1",
+          "option_value": "Día 1",
+          "flow": 4
+        },
+        {
+          "option_key": "Día 2",
+          "option_value": "Día 2",
+          "flow": 5
+        },
+        {
+          "option_key": "Día 3",
+          "option_value": "Día 3",
+          "flow": 6
+        },
+        {
+          "option_key": "Día 4",
+          "option_value": "Día 4",
+          "flow": 7
+        },
+        {
+          "option_key": "Día 5",
+          "option_value": "Día 5",
+          "flow": 8
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Temas de entrenamiento - Día 1",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 15,
+      "options": [
+        {
+          "option_key": "Entorno Corporativo",
+          "option_value": "Entorno Corporativo"
+        },
+        {
+          "option_key": "Súper MacGO",
+          "option_value": "Súper MacGO"
+        },
+        {
+          "option_key": "Prepago",
+          "option_value": "Prepago"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+	{
+      "id": 5,
+      "title": "Temas de entrenamiento - Día 2",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 15,
+      "options": [
+        {
+          "option_key": "Pospago",
+          "option_value": "Pospago"
+        },
+        {
+          "option_key": "Súper MacGO",
+          "option_value": "Súper MacGO"
+        },
+        {
+          "option_key": "Gestión Documental",
+          "option_value": "Gestión Documental"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Temas de entrenamiento - Día 3",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 15,
+      "options": [
+        {
+          "option_key": "Tecnología",
+          "option_value": "Tecnología"
+        },
+        {
+          "option_key": "Súper MacGO",
+          "option_value": "Súper MacGO"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Temas de entrenamiento - Día 4",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 15,
+      "options": [
+        {
+          "option_key": "Específicos por canal - CDE",
+          "option_value": "Específicos por canal - CDE"
+        },
+        {
+          "option_key": "Específicos por canal - FVD",
+          "option_value": "Específicos por canal - FVD"
+        },
+         {
+          "option_key": "Específicos por canal - Retail",
+          "option_value": "Específicos por canal - Retail"
+        },
+         {
+          "option_key": "Específicos por canal - Distribuidores",
+          "option_value": "Específicos por canal - Distribuidores"
+        },
+        {
+          "option_key": "Sales Day",
+          "option_value": "Sales Day"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Temas de entrenamiento - Día 5",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 15,
+      "options": [
+        {
+          "option_key": "Evoluciona",
+          "option_value": "Evoluciona"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Módulo de Entrenamiento",
+      "slug": "training_day",
+      "type": "unique_option",
+      "flow": "_conditional",
+      "options": [
+        {
+          "option_key": "Día 1",
+          "option_value": "Día 1",
+          "flow": 10
+        },
+        {
+          "option_key": "Día 2",
+          "option_value": "Día 2",
+          "flow": 11
+        },
+        {
+          "option_key": "Día 3",
+          "option_value": "Día 3",
+          "flow": 12
+        },
+        {
+          "option_key": "Día 4",
+          "option_value": "Día 4",
+          "flow": 13
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Temas de entrenamiento - Día 1",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 15,
+      "options": [
+        {
+          "option_key": "Entorno Corporativo",
+          "option_value": "Entorno Corporativo"
+        },
+        {
+          "option_key": "Súper MacGO",
+          "option_value": "Súper MacGO"
+        },
+        {
+          "option_key": "Prepago",
+          "option_value": "Prepago"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+	{
+      "id": 11,
+      "title": "Temas de entrenamiento - Día 2",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 15,
+      "options": [
+        {
+          "option_key": "Pospago",
+          "option_value": "Pospago"
+        },
+        {
+          "option_key": "Súper MacGO",
+          "option_value": "Súper MacGO"
+        },
+        {
+          "option_key": "Gestión Documental",
+          "option_value": "Gestión Documental"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 12,
+      "title": "Temas de entrenamiento - Día 3",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 15,
+      "options": [
+        {
+          "option_key": "Tecnología",
+          "option_value": "Tecnología"
+        },
+        {
+          "option_key": "Súper MacGO",
+          "option_value": "Súper MacGO"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 13,
+      "title": "Temas de entrenamiento - Día 4",
+      "slug": "training_theme",
+      "type": "multiple_option",
+      "flow": 15,
+      "options": [
+        {
+          "option_key": "Específicos por canal - CDE",
+          "option_value": "Específicos por canal - CDE"
+        },
+        {
+          "option_key": "Específicos por canal - FVD",
+          "option_value": "Específicos por canal - FVD"
+        },
+         {
+          "option_key": "Específicos por canal - Retail",
+          "option_value": "Específicos por canal - Retail"
+        },
+         {
+          "option_key": "Específicos por canal - Distribuidores",
+          "option_value": "Específicos por canal - Distribuidores"
+        },
+        {
+          "option_key": "Sales Day",
+          "option_value": "Sales Day"
+        }
+      ],
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    },
+    {
+      "id": 15,
+      "title": "Cédula(s) de participante(s)",
+      "slug": "asesor_cc",
+      "type": "number",
+      "flow": 16,
+      "properties": {
+        "required": true,
+        "validate": "cc_id",
+        "multidata": true
+      }
+    },
+    {
+      "id": 16,
+      "title": "Duración del entrenamiento (minutos)",
+      "slug": "training_time",
+      "type": "range_option",
+      "flow": 17,
+      "options": {
+        "min_value": 60,
+        "max_value": 480,
+        "steps": 60
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 17,
+      "title": "¿Se realizó evaluación?",
+      "slug": "quiz_done",
+      "type": "boolean_option",
+      "flow": 18,
+      "options": {
+        "true": 1,
+        "false": 0
+      },
+      "properties": {
+        "required": true,
+        "validate": "number"
+      }
+    },
+    {
+      "id": 18,
+      "title": "Observaciones",
+      "slug": "field_notes",
+      "type": "textarea",
+      "flow": "_submit",
+      "properties": {
+        "required": true,
+        "validate": "text"
+      }
+    }
+  ]
+}
